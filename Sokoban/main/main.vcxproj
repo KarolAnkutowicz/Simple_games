@@ -139,7 +139,18 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cboard.cpp" />
+    <ClCompile Include="cfield.cpp" />
+    <ClCompile Include="csokoban.cpp" />
+    <ClCompile Include="cstartgame.cpp" />
     <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="cboard.hpp" />
+    <ClInclude Include="cfield.hpp" />
+    <ClInclude Include="constantsandtypes.hpp" />
+    <ClInclude Include="csokoban.hpp" />
+    <ClInclude Include="cstartgame.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
