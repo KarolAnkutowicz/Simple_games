@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="cboard.cpp" />
     <ClCompile Include="cfield.cpp" />
+    <ClCompile Include="cposition.cpp" />
     <ClCompile Include="csokoban.cpp" />
     <ClCompile Include="cstartgame.cpp" />
     <ClCompile Include="main.cpp" />
@@ -149,6 +150,7 @@
     <ClInclude Include="cboard.hpp" />
     <ClInclude Include="cfield.hpp" />
     <ClInclude Include="constantsandtypes.hpp" />
+    <ClInclude Include="cposition.hpp" />
     <ClInclude Include="csokoban.hpp" />
     <ClInclude Include="cstartgame.hpp" />
   </ItemGroup>
