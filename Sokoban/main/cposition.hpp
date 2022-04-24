@@ -41,7 +41,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola xPosition (typ: int).
      */
-    int getXPosition();
+    inline int getXPosition()
+    {
+        return xPosition;
+    }
 
     /*
      * int getYPosition() - metoda zwracajaca wartosc pola
@@ -51,7 +54,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola yPosition (typ: int).
      */
-    int getYPosition();
+    inline int getYPosition()
+    {
+        return yPosition;
+    }
 
     /*
      * void setXPosition(int xPos) - metoda ustanawiajaca
@@ -61,7 +67,10 @@ public:
      * POST:
      * - brak.
      */
-    void setXPosition(int xPos);
+    inline void setXPosition(int xPos)
+    {
+        xPosition = xPos;
+    }
 
     /*
      * void setYPosition(int yPos) - metoda ustanawiajaca
@@ -71,7 +80,10 @@ public:
      * POST:
      * - brak.
      */
-    void setYPosition(int yPos);
+    inline void setYPosition(int yPos)
+    {
+        yPosition = yPos;
+    }
 
     /*
      * void incrementXPosition() - metoda inkrementujaca
@@ -81,7 +93,10 @@ public:
      * POST:
      * - brak.
      */
-    void incrementXPosition();
+    inline void incrementXPosition()
+    {
+        xPosition++;
+    }
 
     /*
      * void decrementXPosition() - metoda dekrementujaca
@@ -91,7 +106,10 @@ public:
      * POST:
      * - brak.
      */
-    void decrementXPosition();
+    inline void decrementXPosition()
+    {
+        xPosition--;
+    }
 
     /*
      * void incrementYPosition() - metoda inkrementujaca
@@ -101,7 +119,10 @@ public:
      * POST:
      * - brak.
      */
-    void incrementYPosition();
+    inline void incrementYPosition()
+    {
+        yPosition++;
+    }
 
     /*
      * void decrementYPosition() - metoda dekrementujaca
@@ -111,7 +132,10 @@ public:
      * POST:
      * - brak.
      */
-    void decrementYPosition();
+    inline void decrementYPosition()
+    {
+        yPosition--;
+    }
 
     /********** PUBLIC: END **********/
 
