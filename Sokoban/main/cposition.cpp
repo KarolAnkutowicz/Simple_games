@@ -26,6 +26,54 @@ cPosition::cPosition(int xPos, int yPos)
 	yPosition = yPos; // ustanowienie wartosci wspolrzednej wertykalnej
 }
 
+/*
+ * cPosition(const cPosition& cPos)
+ */
+cPosition::cPosition(const cPosition& cPos)
+{
+	xPosition = cPos.xPosition; // ustanowienie wartosci wspolrzednej horyzontalnej
+	yPosition = cPos.yPosition; // ustanowienie wartosci wspolrzednej wertykalnej
+}
+
+/*
+ * cPosition(cPosition&& cPos)
+ */
+cPosition::cPosition(cPosition&& cPos)
+{
+	xPosition = cPos.xPosition; // ustanowienie wartosci wspolrzednej horyzontalnej
+	yPosition = cPos.yPosition; // ustanowienie wartosci wspolrzednej wertykalnej
+	cPos.xPosition = 0; // ustanowienie wartosci wspolrzednej horyzontalnej obiektu zrodlowego
+	cPos.yPosition = 0; // ustanowienie wartosci wspolrzednej wertykalnej obiektu zrodlowego
+}
+
+
+
+/*
+ * cPosition& operator = (cPosition cPos)
+ */
+cPosition& cPosition::operator = (cPosition cPos)
+{
+	xPosition = cPos.xPosition; // ustanowienie wartosci wspolrzednej horyzontalnej
+	yPosition = cPos.yPosition; // ustanowienie wartosci wspolrzednej wertykalnej
+	return *this; // zwrocenie wartosci
+}
+
+/*
+ * cPosition& operator = (cPosition cPos)
+ */
+cPosition& cPosition::operator = (cPosition&& cPos)
+{
+	if (this != &cPos) // sprawdzamy czy 
+	{
+		xPosition = cPos.xPosition; // ustanowienie wartosci wspolrzednej horyzontalnej
+		yPosition = cPos.yPosition; // ustanowienie wartosci wspolrzednej wertykalnej
+		cPos.xPosition = 0; // ustanowienie wartosci wspolrzednej horyzontalnej obiektu zrodlowego
+		cPos.yPosition = 0; // ustanowienie wartosci wspolrzednej wertykalnej obiektu zrodlowego
+	}
+	return *this; // zwrocenie wartosci
+}
+
+
 /********** PUBLIC: END **********/
 
 /* cposition.cpp */

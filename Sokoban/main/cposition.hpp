@@ -17,7 +17,7 @@ public:
      * PRE:
      * - brak;
      * POST:
-     * - brak.
+     * - utworzenie obiektu cPosition.
      */
     cPosition();
 
@@ -29,9 +29,53 @@ public:
      * - podanie wspolrzednej horyzontalnej (typ: int);
      * - podanie wspolrzednej wertykalnej (typ: int)
      * POST:
-     * - brak.
+     * - utworzenie obiektu cPosition.
      */
     cPosition(int xPos, int yPos);
+
+    /*
+     * cPosition(const cPosition& cPos) - konstruktor kopiujacy
+     * klasy cPosition.
+     * PRE:
+     * - podanie referencji do obiektu stalego (typ: cPosition);
+     * POST:
+     * - utworzenie obiektu cPosition.
+     */
+    cPosition(const cPosition& cPos);
+
+    /*
+     * cPosition(cPosition&& cPos) - konstruktor przenoszenia
+     * klasy cPosition.
+     * PRE:
+     * - podanie referencji do obiektu przenoszonego (typ: cPosition);
+     * POST:
+     * - utworzenie obiektu cPosition.
+     */
+    cPosition(cPosition&& cPos);
+
+
+
+    /*
+     * cPosition& operator = (cPosition cPos) - operator przypisania
+     * klasy cPosition.
+     * PRE:
+     * - podanie obiektu (typ: cPosition);
+     * POST:
+     * - utworzenie obiektu cPosition.
+     */
+    cPosition& operator = (cPosition cPos);
+
+    /*
+     * cPosition& operator = (cPosition cPos) - operator przypisania
+     * przenoszenia klasy cPosition.
+     * PRE:
+     * - podanie referencji do obiektu przenoszonego (typ: cPosition);
+     * POST:
+     * - utworzenie obiektu cPosition.
+     */
+    cPosition& operator = (cPosition&& cPos);
+
+
 
     /*
      * int getXPosition() - metoda zwracajaca wartosc pola
