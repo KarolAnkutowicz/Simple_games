@@ -13,13 +13,13 @@ class cStartGame
 {
     /********** PUBLIC: BEGIN **********/
 
-public:
+//public:
 
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/
 
-private:
+//private:
 
     /********** PRIVATE: END **********/
 };

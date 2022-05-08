@@ -9,11 +9,22 @@
 /********** PUBLIC: BEGIN **********/
 
 /*
+ * cSokoban()
+ */
+cSokoban::cSokoban()
+{
+	positionSokoban.setXPosition(0); // ustanowienie pozycji wertykalnej
+	positionSokoban.setYPosition(0); // ustanowienie pozycji horyzontalnej
+}
+
+
+/*
  * cSokoban(cPosition posSok)
  */
 cSokoban::cSokoban(cPosition posSok)
 {
-	positionSokoban = posSok; // przypisanie obiektu
+	positionSokoban.setXPosition(posSok.getXPosition()); // ustanowienie pozycji wertykalnej
+	positionSokoban.setYPosition(posSok.getYPosition()); // ustanowienie pozycji horyzontalnej
 }
 
 /*

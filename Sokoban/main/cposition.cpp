@@ -73,7 +73,6 @@ cPosition& cPosition::operator = (cPosition&& cPos)
 	return *this; // zwrocenie wartosci
 }
 
-
 /********** PUBLIC: END **********/
 
 /* cposition.cpp */

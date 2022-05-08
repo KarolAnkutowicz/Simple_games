@@ -7,22 +7,22 @@
 #pragma once
 
 /*
- * enum enumTypeFields - typ wyliczeniowy okreslajacy
- * typy pol na tablicy.
+ * const char tTypesFields[]  - tablica oznaczen pol:
+ * (n)othing, (b)ase, (s)ave_rock, (r)ock.
  */
-enum enumTypeFields {free, free_base, full_base, rock};
+const char tTypesFields[] = "nbsr";
 
 /*
  * char tSymbolsFields[] - tablica symboli typow pol
  * na tablicy.
  */
-char tSymbolsFields[] = {' ', '-', '+', 'X'};
+const char tSymbolsFields[] = " -+X";
 
 /*
  * char tSymbolsElements[] - tablica symboli elemetow
  * ruchomych na tablicy podczas gry.
  */
-char tSymbolsElements[] = { 'o', 'S' };
+const char tSymbolsElements[] = "oS";
 
- /* constantsandtypes.hpp */
- /********** END_OF_FILE **********/
+/* constantsandtypes.hpp */
+/********** END_OF_FILE **********/

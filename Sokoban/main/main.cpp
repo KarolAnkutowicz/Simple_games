@@ -4,6 +4,8 @@
  * file: main.cpp
  */
 
+#include "cstartgame.hpp"
+
 int main()
 {
 }

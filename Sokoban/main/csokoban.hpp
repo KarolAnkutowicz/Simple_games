@@ -16,7 +16,7 @@
  */
 class cSokoban
 {
-    /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 public:
 
@@ -27,7 +27,7 @@ public:
      * POST:
      * - brak.
      */
-    //cSokoban();
+    cSokoban();
 
     /*
      * cSokoban(cPosition posSok) - konstruktor wywolywany
@@ -51,9 +51,9 @@ public:
      */
     friend std::ostream & operator << (std::ostream & strOut, cSokoban& S);
 
-    /********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
-    /********** PRIVATE: BEGIN **********/
+/********** PRIVATE: BEGIN **********/
 
 private:
 
@@ -63,7 +63,7 @@ private:
      */
     cPosition positionSokoban;
 
-    /********** PRIVATE: END **********/
+/********** PRIVATE: END **********/
 };
 
 /* csokoban.hpp */
