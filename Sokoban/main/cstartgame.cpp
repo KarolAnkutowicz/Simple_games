@@ -6,5 +6,17 @@
 
 #include "cstartgame.hpp"
 
- /* cstartgame.cpp */
- /********** END_OF_FILE **********/
+/********** PUBLIC: BEGIN **********/
+
+/*
+ * cStartGame()
+ */
+cStartGame::cStartGame()
+{
+
+}
+
+/********** PUBLIC: END **********/
+
+/* cstartgame.cpp */
+/********** END_OF_FILE **********/

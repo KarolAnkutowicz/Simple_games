@@ -6,6 +6,9 @@
 
 #pragma once
 
+#include "constantsandtypes.hpp"
+#include "cposition.hpp"
+
 /*
  * cField - klasa modelujaca pojedyncze pole na tablicy gry.
  */
@@ -15,11 +18,26 @@ class cField
 
 public:
 
+    /*
+     * cField() - konstruktor wywolywany bez parametrow.
+     * PRE:
+     * - brak;
+     * POST:
+     * - utworzenie obiektu cField.
+     */
+    cField();
+
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/
 
 private:
+
+    /*
+     * cPosition postionField - skladowa pola - obiekt zawierajacy
+     * wspolrzedne i operujacy na nich.
+     */
+    cPosition postionField;
 
     /********** PRIVATE: END **********/
 };

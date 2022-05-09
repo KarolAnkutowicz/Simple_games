@@ -8,9 +8,9 @@
 
 /*
  * const char tTypesFields[]  - tablica oznaczen pol:
- * (n)othing, (b)ase, (s)ave_rock, (r)ock.
+ * (n)othing, (e)mpty base, (f)ull base, (w)all.
  */
-const char tTypesFields[] = "nbsr";
+const char tTypesFields[] = "nefw";
 
 /*
  * char tSymbolsFields[] - tablica symboli typow pol
