@@ -6,6 +6,10 @@
 
 #pragma once
 
+/*
+ * cPosition - klasa modelujaca pozycje pol
+ * oraz elementow ruchomych gry.
+ */
 class cPosition
 {
     /********** PUBLIC: BEGIN **********/

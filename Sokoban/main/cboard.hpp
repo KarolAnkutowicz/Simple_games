@@ -8,6 +8,9 @@
 
 #include "cfield.hpp"
 
+/*
+ * cBoard - klasa modelujaca plansze gry.
+ */
 class cBoard
 {
     /********** PUBLIC: BEGIN **********/
