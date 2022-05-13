@@ -6,5 +6,18 @@
 
 #include "cboard.hpp"
 
+/********** PUBLIC: BEGIN **********/
+
+/*
+ * cBoard()
+ */
+cBoard::cBoard()
+{
+
+}
+
+/********** PUBLIC: END **********/
+
+
  /* cboard.cpp */
  /********** END_OF_FILE **********/

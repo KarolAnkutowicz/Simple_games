@@ -25,7 +25,7 @@ public:
      * PRE:
      * - brak;
      * POST:
-     * - brak.
+     * - utworzenie obiektu cSokoban.
      */
     cSokoban();
 
@@ -58,10 +58,10 @@ public:
 private:
 
     /*
-     * cPosition posSokoban - pole bedace obiektem
+     * cPosition vPositionSokoban - pole bedace obiektem
      * opisujacym wspolrzedne postaci.
      */
-    cPosition positionSokoban;
+    cPosition vPositionSokoban;
 
 /********** PRIVATE: END **********/
 };

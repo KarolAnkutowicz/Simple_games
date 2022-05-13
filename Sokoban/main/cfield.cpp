@@ -6,5 +6,18 @@
 
 #include "cfield.hpp"
 
+/********** PUBLIC: BEGIN **********/
+
+/*
+ * cField()
+ */
+cField::cField()
+{
+
+}
+
+ /********** PUBLIC: END **********/
+
+
  /* cfield.cpp */
  /********** END_OF_FILE **********/

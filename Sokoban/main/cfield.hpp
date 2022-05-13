@@ -34,10 +34,10 @@ public:
 private:
 
     /*
-     * cPosition postionField - skladowa pola - obiekt zawierajacy
+     * cPosition vPositionField - skladowa pola - obiekt zawierajacy
      * wspolrzedne i operujacy na nich.
      */
-    cPosition postionField;
+    cPosition vPositionField;
 
     /********** PRIVATE: END **********/
 };

@@ -13,8 +13,8 @@
  */
 cSokoban::cSokoban()
 {
-	positionSokoban.setXPosition(0); // ustanowienie pozycji wertykalnej
-	positionSokoban.setYPosition(0); // ustanowienie pozycji horyzontalnej
+	vPositionSokoban.setXPosition(0); // ustanowienie pozycji wertykalnej
+	vPositionSokoban.setYPosition(0); // ustanowienie pozycji horyzontalnej
 }
 
 
@@ -23,8 +23,8 @@ cSokoban::cSokoban()
  */
 cSokoban::cSokoban(cPosition posSok)
 {
-	positionSokoban.setXPosition(posSok.getXPosition()); // ustanowienie pozycji wertykalnej
-	positionSokoban.setYPosition(posSok.getYPosition()); // ustanowienie pozycji horyzontalnej
+	vPositionSokoban.setXPosition(posSok.getXPosition()); // ustanowienie pozycji wertykalnej
+	vPositionSokoban.setYPosition(posSok.getYPosition()); // ustanowienie pozycji horyzontalnej
 }
 
 /*
