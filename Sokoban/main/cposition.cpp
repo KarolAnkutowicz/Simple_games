@@ -63,7 +63,7 @@ cPosition& cPosition::operator = (cPosition cPos)
  */
 cPosition& cPosition::operator = (cPosition&& cPos)
 {
-	if (this != &cPos) // sprawdzamy czy 
+	if (this != &cPos) // sprawdzamy czy chcemy przeniesc ten sam obiekt 
 	{
 		xPosition = cPos.xPosition; // ustanowienie wartosci wspolrzednej horyzontalnej
 		yPosition = cPos.yPosition; // ustanowienie wartosci wspolrzednej wertykalnej

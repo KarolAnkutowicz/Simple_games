@@ -39,23 +39,26 @@ public:
     cField(const cPosition cPos);
 
     /*
-     * cField(const cField& cFld) - konstruktor kopiujacy klasy cField.
+     * cField(const unsigned int aIndex) - konstruktor wywolywany
+     * z jednym parametrem - stala wspolrzedna tablicy symboli pol.
      * PRE:
-     * - podanie referencji do obiektu (typ: cField);
+     * - podanie wspolrzednej tablicy pol (typ: unsigned int);
      * POST:
      * - utworzenie obiektu cField.
      */
-    cField(const cField& cFld);
+    cField(const unsigned int aIndex);
 
     /*
-     * cField(cField&& cFld) - konstruktor przenoszacy klasy cField.
+     * cField(const cPosition cPos, const unsigned int aIndex) -
+     * konstruktor wywolywany z dwoma parametrami - stalym obiektem
+     * typu cPosition oraz stala wspolrzedna tablicy symboli pol.
      * PRE:
-     * - podanie referencji do obiektu (typ: cField);
+     * - podanie obiektu (typ: cPosition);
+     * - podanie wspolrzednej tablicy pol (typ: unsigned int);
      * POST:
      * - utworzenie obiektu cField.
      */
-    cField(cField&& cFld);
-
+    cField(const cPosition cPos, const unsigned int aIndex);
 
 
     /*
@@ -96,6 +99,11 @@ public:
      * wspolrzedne i operujacy na nich.
      */
     cPosition vPositionField;
+
+    /*
+     * unsigned int vIndex - pole okreslajacy wspolrzedna tablicy symboli.
+     */
+    unsigned int vIndex;
 
     /********** PUBLIC: END **********/
 };

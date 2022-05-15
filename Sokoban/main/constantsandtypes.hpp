@@ -10,7 +10,7 @@
  * const char tTypesFields[]  - tablica oznaczen pol:
  * (n)othing, (e)mpty base, (f)ull base, (w)all.
  */
-const char tTypesFields[] = "nefw";
+//const char tTypesFields[] = "nefw";
 
 /*
  * char tSymbolsFields[] - tablica symboli typow pol
