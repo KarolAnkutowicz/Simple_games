@@ -105,6 +105,19 @@ public:
     }
 
     /*
+     * cPosition getPosition() - metoda zwracajaca wartosc
+     * pola vPositionField.
+     * PRE:
+     * - brak;
+     * POST:
+     * - zwrocenie wartosci pola vPositionField.
+     */
+    inline cPosition getPosition()
+    {
+        return vPositionField;
+    }
+
+    /*
      * void setIndex(unsigned int aIndex) - metoda ustanawiajaca wartosc
      * pola vIndex.
      * PRE:
@@ -112,24 +125,34 @@ public:
      * POST:
      * - brak.
      */
-    inline void setIndex(unsigned int aIndex)
+    inline void setIndex(const unsigned int aIndex)
     {
         vIndex = aIndex;
     }
+    /********** PUBLIC: END **********/
 
+    /*
+     * void setPosition(const cPosition cPos) - metoda ustanawiajaca wartosc
+     * pola vPositionField.
+     * PRE:
+     * - podanie wartosci obniektu (typ: cPosition);
+     * POST:
+     * - brak.
+     */
+    inline void setPosition(const cPosition cPos)
+    {
+        vPositionField = cPos;
+    }
 
+private:
+
+    /********** PRIVATE: BEGIN **********/
 
     /*
      * cPosition vPositionField - skladowa pola - obiekt zawierajacy
      * wspolrzedne i operujacy na nich.
      */
     cPosition vPositionField;
-
-    /********** PUBLIC: END **********/
-
-private:
-
-    /********** PRIVATE: BEGIN **********/
 
     /*
      * unsigned int vIndex - pole okreslajacy wspolrzedna tablicy symboli.

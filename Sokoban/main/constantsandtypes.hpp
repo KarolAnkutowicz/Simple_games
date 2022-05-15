@@ -7,14 +7,8 @@
 #pragma once
 
 /*
- * const char tTypesFields[]  - tablica oznaczen pol:
- * (n)othing, (e)mpty base, (f)ull base, (w)all.
- */
-//const char tTypesFields[] = "nefw";
-
-/*
- * char tSymbolsFields[] - tablica symboli typow pol
- * na tablicy.
+ * char tSymbolsFields[] - tablica symboli typow pol na tablicy
+ * (polejno: puste pole, pusta baza, pelna baza, skala).
  */
 const char tSymbolsFields[] = " -+X";
 
