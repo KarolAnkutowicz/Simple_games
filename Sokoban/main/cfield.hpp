@@ -92,6 +92,31 @@ public:
      */
     friend std::ostream& operator << (std::ostream& strOut, cField& F);
 
+    /*
+     * unsigned int getIndex() - metoda zwracajaca wartosc pola vIndex.
+     * PRE:
+     * - brak;
+     * POST:
+     * - zwrocenie wartosci pola vIndex.
+     */
+    inline unsigned int getIndex()
+    {
+        return vIndex;
+    }
+
+    /*
+     * void setIndex(unsigned int aIndex) - metoda ustanawiajaca wartosc
+     * pola vIndex.
+     * PRE:
+     * - podanie wartosci indeksu (typ: unsigned int);
+     * POST:
+     * - brak.
+     */
+    inline void setIndex(unsigned int aIndex)
+    {
+        vIndex = aIndex;
+    }
+
 
 
     /*
@@ -100,12 +125,18 @@ public:
      */
     cPosition vPositionField;
 
+    /********** PUBLIC: END **********/
+
+private:
+
+    /********** PRIVATE: BEGIN **********/
+
     /*
      * unsigned int vIndex - pole okreslajacy wspolrzedna tablicy symboli.
      */
     unsigned int vIndex;
 
-    /********** PUBLIC: END **********/
+    /********** PRIVATE: END **********/
 };
 
 /* cfield.hpp */
