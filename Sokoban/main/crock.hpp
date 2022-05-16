@@ -39,7 +39,7 @@ public:
     cRock(const cRock& cRc);
 
     /*
-     * cRock() - konstruktor wywolywany bez parametrow.
+     * cRock(cRock&& cRc) - konstruktor wywolywany bez parametrow.
      * PRE:
      * - brak;
      * POST:
@@ -87,7 +87,10 @@ public:
      * POST:
      * - zwrocenie zawartosci pola vSave.
      */
-    bool getSave();
+    inline bool getSave()
+    {
+        return vSave;
+    }
 
     /*
      * void setSave(bool aSave) - metoda ustanawiajaca zawartosc pola vSave.
@@ -96,7 +99,10 @@ public:
      * POST:
      * - brak.
      */
-    void setSave(bool aSave);
+    inline void setSave(bool aSave)
+    {
+        vSave = aSave;
+    }
 
     /********** PUBLIC: END **********/
 
