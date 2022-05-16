@@ -8,6 +8,7 @@
 
 #include "constantsandtypes.hpp"
 #include "cposition.hpp"
+#include <iostream>
 
 /*
  * cRock - klasa modelujaca kamien znajdujacy sie
@@ -27,6 +28,75 @@ public:
      * - utworzenie obiektu cRock.
      */
     cRock();
+
+    /*
+     * cRock(const cRock& cRc) - konstruktor kopiujacy klasy cRock.
+     * PRE:
+     * - podanie stalej referancji obiektu (typ: cRock);
+     * POST:
+     * - utworzenie obiektu cRock.
+     */
+    cRock(const cRock& cRc);
+
+    /*
+     * cRock() - konstruktor wywolywany bez parametrow.
+     * PRE:
+     * - brak;
+     * POST:
+     * - utworzenie obiektu cRock.
+     */
+    cRock(cRock&& cRc);
+
+
+
+    /*
+     * cRock& operator = (cRock cRc) - operator przypisania klasy cRock.
+     * PRE:
+     * - obiekt klasy cRock;
+     * POST:
+     * - zwrocenie obiektu cRock.
+     */
+    cRock& operator = (cRock cRc);
+
+
+    /*
+     * cRock& operator = (cRock&& cRc) - operator przypisania
+     * przenoszenia klasy cRock.
+     * PRE:
+     * - referencja do obiektu klasy cRock;
+     * POST:
+     * - utworzenie obiektu cRock.
+     */
+    cRock& operator = (cRock&& cRc);
+
+    /*
+     * std::ostream& operator << (std::ostream& strout, cRock& R) -
+     * przeladowany operator wyjscia.
+     * PRE:
+     * - podanie referencji do obiektu (typ: ostream);
+     * - podanie referencji do obiektu (typ cRock);
+     * POST:
+     * - wypisanie zawartosci obiektu.
+     */
+    friend std::ostream& operator << (std::ostream& strout, cRock& R);
+
+    /*
+     * bool getSave() - metoda zwracajaca zawartosc pola vSave.
+     * PRE:
+     * - brak;
+     * POST:
+     * - zwrocenie zawartosci pola vSave.
+     */
+    bool getSave();
+
+    /*
+     * void setSave(bool aSave) - metoda ustanawiajaca zawartosc pola vSave.
+     * PRE:
+     * - podanie wartosci (typ: bool);
+     * POST:
+     * - brak.
+     */
+    void setSave(bool aSave);
 
     /********** PUBLIC: END **********/
 
