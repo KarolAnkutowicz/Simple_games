@@ -29,24 +29,6 @@ public:
      */
     cRock();
 
-    /*
-     * cRock(const cRock& cRc) - konstruktor kopiujacy klasy cRock.
-     * PRE:
-     * - podanie stalej referancji obiektu (typ: cRock);
-     * POST:
-     * - utworzenie obiektu cRock.
-     */
-    cRock(const cRock& cRc);
-
-    /*
-     * cRock(cRock&& cRc) - konstruktor wywolywany bez parametrow.
-     * PRE:
-     * - brak;
-     * POST:
-     * - utworzenie obiektu cRock.
-     */
-    cRock(cRock&& cRc);
-
 
 
     /*

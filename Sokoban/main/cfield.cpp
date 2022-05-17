@@ -57,7 +57,7 @@ cField& cField::operator = (cField cFld)
 {
 	vPositionField = cFld.vPositionField; // przypisanie wartosci obiektu cPosition
 	vIndex = cFld.vIndex; // przypisanie wartosci vIndex
-	return *this; // zwrocenie wartosci
+	return *this; // zwrocenie obiektu
 }
 
 /*
@@ -74,7 +74,7 @@ cField& cField::operator = (cField&& cFld)
 		cFld.vPositionField.setYPosition(0); // ustanowienie wartosci wspolrzednej wertykalnej obiektu zrodlowego
 		cFld.vIndex = 0; // ustanowienie wartosci indeksu tablicy symboli
 	}
-	return *this; // zwrocenie wartosci
+	return *this; // zwrocenie wskaznika do obiektu wynikowego
 }
 
 
