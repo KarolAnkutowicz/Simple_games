@@ -118,6 +118,19 @@ public:
     }
 
     /*
+     * bool getIsFull() - metoda zwracajaca wartosc
+     * pola vIsFull.
+     * PRE:
+     * - brak;
+     * POST:
+     * - zwrocenie wartosci pola vIsFull.
+     */
+    inline bool getIsFull()
+    {
+        return vIsFull;
+    }
+
+    /*
      * void setIndex(unsigned int aIndex) - metoda ustanawiajaca wartosc
      * pola vIndex.
      * PRE:
@@ -144,6 +157,19 @@ public:
         vPositionField = cPos;
     }
 
+    /*
+     * void setFull(const bool aIsFull) - metoda ustanawiajaca wartosc
+     * pola vIsFull.
+     * PRE:
+     * - podanie wartosci logicznej (typ: bool);
+     * POST:
+     * - brak.
+     */
+    inline void setFull(const bool aIsFull)
+    {
+        vIsFull = aIsFull;
+    }
+
 private:
 
     /********** PRIVATE: BEGIN **********/
@@ -158,6 +184,11 @@ private:
      * unsigned int vIndex - pole okreslajacy wspolrzedna tablicy symboli.
      */
     unsigned int vIndex;
+
+    /*
+     * bool vIsFull - pole okreslajace czy na polu jest umieszczony kamien.
+     */
+    bool vIsFull;
 
     /********** PRIVATE: END **********/
 };
