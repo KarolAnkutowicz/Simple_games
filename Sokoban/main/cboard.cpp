@@ -16,6 +16,30 @@ cBoard::cBoard()
 
 }
 
+/*
+ * cBoard(unsigned int aHigh, unsigned int aWide)
+ */
+cBoard::cBoard(unsigned int aHigh, unsigned int aWide)
+{
+
+}
+
+/*
+ * cBoard(const cBoard& cBr)
+ */
+cBoard::cBoard(const cBoard& cBr)
+{
+
+}
+
+/*
+ * cBoard(cBoard&& cBr)
+ */
+cBoard::cBoard(cBoard&& cBr)
+{
+
+}
+
 /********** PUBLIC: END **********/
 
 

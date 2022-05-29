@@ -7,6 +7,7 @@
 #pragma once
 
 #include "cfield.hpp"
+#include <memory>
 
 /*
  * cBoard - klasa modelujaca plansze gry.
@@ -25,6 +26,36 @@ public:
      * - utworzenie obiektu cBoard.
      */
     cBoard();
+
+    /*
+     * cBoard(unsigned int aHigh, unsigned int aWide) - konstruktor
+     * wywolywany z dwoma parametrami - wysokoscia oraz szerokoscia
+     * tablicy pol.
+     * PRE:
+     * - podanie wysokosci tablicy (typ: unsigned int);
+     * - podanie szerokosci tablicy (typ: unsigned int);
+     * POST:
+     * - utworzenie obiektu cBoard.
+     */
+    cBoard(unsigned int aHigh, unsigned int aWide);
+
+    /*
+     * cBoard(const cBoard& cBr) - konstruktor kopiujacy klasy cBoard.
+     * PRE:
+     * - podanie referencji stalej do obiektu (typ: cBoard&);
+     * POST:
+     * - utworzenie obiektu cBoard.
+     */
+    cBoard(const cBoard& cBr);
+
+    /*
+     * cBoard(cBoard&& cBr) - konstruktor przenoszacy klasy cBoard.
+     * PRE:
+     * - podanie referencji do obiektu przenoszonego (typ: cBoard&&);
+     * POST:
+     * - utworzenie obiektu cBoard.
+     */
+    cBoard(cBoard&& cBr);
 
     /*
      * unsigned int getHigh() - metoda zwracajaca wartosc pola vHigh.
@@ -83,9 +114,9 @@ public:
 private:
 
     /*
-     * cField* tabGameBoard - wskaznik do tablicy pol.
+     * std::unique_ptr<cField> tabGameBoard - wskaznik do tablicy pol.
      */
-    cField* tabGameBoard;
+    std::unique_ptr<cField[]> tabGameBoard;
 
     /*
      * unsigned int vHigh - wysokosc planszy.
