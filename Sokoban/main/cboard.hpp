@@ -57,6 +57,29 @@ public:
      */
     cBoard(cBoard&& cBr);
 
+
+
+    /*
+     * cBoard& operator = (cBoard cBr) - operator przypisania.
+     * PRE:
+     * - podanie obiektu (typ: cBoard);
+     * POST:
+     * - zwrocenie referencji do kopii obiektu.
+     */
+    cBoard& operator = (cBoard cBr);
+
+    /*
+     * cBoard& operator = (cBoard&& cBr) - operator przypisania
+     * przenoszenia.
+     * PRE:
+     * - podanie referenji do obiektu przenoszonego (typ: cBoard&&);
+     * POST:
+     * - zwrocenie referencji do kopii obiektu.
+     */
+    cBoard& operator = (cBoard&& cBoard);
+
+
+
     /*
      * unsigned int getHigh() - metoda zwracajaca wartosc pola vHigh.
      * PRE:

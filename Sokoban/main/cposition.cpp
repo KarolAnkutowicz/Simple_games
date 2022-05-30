@@ -55,7 +55,7 @@ cPosition& cPosition::operator = (cPosition cPos)
 {
 	xPosition = cPos.xPosition; // ustanowienie wartosci wspolrzednej horyzontalnej
 	yPosition = cPos.yPosition; // ustanowienie wartosci wspolrzednej wertykalnej
-	return *this; // zwrocenie wartosci
+	return *this; // zwrocenie referencji do obiektu
 }
 
 /*
