@@ -81,6 +81,16 @@ cBoard& cBoard::operator = (cBoard&& cBr)
 	return *this; // zwrocenie wskaznika do obiektu
 }
 
+
+
+/*
+ * void mBoardFromFile(std::string aFilename)
+ */
+void cBoard::mBoardFromFile(std::string aFilename)
+{
+
+}
+
 /********** PUBLIC: END **********/
 
 

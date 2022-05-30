@@ -7,6 +7,7 @@
 #pragma once
 
 #include "cfield.hpp"
+#include <fstream>
 #include <memory>
 
 /*
@@ -129,6 +130,16 @@ public:
     {
         vWide = aWide;
     }
+
+    /*
+     * void mBoardFromFile(std::string aFilename) - metoda wczytujaca
+     * tablice pol z pliku.
+     * PRE:
+     * - podanie nazwy pliku (typ: string);
+     * POST:
+     * - brak.
+     */
+    void mBoardFromFile(std::string aFilename);
 
     /********** PUBLIC: END **********/
 
