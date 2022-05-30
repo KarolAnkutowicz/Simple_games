@@ -9,8 +9,10 @@
 #include "cboard.hpp"
 #include "cfield.hpp"
 #include "constantsandtypes.hpp"
+#include "crock.hpp"
 #include "csokoban.hpp"
 #include <memory>
+#include <vector>
 
 /*
  * cStartGame - klasa modelujaca obsluge gry.
@@ -30,6 +32,37 @@ public:
      */
     cStartGame();
 
+
+
+    /*
+     * void mHandlingGame() - glowna metoda zajmujaca sie obsluga gry.
+     * PRE:
+     * - brak;
+     * POST:
+     * - brak.
+     */
+    void mHandlingGame();
+
+    /*
+     * bool mPossibleMove(cField* aStart, cField* aMeta) - metoda sprawdzajaca
+     * czy ruch pomiedzy wskazanymi punktami jest mozliwy.
+     * PRE:
+     * - podanie wskaznika do punktu poczatkowego (typ: cField*);
+     * - podanie wskaznika do punktu koncowego (typ: cField*);
+     * POST:
+     * - zwrocenie wartosi logicznej mozliwosci wykonania ruchu.
+     */
+    bool mPossibleMove(cField* aStart, cField* aMeta);
+
+    /*
+     * bool mYouWin() - metoda sprawdzajaca czy udalo sie wygrac.
+     * PRE:
+     * - brak;
+     * POST:
+     * - brak.
+     */
+    bool mYouWin();
+
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/
@@ -37,14 +70,20 @@ public:
 private:
 
     /*
-     * std::unique_ptr<cBoard> board - wskaznik na plansze gry.
+     * std::unique_ptr<cBoard> vBoard - wskaznik na plansze gry.
      */
-    std::unique_ptr<cBoard> board;
+    std::unique_ptr<cBoard> vBoard;
    
     /*
-     * std::unique_ptr<cSokoban> sokoban - wskaznik na glowna postac.
+     * std::unique_ptr<cSokoban> vSokoban - wskaznik na glowna postac.
      */
-    std::unique_ptr<cSokoban> sokoban;
+    std::unique_ptr<cSokoban> vSokoban;
+
+    /*
+     * std::vector<cRock> vRocks - wektor kamieni, ktore musimy
+     * przemiescic na wskazane pola.
+     */
+    std::vector<cRock> vRocks;
 
     /********** PRIVATE: END **********/
 };
