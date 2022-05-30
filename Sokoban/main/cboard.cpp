@@ -13,7 +13,9 @@
  */
 cBoard::cBoard()
 {
-
+	vHigh = 10; // ustanowienie wysokosci planszy
+	vWide = 10; // ustanowienie szerokosci planszy
+	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
 }
 
 /*
@@ -21,7 +23,9 @@ cBoard::cBoard()
  */
 cBoard::cBoard(unsigned int aHigh, unsigned int aWide)
 {
-
+	vHigh = aHigh; // ustanowienie wysokosci planszy
+	vWide = aWide; // ustanowienie szerokosci planszy
+	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
 }
 
 /*
@@ -29,7 +33,9 @@ cBoard::cBoard(unsigned int aHigh, unsigned int aWide)
  */
 cBoard::cBoard(const cBoard& cBr)
 {
-
+	vHigh = cBr.vHigh; // ustanowienie wysokosci planszy
+	vWide = cBr.vWide; // ustanowienie szerokosci planszy
+	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
 }
 
 /*
@@ -37,7 +43,11 @@ cBoard::cBoard(const cBoard& cBr)
  */
 cBoard::cBoard(cBoard&& cBr)
 {
-
+	vHigh = cBr.vHigh; // ustanowienie wysokosci planszy
+	vWide = cBr.vWide; // ustanowienie szerokosci planszy
+	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	cBr.vHigh = 0;
+	cBr.vWide = 0;
 }
 
 /********** PUBLIC: END **********/
