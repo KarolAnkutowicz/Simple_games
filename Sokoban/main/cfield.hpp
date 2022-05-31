@@ -61,6 +61,7 @@ public:
     cField(const cPosition cPos, const unsigned int aIndex);
 
 
+
     /*
      * cField& operator = (cField cFld) - operator przypisania
      * klasy cField.
@@ -77,7 +78,7 @@ public:
      * PRE:
      * - podanie referencji do obiektu (typ: cField);
      * POST:
-     * - utworzenie obiektu cField.
+     * - zwrocenie referencji do obiektu cField.
      */
     cField& operator = (cField&& cFld);
 
@@ -88,7 +89,7 @@ public:
      * - podanie referencji do obiektu (typ: ostream);
      * - podanie referencji do obiektu (typ: cField);
      * POST:
-     * - utworzenie obiektu cField.
+     * - zwrocenie referencji do obiektu cField.
      */
     friend std::ostream& operator << (std::ostream& strOut, cField& F);
 
