@@ -7,6 +7,7 @@
 #pragma once
 
 #include "cfield.hpp"
+#include <iostream>
 #include <memory>
 
 /*
@@ -77,6 +78,17 @@ public:
      * - zwrocenie referencji do kopii obiektu.
      */
     cBoard& operator = (cBoard&& cBoard);
+
+    /*
+     * std::ostream& operator << (std::ostream& strOut, cBoard& cBr) -
+     * operator wyjscia strumienia.
+     * PRE:
+     * - podanie referenji do obiektu (typ: iostream&);
+     * - podanie referenji do obiektu (typ: cBoard&);
+     * POST:
+     * - zwrocenie referencji do strumienia wyjsciowego.
+     */
+    friend std::ostream& operator << (std::ostream& strOut, cBoard& cBr);
 
 
 

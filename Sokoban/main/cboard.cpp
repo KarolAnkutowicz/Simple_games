@@ -83,6 +83,20 @@ cBoard& cBoard::operator = (cBoard&& cBr)
 	return *this; // zwrocenie wskaznika do obiektu
 }
 
+/*
+ * std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
+ */
+std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
+{
+	for (unsigned int i = 0; i < cBr.getHigh(); i++) // przejscie po wszystkich wierszach
+	{
+		for (unsigned int j = 0; j < cBr.getWide(); j++) // przejscie po wszystkich kolumnach
+			strOut << cBr.tabGameBoard[i * cBr.getWide() + j]; // wypisanie zawartosci pola
+		strOut << '\n'; // przejscie do nowej linii
+	}
+	return strOut; // zwrocenie strumienia
+}
+
 
 
 /*
