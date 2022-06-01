@@ -18,6 +18,18 @@ cBoard::cBoard()
 	vHigh = 10; // ustanowienie wysokosci planszy
 	vWide = 10; // ustanowienie szerokosci planszy
 	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	cPosition cPos;
+	for (unsigned int i = 0; i < vHigh; i++)
+	{
+		for (unsigned int j = 0; j < vWide; j++)
+		{
+			tabGameBoard[i * vWide + j].setIndex(3);
+			tabGameBoard[i * vWide + j].setFull(false);
+			cPos.setXPosition(i);
+			cPos.setYPosition(j);
+			tabGameBoard[i * vWide + j].setPosition(cPos);
+		}
+	}
 }
 
 /*
@@ -116,14 +128,18 @@ void cBoard::mBoardFromFile(std::string aFilename)
 		bool full; // deklaracja zmiennej zajetosci pola
 		cPosition cPos; // deklaracja obiektu okreslajacego pozycje pola
 		strIn >> std::skipws >> vHg >> vWd; // wczytanie wymiarow tablicy
-		vHigh = vHg; // ustanowienie wysokosci tablicy
-		vWide = vWd; // ustanowienie szerokosci tablicy
+		std::cout << "Wczytanie pliku 1\n";
+		setHigh(vHg); // ustanowienie wysokosci tablicy
+		std::cout << "Wczytanie pliku 2\n";
+		setWide(vWd); // ustanowienie szerokosci tablicy
+		std::cout << "Wczytanie pliku 3\n";
 		std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy o pobranych pomiarach
+		std::cout << "Wczytanie pliku 4\n";
 		for (unsigned int i = 0; i < vHigh; i++) // przejscie po wszystkich wierszach
 		{
 			for (unsigned int j = 0; j < vWide; j++) // przejscie po wszystkich kolumnach
 			{
-				strIn >> c; // wczytanie znaku
+				strIn >> std::noskipws >> c; // wczytanie znaku
 				full = false; // ustanowienie zajetosci pola
 				switch (c) // wybranie indeksu tablicy pol na podstawie wczytanego znaku
 				{

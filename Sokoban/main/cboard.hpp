@@ -159,7 +159,7 @@ public:
 private:
 
     /*
-     * std::unique_ptr<cField> tabGameBoard - wskaznik do tablicy pol.
+     * std::unique_ptr<cField[]> tabGameBoard - wskaznik do tablicy pol.
      */
     std::unique_ptr<cField[]> tabGameBoard;
 

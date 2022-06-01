@@ -8,6 +8,7 @@
 
 int main()
 {
+	cStartGame C;
 }
 
 /* main.cpp */
