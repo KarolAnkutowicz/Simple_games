@@ -10,7 +10,7 @@
  * char tSymbolsFields[] - tablica symboli typow pol na tablicy
  * (polejno: puste pole, pusta baza, pelna baza, skala).
  */
-const char tSymbolsFields[] = " -+X";
+const char tSymbolsFields[] = ".-+X";
 
 /*
  * char tSymbolsElements[] - tablica symboli elemetow

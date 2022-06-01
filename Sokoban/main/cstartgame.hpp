@@ -72,12 +72,14 @@ private:
     /*
      * std::unique_ptr<cBoard> vBoard - wskaznik na plansze gry.
      */
-    std::unique_ptr<cBoard> vBoard;
+    //std::unique_ptr<cBoard> vBoard;
+    cBoard vBoard;
    
     /*
      * std::unique_ptr<cSokoban> vSokoban - wskaznik na glowna postac.
      */
-    std::unique_ptr<cSokoban> vSokoban;
+    //std::unique_ptr<cSokoban> vSokoban;
+    cSokoban vSokoban;
 
     /*
      * std::vector<cRock> vRocks - wektor kamieni, ktore musimy

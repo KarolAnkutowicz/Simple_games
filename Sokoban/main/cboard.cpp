@@ -17,7 +17,9 @@ cBoard::cBoard()
 {
 	vHigh = 10; // ustanowienie wysokosci planszy
 	vWide = 10; // ustanowienie szerokosci planszy
-	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	delete[]tabGameBoard;
+	tabGameBoard = new cField[vHigh * vWide];
 	cPosition cPos;
 	for (unsigned int i = 0; i < vHigh; i++)
 	{
@@ -39,7 +41,9 @@ cBoard::cBoard(unsigned int aHigh, unsigned int aWide)
 {
 	vHigh = aHigh; // ustanowienie wysokosci planszy
 	vWide = aWide; // ustanowienie szerokosci planszy
-	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	delete[]tabGameBoard;
+	tabGameBoard = new cField[vHigh * vWide];
 }
 
 /*
@@ -49,13 +53,15 @@ cBoard::cBoard(const cBoard& cBr)
 {
 	vHigh = cBr.vHigh; // ustanowienie wysokosci planszy
 	vWide = cBr.vWide; // ustanowienie szerokosci planszy
-	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	delete[]tabGameBoard;
+	tabGameBoard = new cField[vHigh * vWide];
 }
 
 /*
  * cBoard(cBoard&& cBr)
  */
-cBoard::cBoard(cBoard&& cBr)
+/*cBoard::cBoard(cBoard&& cBr)
 {
 	vHigh = cBr.vHigh; // ustanowienie wysokosci planszy
 	vWide = cBr.vWide; // ustanowienie szerokosci planszy
@@ -63,7 +69,7 @@ cBoard::cBoard(cBoard&& cBr)
 	cBr.vHigh = 0; // ustanowienie wysokosci obiektu przenoszonego
 	cBr.vWide = 0; // ustanowienie szerokosci obiektu przenoszonego
 	cBr.tabGameBoard = nullptr; // ustanowienie wskaznika na tablice pol przenoszeonego obiektu na nullptr;
-}
+}*/
 
 
 
@@ -74,14 +80,16 @@ cBoard& cBoard::operator = (cBoard cBr)
 {
 	vHigh = cBr.vHigh; // skopiowanie wysokosci planszy
 	vWide = cBr.vWide; // skopiowanie szerokosci planszy
-	std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
+	delete[]tabGameBoard;
+	tabGameBoard = new cField[vHigh * vWide];
 	return *this; // zwrocenie wskaznika do obiektu
 }
 
 /*
  * cBoard& operator = (cBoard&& cBr)
  */
-cBoard& cBoard::operator = (cBoard&& cBr)
+/*cBoard& cBoard::operator = (cBoard&& cBr)
 {
 	if (this != &cBr) //  sprawdzamy czy chcemy przeniesc ten sam obiekt
 	{
@@ -93,7 +101,7 @@ cBoard& cBoard::operator = (cBoard&& cBr)
 		cBr.tabGameBoard = nullptr; // ustanowienie wskaznika na tablice pol przenoszeonego obiektu na nullptr;
 	}
 	return *this; // zwrocenie wskaznika do obiektu
-}
+}*/
 
 /*
  * std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
@@ -128,18 +136,20 @@ void cBoard::mBoardFromFile(std::string aFilename)
 		bool full; // deklaracja zmiennej zajetosci pola
 		cPosition cPos; // deklaracja obiektu okreslajacego pozycje pola
 		strIn >> std::skipws >> vHg >> vWd; // wczytanie wymiarow tablicy
-		std::cout << "Wczytanie pliku 1\n";
+		//std::cout << "Wczytanie pliku 1\n";
 		setHigh(vHg); // ustanowienie wysokosci tablicy
-		std::cout << "Wczytanie pliku 2\n";
+		//std::cout << "Wczytanie pliku 2\n";
 		setWide(vWd); // ustanowienie szerokosci tablicy
-		std::cout << "Wczytanie pliku 3\n";
-		std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy o pobranych pomiarach
-		std::cout << "Wczytanie pliku 4\n";
+		//std::cout << "Wczytanie pliku 3\n";
+		//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy o pobranych pomiarach
+		delete[]tabGameBoard;
+		tabGameBoard = new cField[vHigh * vWide];
+		//std::cout << "Wczytanie pliku 4\n";
 		for (unsigned int i = 0; i < vHigh; i++) // przejscie po wszystkich wierszach
 		{
 			for (unsigned int j = 0; j < vWide; j++) // przejscie po wszystkich kolumnach
 			{
-				strIn >> std::noskipws >> c; // wczytanie znaku
+				strIn >> std::skipws >> c; // wczytanie znaku
 				full = false; // ustanowienie zajetosci pola
 				switch (c) // wybranie indeksu tablicy pol na podstawie wczytanego znaku
 				{

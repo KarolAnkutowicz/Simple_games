@@ -8,7 +8,7 @@
 
 #include "cfield.hpp"
 #include <iostream>
-#include <memory>
+//#include <memory>
 
 /*
  * cBoard - klasa modelujaca plansze gry.
@@ -56,7 +56,7 @@ public:
      * POST:
      * - utworzenie obiektu cBoard.
      */
-    cBoard(cBoard&& cBr);
+    //cBoard(cBoard&& cBr);
 
 
 
@@ -77,7 +77,7 @@ public:
      * POST:
      * - zwrocenie referencji do kopii obiektu.
      */
-    cBoard& operator = (cBoard&& cBoard);
+    //cBoard& operator = (cBoard&& cBoard);
 
     /*
      * std::ostream& operator << (std::ostream& strOut, cBoard& cBr) -
@@ -161,7 +161,8 @@ private:
     /*
      * std::unique_ptr<cField[]> tabGameBoard - wskaznik do tablicy pol.
      */
-    std::unique_ptr<cField[]> tabGameBoard;
+    //std::unique_ptr<cField[]> tabGameBoard;
+    cField* tabGameBoard;
 
     /*
      * unsigned int vHigh - wysokosc planszy.

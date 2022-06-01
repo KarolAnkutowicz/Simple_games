@@ -15,7 +15,7 @@
 cStartGame::cStartGame()
 {
 	std::cout << "konstruktor\n";
-	std::unique_ptr<cBoard> vBoard(new cBoard);
+	//std::unique_ptr<cBoard> vBoard(new cBoard);
 	mHandlingGame(); // wywolanie obslugi gry
 }
 
@@ -29,6 +29,7 @@ void cStartGame::mHandlingGame()
 	std::cout << "obsluga gry 1\n";
 	//vBoard->mBoardFromFile("level0.txt");
 	//std::cout << "obsluga gry 2\n";
+	vBoard.mBoardFromFile("level0.txt");
 	std::cout << vBoard;
 }
 
