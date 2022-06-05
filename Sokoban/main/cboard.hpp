@@ -88,7 +88,18 @@ public:
      * POST:
      * - zwrocenie referencji do strumienia wyjsciowego.
      */
-    friend std::ostream& operator << (std::ostream& strOut, cBoard& cBr);
+    //friend std::ostream& operator << (std::ostream& strOut, cBoard& cBr);
+
+    /*
+     * std::istream& operator >> (std::istream& strIn, cBoard& cBr) -
+     * operator wejscia strumienia.
+     * PRE:
+     * - podanie referenji do obiektu (typ: istream&);
+     * - podanie referenji do obiektu (typ: cBoard&);
+     * POST:
+     * - zwrocenie referencji do strumienia wejsciowego.
+     */
+    friend std::istream& operator >> (std::istream& strIn, cBoard& cBr);
 
 
 
@@ -150,7 +161,7 @@ public:
      * POST:
      * - brak.
      */
-    void mBoardFromFile(std::string aFilename);
+    //void mBoardFromFile(std::string aFilename);
 
     /********** PUBLIC: END **********/
 

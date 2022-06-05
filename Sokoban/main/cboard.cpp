@@ -106,7 +106,7 @@ cBoard& cBoard::operator = (cBoard cBr)
 /*
  * std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
  */
-std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
+/*std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
 {
 	for (unsigned int i = 0; i < cBr.getHigh(); i++) // przejscie po wszystkich wierszach
 	{
@@ -115,6 +115,17 @@ std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
 		strOut << '\n'; // przejscie do nowej linii
 	}
 	return strOut; // zwrocenie strumienia
+}*/
+
+/*
+ * std::istream& operator >> (std::istream& strIn, cBoard& cBr)
+ */
+std::istream& operator >> (std::istream& strIn, cBoard& cBr)
+{
+	/*
+	ciag dalszy...
+	*/
+	return strIn;
 }
 
 
@@ -122,7 +133,7 @@ std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
 /*
  * void mBoardFromFile(std::string aFilename)
  */
-void cBoard::mBoardFromFile(std::string aFilename)
+/*void cBoard::mBoardFromFile(std::string aFilename)
 {
 	std::ifstream strIn; // ustanowienie strumienia wejsciowego
 	strIn.open(aFilename); // otwarcie pliku
@@ -136,15 +147,11 @@ void cBoard::mBoardFromFile(std::string aFilename)
 		bool full; // deklaracja zmiennej zajetosci pola
 		cPosition cPos; // deklaracja obiektu okreslajacego pozycje pola
 		strIn >> std::skipws >> vHg >> vWd; // wczytanie wymiarow tablicy
-		//std::cout << "Wczytanie pliku 1\n";
 		setHigh(vHg); // ustanowienie wysokosci tablicy
-		//std::cout << "Wczytanie pliku 2\n";
 		setWide(vWd); // ustanowienie szerokosci tablicy
-		//std::cout << "Wczytanie pliku 3\n";
 		//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy o pobranych pomiarach
 		delete[]tabGameBoard;
 		tabGameBoard = new cField[vHigh * vWide];
-		//std::cout << "Wczytanie pliku 4\n";
 		for (unsigned int i = 0; i < vHigh; i++) // przejscie po wszystkich wierszach
 		{
 			for (unsigned int j = 0; j < vWide; j++) // przejscie po wszystkich kolumnach
@@ -166,7 +173,7 @@ void cBoard::mBoardFromFile(std::string aFilename)
 			}
 		}
 	}
-}
+}*/
 
 /********** PUBLIC: END **********/
 

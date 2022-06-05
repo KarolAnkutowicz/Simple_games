@@ -29,8 +29,8 @@ void cStartGame::mHandlingGame()
 	std::cout << "obsluga gry 1\n";
 	//vBoard->mBoardFromFile("level0.txt");
 	//std::cout << "obsluga gry 2\n";
-	vBoard.mBoardFromFile("level0.txt");
-	std::cout << vBoard;
+	//vBoard.mBoardFromFile("level0.txt");
+	//std::cout << vBoard;
 }
 
 /*
