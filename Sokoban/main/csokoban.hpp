@@ -42,7 +42,7 @@ public:
 
     /*
      * ostream & operator << (ostream & strOut, cSokoban& S) -
-     * przeladowanie operatora wyjscia klasy cSokoban.
+     * przeladowanie operatora wyjscia.
      * PRE:
      * - podanie referencji do klasy ostream;
      * - podanie referencji do klasy cSokoban;
@@ -50,6 +50,17 @@ public:
      * - zwrocenie strumienia wyjsciowego.
      */
     friend std::ostream & operator << (std::ostream & strOut, cSokoban& S);
+
+    /*
+     * istream& operator >> (istream& strIn, cSokoban& S) -
+     * przeladowanie operatora wejscia.
+     * PRE:
+     * - podanie referencji do klasy istream;
+     * - podanie referencji do klasy cSokoban;
+     * POST:
+     * - zwrocenie strumienia wejsciowego.
+     */
+    friend std::istream& operator >> (std::istream& strIn, cSokoban& S);
 
 /********** PUBLIC: END **********/
 

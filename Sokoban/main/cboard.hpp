@@ -80,7 +80,7 @@ public:
     //cBoard& operator = (cBoard&& cBoard);
 
     /*
-     * std::ostream& operator << (std::ostream& strOut, cBoard& cBr) -
+     * ostream& operator << (ostream& strOut, cBoard& cBr) -
      * operator wyjscia strumienia.
      * PRE:
      * - podanie referenji do obiektu (typ: iostream&);
@@ -91,7 +91,7 @@ public:
     //friend std::ostream& operator << (std::ostream& strOut, cBoard& cBr);
 
     /*
-     * std::istream& operator >> (std::istream& strIn, cBoard& cBr) -
+     * istream& operator >> (istream& strIn, cBoard& cBr) -
      * operator wejscia strumienia.
      * PRE:
      * - podanie referenji do obiektu (typ: istream&);

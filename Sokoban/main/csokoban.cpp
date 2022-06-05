@@ -36,6 +36,17 @@ std::ostream& operator << (std::ostream& strOut, cSokoban& S)
 	return strOut; // zwrocenie strumienia
 }
 
+/*
+ * istream& operator >> (istream& strIn, cSokoban& S)
+ */
+std::istream& operator >> (std::istream& strIn, cSokoban& S)
+{
+	/*
+	ciag dalszy...
+	*/
+	return strIn;
+}
+
 /********** PUBLIC: END **********/
 
  /* csokoban.cpp */

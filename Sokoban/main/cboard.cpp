@@ -104,7 +104,7 @@ cBoard& cBoard::operator = (cBoard cBr)
 }*/
 
 /*
- * std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
+ * ostream& operator << (ostream& strOut, cBoard& cBr)
  */
 /*std::ostream& operator << (std::ostream& strOut, cBoard& cBr)
 {
@@ -118,7 +118,7 @@ cBoard& cBoard::operator = (cBoard cBr)
 }*/
 
 /*
- * std::istream& operator >> (std::istream& strIn, cBoard& cBr)
+ * istream& operator >> (istream& strIn, cBoard& cBr)
  */
 std::istream& operator >> (std::istream& strIn, cBoard& cBr)
 {
