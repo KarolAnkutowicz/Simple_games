@@ -26,7 +26,7 @@ public:
      * POST:
      * - utworzenie obiektu cBoard.
      */
-    cBoard();
+    //cBoard();
 
     /*
      * cBoard(unsigned int aHigh, unsigned int aWide) - konstruktor
@@ -38,7 +38,7 @@ public:
      * POST:
      * - utworzenie obiektu cBoard.
      */
-    cBoard(unsigned int aHigh, unsigned int aWide);
+    //cBoard(unsigned int aHigh, unsigned int aWide);
 
     /*
      * cBoard(const cBoard& cBr) - konstruktor kopiujacy klasy cBoard.
@@ -47,7 +47,7 @@ public:
      * POST:
      * - utworzenie obiektu cBoard.
      */
-    cBoard(const cBoard& cBr);
+    //cBoard(const cBoard& cBr);
 
     /*
      * cBoard(cBoard&& cBr) - konstruktor przenoszacy klasy cBoard.
@@ -67,7 +67,7 @@ public:
      * POST:
      * - zwrocenie referencji do kopii obiektu.
      */
-    cBoard& operator = (cBoard cBr);
+    //cBoard& operator = (cBoard cBr);
 
     /*
      * cBoard& operator = (cBoard&& cBr) - operator przypisania
@@ -99,7 +99,7 @@ public:
      * POST:
      * - zwrocenie referencji do strumienia wejsciowego.
      */
-    friend std::istream& operator >> (std::istream& strIn, cBoard& cBr);
+    //friend std::istream& operator >> (std::istream& strIn, cBoard& cBr);
 
 
 
@@ -110,10 +110,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola vHigh.
      */
-    inline unsigned int getHigh()
+    /*inline unsigned int getHigh()
     {
         return vHigh;
-    }
+    }*/
 
     /*
      * unsigned int getWide() - metoda zwracajaca wartosc pola vWide.
@@ -122,10 +122,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola vWide.
      */
-    inline unsigned int  getWide()
+    /*inline unsigned int  getWide()
     {
         return vWide;
-    }
+    }*/
 
     /*
      * void setHigh(const unsigned int aHigh) - metoda ustanawiajaca
@@ -135,10 +135,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setHigh(const unsigned int aHigh)
+    /*inline void setHigh(const unsigned int aHigh)
     {
         vHigh = aHigh;
-    }
+    }*/
 
     /*
      * void setHigh(const unsigned int aWide) - metoda ustanawiajaca
@@ -148,10 +148,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setWide(const unsigned int aWide)
+    /*inline void setWide(const unsigned int aWide)
     {
         vWide = aWide;
-    }
+    }*/
 
     /*
      * void mBoardFromFile(std::string aFilename) - metoda wczytujaca

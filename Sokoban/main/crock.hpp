@@ -27,7 +27,7 @@ public:
      * POST:
      * - utworzenie obiektu cRock.
      */
-    cRock();
+    //cRock();
 
 
 
@@ -38,7 +38,7 @@ public:
      * POST:
      * - zwrocenie obiektu cRock.
      */
-    cRock& operator = (cRock cRc);
+    //cRock& operator = (cRock cRc);
 
 
     /*
@@ -49,18 +49,29 @@ public:
      * POST:
      * - utworzenie obiektu cRock.
      */
-    cRock& operator = (cRock&& cRc);
+    //cRock& operator = (cRock&& cRc);
 
     /*
-     * std::ostream& operator << (std::ostream& strout, cRock& R) -
+     * ostream& operator << (ostream& strOut, cRock& R) -
      * przeladowany operator wyjscia.
      * PRE:
      * - podanie referencji do obiektu (typ: ostream);
      * - podanie referencji do obiektu (typ cRock);
      * POST:
-     * - wypisanie zawartosci obiektu.
+     * - zwrocenie zawartosci strumienia wyjsciowego.
      */
-    friend std::ostream& operator << (std::ostream& strout, cRock& R);
+    //friend std::ostream& operator << (std::ostream& strOut, cRock& R);
+
+    /*
+     * istream& operator >> (istream& strIn, cRock& R) -
+     * przeladowany operator wejscia.
+     * PRE:
+     * - podanie referencji do obiektu (typ: istream);
+     * - podanie referencji do obiektu (typ cRock);
+     * POST:
+     * - zwrocenie zawartosci strumienia wejsciowego.
+     */
+    //friend std::istream& operator >> (std::istream& strIn, cRock& R);
 
     /*
      * bool getSave() - metoda zwracajaca zawartosc pola vSave.
@@ -69,10 +80,10 @@ public:
      * POST:
      * - zwrocenie zawartosci pola vSave.
      */
-    inline bool getSave()
+    /*inline bool getSave()
     {
         return vSave;
-    }
+    }*/
 
     /*
      * void setSave(bool aSave) - metoda ustanawiajaca zawartosc pola vSave.
@@ -81,10 +92,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setSave(bool aSave)
+    /*inline void setSave(bool aSave)
     {
         vSave = aSave;
-    }
+    }*/
 
     /********** PUBLIC: END **********/
 

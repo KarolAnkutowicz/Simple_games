@@ -27,7 +27,7 @@ public:
      * POST:
      * - utworzenie obiektu cSokoban.
      */
-    cSokoban();
+    //cSokoban();
 
     /*
      * cSokoban(cPosition posSok) - konstruktor wywolywany
@@ -38,7 +38,7 @@ public:
      * POST:
      * - brak.
      */
-    cSokoban(cPosition posSok);
+    //cSokoban(cPosition posSok);
 
     /*
      * ostream & operator << (ostream & strOut, cSokoban& S) -
@@ -49,7 +49,7 @@ public:
      * POST:
      * - zwrocenie strumienia wyjsciowego.
      */
-    friend std::ostream & operator << (std::ostream & strOut, cSokoban& S);
+    //friend std::ostream & operator << (std::ostream & strOut, cSokoban& S);
 
     /*
      * istream& operator >> (istream& strIn, cSokoban& S) -
@@ -60,7 +60,7 @@ public:
      * POST:
      * - zwrocenie strumienia wejsciowego.
      */
-    friend std::istream& operator >> (std::istream& strIn, cSokoban& S);
+    //friend std::istream& operator >> (std::istream& strIn, cSokoban& S);
 
 /********** PUBLIC: END **********/
 

@@ -30,7 +30,7 @@ public:
      * POST:
      * - utworzenie obiektu cStartGame.
      */
-    cStartGame();
+    //cStartGame();
 
 
 
@@ -41,7 +41,7 @@ public:
      * POST:
      * - brak.
      */
-    void mHandlingGame();
+    //void mHandlingGame();
 
     /*
      * bool mPossibleMove(cField* aStart, cField* aMeta) - metoda sprawdzajaca
@@ -52,7 +52,7 @@ public:
      * POST:
      * - zwrocenie wartosi logicznej mozliwosci wykonania ruchu.
      */
-    bool mPossibleMove(cField* aStart, cField* aMeta);
+    //bool mPossibleMove(cField* aStart, cField* aMeta);
 
     /*
      * bool mYouWin() - metoda sprawdzajaca czy udalo sie wygrac.
@@ -61,7 +61,7 @@ public:
      * POST:
      * - brak.
      */
-    bool mYouWin();
+    //bool mYouWin();
 
     /********** PUBLIC: END **********/
 

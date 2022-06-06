@@ -26,7 +26,7 @@ public:
      * POST:
      * - utworzenie obiektu cField.
      */
-    cField();
+    //cField();
 
     /*
      * cField(const cPosition cPos) - konstruktor wywolywany
@@ -36,7 +36,7 @@ public:
      * POST:
      * - utworzenie obiektu cField.
      */
-    cField(const cPosition cPos);
+    //cField(const cPosition cPos);
 
     /*
      * cField(const unsigned int aIndex) - konstruktor wywolywany
@@ -46,7 +46,7 @@ public:
      * POST:
      * - utworzenie obiektu cField.
      */
-    cField(const unsigned int aIndex);
+    //cField(const unsigned int aIndex);
 
     /*
      * cField(const cPosition cPos, const unsigned int aIndex) -
@@ -58,7 +58,7 @@ public:
      * POST:
      * - utworzenie obiektu cField.
      */
-    cField(const cPosition cPos, const unsigned int aIndex);
+    //cField(const cPosition cPos, const unsigned int aIndex);
 
 
 
@@ -70,7 +70,7 @@ public:
      * POST:
      * - utworzenie obiektu cField.
      */
-    cField& operator = (cField cFld);
+    //cField& operator = (cField cFld);
 
     /*
      * cField& operator = (cField&& cFld) - operator przypisania
@@ -80,7 +80,7 @@ public:
      * POST:
      * - zwrocenie referencji do obiektu cField.
      */
-    cField& operator = (cField&& cFld);
+    //cField& operator = (cField&& cFld);
 
     /*
      * std::ostream& operator << (std::ostream& strOut, cField& F) - 
@@ -91,7 +91,7 @@ public:
      * POST:
      * - zwrocenie referencji do obiektu cField.
      */
-    friend std::ostream& operator << (std::ostream& strOut, cField& F);
+    //friend std::ostream& operator << (std::ostream& strOut, cField& F);
 
     /*
      * unsigned int getIndex() - metoda zwracajaca wartosc pola vIndex.
@@ -100,10 +100,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola vIndex.
      */
-    inline unsigned int getIndex()
+    /*inline unsigned int getIndex()
     {
         return vIndex;
-    }
+    }*/
 
     /*
      * cPosition getPosition() - metoda zwracajaca wartosc
@@ -113,10 +113,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola vPositionField.
      */
-    inline cPosition getPosition()
+    /*inline cPosition getPosition()
     {
         return vPositionField;
-    }
+    }*/
 
     /*
      * bool getIsFull() - metoda zwracajaca wartosc
@@ -126,10 +126,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola vIsFull.
      */
-    inline bool getIsFull()
+    /*inline bool getIsFull()
     {
         return vIsFull;
-    }
+    }*/
 
     /*
      * void setIndex(unsigned int aIndex) - metoda ustanawiajaca wartosc
@@ -139,10 +139,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setIndex(const unsigned int aIndex)
+    /*inline void setIndex(const unsigned int aIndex)
     {
         vIndex = aIndex;
-    }
+    }*/
     /********** PUBLIC: END **********/
 
     /*
@@ -153,10 +153,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setPosition(const cPosition cPos)
+    /*inline void setPosition(const cPosition cPos)
     {
         vPositionField = cPos;
-    }
+    }*/
 
     /*
      * void setFull(const bool aIsFull) - metoda ustanawiajaca wartosc
@@ -166,10 +166,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setFull(const bool aIsFull)
+    /*inline void setFull(const bool aIsFull)
     {
         vIsFull = aIsFull;
-    }
+    }*/
 
 private:
 

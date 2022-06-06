@@ -13,7 +13,7 @@
 /*
  * cBoard()
  */
-cBoard::cBoard()
+/*cBoard::cBoard()
 {
 	vHigh = 10; // ustanowienie wysokosci planszy
 	vWide = 10; // ustanowienie szerokosci planszy
@@ -32,31 +32,31 @@ cBoard::cBoard()
 			tabGameBoard[i * vWide + j].setPosition(cPos);
 		}
 	}
-}
+}*/
 
 /*
  * cBoard(unsigned int aHigh, unsigned int aWide)
  */
-cBoard::cBoard(unsigned int aHigh, unsigned int aWide)
+/*cBoard::cBoard(unsigned int aHigh, unsigned int aWide)
 {
 	vHigh = aHigh; // ustanowienie wysokosci planszy
 	vWide = aWide; // ustanowienie szerokosci planszy
 	//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
 	delete[]tabGameBoard;
 	tabGameBoard = new cField[vHigh * vWide];
-}
+}*/
 
 /*
  * cBoard(const cBoard& cBr)
  */
-cBoard::cBoard(const cBoard& cBr)
+/*cBoard::cBoard(const cBoard& cBr)
 {
 	vHigh = cBr.vHigh; // ustanowienie wysokosci planszy
 	vWide = cBr.vWide; // ustanowienie szerokosci planszy
 	//std::unique_ptr<cField[]> tabGameBoard(new cField[vHigh * vWide]); // utworzenie nowej tablicy pol o wskazanych wymiarach
 	delete[]tabGameBoard;
 	tabGameBoard = new cField[vHigh * vWide];
-}
+}*/
 
 /*
  * cBoard(cBoard&& cBr)
@@ -76,7 +76,7 @@ cBoard::cBoard(const cBoard& cBr)
 /*
  * cBoard& operator = (cBoard cBr)
  */
-cBoard& cBoard::operator = (cBoard cBr)
+/*cBoard& cBoard::operator = (cBoard cBr)
 {
 	vHigh = cBr.vHigh; // skopiowanie wysokosci planszy
 	vWide = cBr.vWide; // skopiowanie szerokosci planszy
@@ -84,7 +84,7 @@ cBoard& cBoard::operator = (cBoard cBr)
 	delete[]tabGameBoard;
 	tabGameBoard = new cField[vHigh * vWide];
 	return *this; // zwrocenie wskaznika do obiektu
-}
+}*/
 
 /*
  * cBoard& operator = (cBoard&& cBr)
@@ -120,13 +120,13 @@ cBoard& cBoard::operator = (cBoard cBr)
 /*
  * istream& operator >> (istream& strIn, cBoard& cBr)
  */
-std::istream& operator >> (std::istream& strIn, cBoard& cBr)
+/*std::istream& operator >> (std::istream& strIn, cBoard& cBr)
 {
-	/*
-	ciag dalszy...
-	*/
+	//
+	//ciag dalszy...
+	//
 	return strIn;
-}
+}*/
 
 
 

@@ -23,7 +23,7 @@ public:
      * POST:
      * - utworzenie obiektu cPosition.
      */
-    cPosition();
+    //cPosition();
 
     /*
      * cPosition(int xPos, int yPos) - konstruktor wywolywany
@@ -35,7 +35,7 @@ public:
      * POST:
      * - utworzenie obiektu cPosition.
      */
-    cPosition(int xPos, int yPos);
+    //cPosition(int xPos, int yPos);
 
     /*
      * cPosition(const cPosition& cPos) - konstruktor kopiujacy
@@ -45,7 +45,7 @@ public:
      * POST:
      * - utworzenie obiektu cPosition.
      */
-    cPosition(const cPosition& cPos);
+    //cPosition(const cPosition& cPos);
 
     /*
      * cPosition(cPosition&& cPos) - konstruktor przenoszenia
@@ -55,7 +55,7 @@ public:
      * POST:
      * - utworzenie obiektu cPosition.
      */
-    cPosition(cPosition&& cPos);
+    //cPosition(cPosition&& cPos);
 
 
 
@@ -67,7 +67,7 @@ public:
      * POST:
      * - utworzenie obiektu cPosition.
      */
-    cPosition& operator = (cPosition cPos);
+    //cPosition& operator = (cPosition cPos);
 
     /*
      * cPosition& operator = (cPosition cPos) - operator przypisania
@@ -77,7 +77,7 @@ public:
      * POST:
      * - utworzenie obiektu cPosition.
      */
-    cPosition& operator = (cPosition&& cPos);
+    //cPosition& operator = (cPosition&& cPos);
 
 
 
@@ -89,10 +89,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola xPosition (typ: int).
      */
-    inline int getXPosition()
+    /*inline int getXPosition()
     {
         return xPosition;
-    }
+    }*/
 
     /*
      * int getYPosition() - metoda zwracajaca wartosc pola
@@ -102,10 +102,10 @@ public:
      * POST:
      * - zwrocenie wartosci pola yPosition (typ: int).
      */
-    inline int getYPosition()
+    /*inline int getYPosition()
     {
         return yPosition;
-    }
+    }*/
 
     /*
      * void setXPosition(int xPos) - metoda ustanawiajaca
@@ -115,10 +115,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setXPosition(int xPos)
+    /*inline void setXPosition(int xPos)
     {
         xPosition = xPos;
-    }
+    }*/
 
     /*
      * void setYPosition(int yPos) - metoda ustanawiajaca
@@ -128,10 +128,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void setYPosition(int yPos)
+    /*inline void setYPosition(int yPos)
     {
         yPosition = yPos;
-    }
+    }*/
 
     /*
      * void incrementXPosition() - metoda inkrementujaca
@@ -141,10 +141,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void incrementXPosition()
+    /*inline void incrementXPosition()
     {
         xPosition++;
-    }
+    }*/
 
     /*
      * void decrementXPosition() - metoda dekrementujaca
@@ -154,10 +154,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void decrementXPosition()
+    /*inline void decrementXPosition()
     {
         xPosition--;
-    }
+    }*/
 
     /*
      * void incrementYPosition() - metoda inkrementujaca
@@ -167,10 +167,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void incrementYPosition()
+    /*inline void incrementYPosition()
     {
         yPosition++;
-    }
+    }*/
 
     /*
      * void decrementYPosition() - metoda dekrementujaca
@@ -180,10 +180,10 @@ public:
      * POST:
      * - brak.
      */
-    inline void decrementYPosition()
+    /*inline void decrementYPosition()
     {
         yPosition--;
-    }
+    }*/
 
     /********** PUBLIC: END **********/
 
