@@ -25,8 +25,6 @@ public:
 
     void mPrintMenuOptions(cSymbols &Symbol);
 
-    void mPrintMenuBestResults();
-
     void mPrintMenuExit();
 
     inline void mPrintGet() { std::cout << "Your choice: "; }

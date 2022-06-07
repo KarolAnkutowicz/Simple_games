@@ -5,6 +5,7 @@
  */
 
 #include "cfilereader.hpp"
+#include <cstdlib>
 #include <fstream>
 #include <iomanip>
 #include <iostream>
@@ -24,6 +25,7 @@ void cFileReader::mListOfLevelsReader(std::string mFileName)
 
 void cFileReader::mEasyReader(std::string mFileName)
 {
+	system("cls");
 	std::ifstream strIn;
 	strIn.open(mFileName);
 	if (!strIn.is_open())
@@ -38,6 +40,7 @@ void cFileReader::mEasyReader(std::string mFileName)
 			std::cout << i;
 	}
 	strIn.close();
+	system("pause");
 }
 
 /********** PUBLIC: END **********/

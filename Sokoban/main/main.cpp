@@ -17,8 +17,6 @@ int main()
 	cFileReader Read;
 	cSymbols Symbols;
 	Print.mPrintWelcome();
-	system("pause");
-
 	char vOption;
 	bool vEnd = false;
 	do
@@ -30,7 +28,6 @@ int main()
 		{
 		case '1': 
 			Print.mPrintMenuStartGame();
-			system("pause");
 			break;
 		case '2': 
 			do
@@ -52,29 +49,21 @@ int main()
 					}
 					system("pause");
 				}
-				else 
+				else if (vOption != 'e')
 				{
-					if (vOption != 'e')
-					{
-						std::cout << "Character is not exist!\n\n";
-						system("pause");
-					}
+					std::cout << "Character is not exist!\n\n";
+					system("pause");
 				}
 			} while (vOption != 'e');
 			break;
 		case '3': 
-			Print.mPrintMenuBestResults();
-			system("pause");
+			Read.mEasyReader("bestresults.txt");
 			break;
 		case '4': 
-			system("cls");
 			Read.mEasyReader("tutorial.txt");
-			system("pause");
 			break;
 		case '5': 
-			system("cls");
 			Read.mEasyReader("credits.txt");
-			system("pause");
 			break;
 		case '6':
 			Print.mPrintMenuExit();

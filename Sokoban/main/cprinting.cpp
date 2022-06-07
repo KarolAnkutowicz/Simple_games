@@ -12,6 +12,7 @@ void cPrinting::mPrintWelcome()
 {
 	system("cls");
 	std::cout << " Welcome!\n\n";
+	system("pause");
 }
 
 void cPrinting::mPrintMenu()
@@ -30,6 +31,7 @@ void cPrinting::mPrintMenuStartGame()
 {
 	system("cls");
 	std::cout << "Let's play!\n\n";
+	system("pause");
 }
 
 void cPrinting::mPrintMenuOptions(cSymbols& Symbol)
@@ -43,12 +45,6 @@ void cPrinting::mPrintMenuOptions(cSymbols& Symbol)
 		" (" << Symbol.getCharacters(4) << ") - Sokoban\n"
 		" (" << Symbol.getCharacters(5) << ") - Rock\n\n"
 		" (e) - exit options\n\n";
-}
-
-void cPrinting::mPrintMenuBestResults()
-{
-	system("cls");
-	std::cout << "Best results\n\n";
 }
 
 void cPrinting::mPrintMenuExit()
