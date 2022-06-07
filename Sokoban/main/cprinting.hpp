@@ -1,7 +1,7 @@
 /********** BEGIN_OF_FILE **********/
 /*
  * author: Karol Ankutowicz
- * file: main.cpp
+ * file: cprinting.hpp
  */
 
 #pragma once
@@ -12,7 +12,7 @@ class cPrinting
 
 public:
 
-    cPrinting();
+    cPrinting(){};
 
     void mPrintWelcome();
 
@@ -33,5 +33,5 @@ public:
 /********** PUBLIC: END **********/
 };
 
-/* main.cpp */
+/* cprinting.hpp */
 /********** END_OF_FILE **********/

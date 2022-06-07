@@ -141,6 +141,7 @@
   <ItemGroup>
     <ClCompile Include="cboard.cpp" />
     <ClCompile Include="cfield.cpp" />
+    <ClCompile Include="cfilereader.cpp" />
     <ClCompile Include="cposition.cpp" />
     <ClCompile Include="cprinting.cpp" />
     <ClCompile Include="crock.cpp" />
@@ -151,6 +152,7 @@
   <ItemGroup>
     <ClInclude Include="cboard.hpp" />
     <ClInclude Include="cfield.hpp" />
+    <ClInclude Include="cfilereader.hpp" />
     <ClInclude Include="constantsandtypes.hpp" />
     <ClInclude Include="cposition.hpp" />
     <ClInclude Include="cprinting.hpp" />

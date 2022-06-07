@@ -1,15 +1,13 @@
 /********** BEGIN_OF_FILE **********/
 /*
  * author: Karol Ankutowicz
- * file: main.cpp
+ * file: cprinting.cpp
  */
 
 #include "cprinting.hpp"
 #include <iostream>
 
 /********** PUBLIC: BEGIN **********/
-
-cPrinting::cPrinting(){}
 
 void cPrinting::mPrintWelcome()
 {
@@ -67,5 +65,5 @@ void cPrinting::mPrintMenuExit()
 
  /********** PUBLIC: END **********/
 
- /* main.cpp */
+ /* cprinting.cpp */
  /********** END_OF_FILE **********/
