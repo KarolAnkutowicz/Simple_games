@@ -20,15 +20,50 @@ void cPrinting::mPrintWelcome()
 void cPrinting::mPrintMenu()
 {
 	system("CLS");
-	std::cout << "Main menu:\n1\n2\n3\n4\n5\n6\n\n";
+	std::cout << "Main menu:\n"
+		" (1) - Start game\n"
+		" (2) - Options\n"
+		" (3) - Best results\n"
+		" (4) - Tutorial\n"
+		" (5) - Credits\n"
+		" (6) - Exit\n\n";
 }
 
-void cPrinting::mPrintMenuEnd()
+void cPrinting::mPrintMenuStartGame()
 {
 	system("CLS");
-	std::cout << "Are you sure?\ny\nn\n\n";
+	std::cout << "Let's play!\n\n";
 }
 
+void cPrinting::mPrintMenuOptions()
+{
+	system("CLS");
+	std::cout << "Options\n\n";
+}
+
+void cPrinting::mPrintMenuBestResults()
+{
+	system("CLS");
+	std::cout << "Best results\n\n";
+}
+
+void cPrinting::mPrintMenuTutorial()
+{
+	system("CLS");
+	std::cout << "Tutorial\n\n";
+}
+
+void cPrinting::mPrintMenuCredits()
+{
+	system("CLS");
+	std::cout << "Credits\n\n";
+}
+
+void cPrinting::mPrintMenuExit()
+{
+	system("CLS");
+	std::cout << "Are you sure?\n(y)es\n(n)o\n\n";
+}
 
  /********** PUBLIC: END **********/
 

@@ -8,7 +8,8 @@
 
 class cPrinting
 {
-    /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
+
 public:
 
     cPrinting();
@@ -17,14 +18,19 @@ public:
 
     void mPrintMenu();
 
-    void mPrintMenuEnd();
+    void mPrintMenuStartGame();
 
-    /********** PUBLIC: END **********/
-    
-    /********** PRIVATE: BEGIN **********/
-private:
+    void mPrintMenuOptions();
 
-    /********** PRIVATE: BEGIN **********/
+    void mPrintMenuBestResults();
+
+    void mPrintMenuTutorial();
+
+    void mPrintMenuCredits();
+
+    void mPrintMenuExit();
+
+/********** PUBLIC: END **********/
 };
 
 /* main.cpp */

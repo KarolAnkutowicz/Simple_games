@@ -14,22 +14,40 @@ int main()
 	cPrinting Print;
 	Print.mPrintWelcome();
 	system("Pause");
-	Print.mPrintMenu();
 
 	char vOption;
 	bool vEnd = false;
 	do
 	{ 
+		Print.mPrintMenu();
 		std::cin >> vOption;
 		switch (vOption)
 		{
+		case '1': 
+			Print.mPrintMenuStartGame();
+			system("Pause");
+			break;
+		case '2': 
+			Print.mPrintMenuOptions();
+			system("Pause");
+			break;
+		case '3': 
+			Print.mPrintMenuBestResults();
+			system("Pause");
+			break;
+		case '4': 
+			Print.mPrintMenuTutorial();
+			system("Pause");
+			break;
+		case '5': 
+			Print.mPrintMenuCredits();
+			system("Pause");
+			break;
 		case '6':
-			{
-			Print.mPrintMenuEnd();
+			Print.mPrintMenuExit();
 			std::cin >> vOption;
 			if (vOption == 'y')
 				vEnd = true;
-			}
 			break;
 		}
 	} while (vEnd == false);
