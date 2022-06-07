@@ -6,7 +6,9 @@
 
 #include "cfilereader.hpp"
 #include <fstream>
+#include <iomanip>
 #include <iostream>
+#include <vector>
 
 /********** PUBLIC: BEGIN **********/
 
@@ -22,7 +24,20 @@ void cFileReader::mListOfLevelsReader(std::string mFileName)
 
 void cFileReader::mEasyReader(std::string mFileName)
 {
-	std::cout << "In the future it will open " << mFileName << " file...\n\n";
+	std::ifstream strIn;
+	strIn.open(mFileName);
+	if (!strIn.is_open())
+		std::cerr << "Not found a file!\n";
+	else
+	{
+		std::vector<char> vCharacters;
+		char c = 0;
+		while (strIn.get(c))
+			vCharacters.push_back(c);
+		for (const auto& i : vCharacters)
+			std::cout << i;
+	}
+	strIn.close();
 }
 
 /********** PUBLIC: END **********/
