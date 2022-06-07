@@ -153,12 +153,12 @@
     <ClInclude Include="cboard.hpp" />
     <ClInclude Include="cfield.hpp" />
     <ClInclude Include="cfilereader.hpp" />
-    <ClInclude Include="constantsandtypes.hpp" />
     <ClInclude Include="cposition.hpp" />
     <ClInclude Include="cprinting.hpp" />
     <ClInclude Include="crock.hpp" />
     <ClInclude Include="csokoban.hpp" />
     <ClInclude Include="cstartgame.hpp" />
+    <ClInclude Include="csymbols.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,7 +6,6 @@
 
 #pragma once
 
-#include "constantsandtypes.hpp"
 #include "cposition.hpp"
 #include <iostream>
 
