@@ -11,13 +11,13 @@
 
 void cPrinting::mPrintWelcome()
 {
-	system("CLS");
+	system("cls");
 	std::cout << "Welcome!\n\n";
 }
 
 void cPrinting::mPrintMenu()
 {
-	system("CLS");
+	system("cls");
 	std::cout << "Main menu:\n"
 		" (1) - Start game\n"
 		" (2) - Options\n"
@@ -29,37 +29,25 @@ void cPrinting::mPrintMenu()
 
 void cPrinting::mPrintMenuStartGame()
 {
-	system("CLS");
+	system("cls");
 	std::cout << "Let's play!\n\n";
 }
 
 void cPrinting::mPrintMenuOptions()
 {
-	system("CLS");
+	system("cls");
 	std::cout << "Options\n\n";
 }
 
 void cPrinting::mPrintMenuBestResults()
 {
-	system("CLS");
+	system("cls");
 	std::cout << "Best results\n\n";
-}
-
-void cPrinting::mPrintMenuTutorial()
-{
-	system("CLS");
-	std::cout << "Tutorial\n\n";
-}
-
-void cPrinting::mPrintMenuCredits()
-{
-	system("CLS");
-	std::cout << "Credits\n\n";
 }
 
 void cPrinting::mPrintMenuExit()
 {
-	system("CLS");
+	system("cls");
 	std::cout << "Are you sure?\n(y)es\n(n)o\n\n";
 }
 

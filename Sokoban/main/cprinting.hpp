@@ -24,10 +24,6 @@ public:
 
     void mPrintMenuBestResults();
 
-    void mPrintMenuTutorial();
-
-    void mPrintMenuCredits();
-
     void mPrintMenuExit();
 
 /********** PUBLIC: END **********/

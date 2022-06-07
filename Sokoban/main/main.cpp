@@ -5,6 +5,7 @@
  */
 
 //#include "cstartgame.hpp"
+#include "cfilereader.hpp"
 #include "cprinting.hpp"
 #include <cstdlib>
 #include <iostream>
@@ -12,8 +13,9 @@
 int main()
 {
 	cPrinting Print;
+	cFileReader Read;
 	Print.mPrintWelcome();
-	system("Pause");
+	system("pause");
 
 	char vOption;
 	bool vEnd = false;
@@ -25,23 +27,25 @@ int main()
 		{
 		case '1': 
 			Print.mPrintMenuStartGame();
-			system("Pause");
+			system("pause");
 			break;
 		case '2': 
 			Print.mPrintMenuOptions();
-			system("Pause");
+			system("pause");
 			break;
 		case '3': 
 			Print.mPrintMenuBestResults();
-			system("Pause");
+			system("pause");
 			break;
 		case '4': 
-			Print.mPrintMenuTutorial();
-			system("Pause");
+			system("cls");
+			Read.mEasyReader("tutorial.txt");
+			system("pause");
 			break;
 		case '5': 
-			Print.mPrintMenuCredits();
-			system("Pause");
+			system("cls");
+			Read.mEasyReader("credits.txt");
+			system("pause");
 			break;
 		case '6':
 			Print.mPrintMenuExit();
