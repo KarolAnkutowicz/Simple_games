@@ -23,7 +23,6 @@ class cStartGame
 
 public:
 
-
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/

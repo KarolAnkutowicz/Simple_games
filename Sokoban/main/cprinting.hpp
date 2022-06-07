@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "csymbols.hpp"
+
 class cPrinting
 {
 /********** PUBLIC: BEGIN **********/
@@ -20,7 +22,7 @@ public:
 
     void mPrintMenuStartGame();
 
-    void mPrintMenuOptions();
+    void mPrintMenuOptions(cSymbols &Symbol);
 
     void mPrintMenuBestResults();
 

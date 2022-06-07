@@ -33,10 +33,17 @@ void cPrinting::mPrintMenuStartGame()
 	std::cout << "Let's play!\n\n";
 }
 
-void cPrinting::mPrintMenuOptions()
+void cPrinting::mPrintMenuOptions(cSymbols& Symbol)
 {
 	system("cls");
-	std::cout << "Options\n\n";
+	std::cout << "Options\n\nChange symbols:\n\n"
+		" (" << Symbol.getCharacters(0) << ") - Free field\n"
+		" (" << Symbol.getCharacters(1) << ") - Free base\n"
+		" (" << Symbol.getCharacters(2) << ") - Full base\n"
+		" (" << Symbol.getCharacters(3) << ") - Wall\n"
+		" (" << Symbol.getCharacters(4) << ") - Sokoban\n"
+		" (" << Symbol.getCharacters(5) << ") - Rock\n\n"
+		" (e) - exit options\n\n";
 }
 
 void cPrinting::mPrintMenuBestResults()

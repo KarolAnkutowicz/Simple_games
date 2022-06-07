@@ -7,6 +7,7 @@
 //#include "cstartgame.hpp"
 #include "cfilereader.hpp"
 #include "cprinting.hpp"
+#include "csymbols.hpp"
 #include <cstdlib>
 #include <iostream>
 
@@ -14,6 +15,7 @@ int main()
 {
 	cPrinting Print;
 	cFileReader Read;
+	cSymbols Symbols;
 	Print.mPrintWelcome();
 	system("pause");
 
@@ -30,8 +32,33 @@ int main()
 			system("pause");
 			break;
 		case '2': 
-			Print.mPrintMenuOptions();
-			system("pause");
+			do
+			{
+				Print.mPrintMenuOptions(Symbols);
+				std::cin >> vOption;
+				if (Symbols.ifExist(vOption))
+				{
+					unsigned int vIndex = Symbols.getIndex(vOption);
+					std::cout << "Get new symbol: ";
+					std::cin >> vOption;
+					if (Symbols.ifExist(vOption) || vOption == 'e')
+						std::cout << "Change impossible - duplication symbol!\n\n";
+					else
+					{
+						Symbols.setCharacters(vIndex, vOption);
+						std::cout << "Change made.\n\n";
+					}
+					system("pause");
+				}
+				else 
+				{
+					if (vOption != 'e')
+					{
+						std::cout << "Character is not exist!\n\n";
+						system("pause");
+					}
+				}
+			} while (vOption != 'e');
 			break;
 		case '3': 
 			Print.mPrintMenuBestResults();
