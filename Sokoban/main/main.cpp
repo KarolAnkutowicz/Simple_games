@@ -4,11 +4,10 @@
  * file: main.cpp
  */
 
-#include "cstartgame.hpp"
+//#include "cstartgame.hpp"
 
 int main()
 {
-	//cStartGame C;
 }
 
 /* main.cpp */

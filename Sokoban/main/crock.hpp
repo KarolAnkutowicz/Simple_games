@@ -20,82 +20,6 @@ class cRock
 
 public:
 
-    /*
-     * cRock() - konstruktor wywolywany bez parametrow.
-     * PRE:
-     * - brak;
-     * POST:
-     * - utworzenie obiektu cRock.
-     */
-    //cRock();
-
-
-
-    /*
-     * cRock& operator = (cRock cRc) - operator przypisania klasy cRock.
-     * PRE:
-     * - obiekt klasy cRock;
-     * POST:
-     * - zwrocenie obiektu cRock.
-     */
-    //cRock& operator = (cRock cRc);
-
-
-    /*
-     * cRock& operator = (cRock&& cRc) - operator przypisania
-     * przenoszenia klasy cRock.
-     * PRE:
-     * - referencja do obiektu klasy cRock;
-     * POST:
-     * - utworzenie obiektu cRock.
-     */
-    //cRock& operator = (cRock&& cRc);
-
-    /*
-     * ostream& operator << (ostream& strOut, cRock& R) -
-     * przeladowany operator wyjscia.
-     * PRE:
-     * - podanie referencji do obiektu (typ: ostream);
-     * - podanie referencji do obiektu (typ cRock);
-     * POST:
-     * - zwrocenie zawartosci strumienia wyjsciowego.
-     */
-    //friend std::ostream& operator << (std::ostream& strOut, cRock& R);
-
-    /*
-     * istream& operator >> (istream& strIn, cRock& R) -
-     * przeladowany operator wejscia.
-     * PRE:
-     * - podanie referencji do obiektu (typ: istream);
-     * - podanie referencji do obiektu (typ cRock);
-     * POST:
-     * - zwrocenie zawartosci strumienia wejsciowego.
-     */
-    //friend std::istream& operator >> (std::istream& strIn, cRock& R);
-
-    /*
-     * bool getSave() - metoda zwracajaca zawartosc pola vSave.
-     * PRE:
-     * - brak;
-     * POST:
-     * - zwrocenie zawartosci pola vSave.
-     */
-    /*inline bool getSave()
-    {
-        return vSave;
-    }*/
-
-    /*
-     * void setSave(bool aSave) - metoda ustanawiajaca zawartosc pola vSave.
-     * PRE:
-     * - podanie wartosci (typ: bool);
-     * POST:
-     * - brak.
-     */
-    /*inline void setSave(bool aSave)
-    {
-        vSave = aSave;
-    }*/
 
     /********** PUBLIC: END **********/
 
@@ -107,13 +31,13 @@ private:
      * cPosition vPositionRock - pole bedace obiektem okreslajacym
      * polozenie skaly na tablicy gry.
      */
-    cPosition vPositionRock;
+    //cPosition vPositionRock;
 
     /*
      * bool vSave - pole okreslajace czy skala jest na bezpiecznym
      * polu.
      */
-    bool vSave;
+    //bool vSave;
 
     /********** PRIVATE: END **********/
 };
