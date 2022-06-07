@@ -11,6 +11,14 @@ class cPrinting
     /********** PUBLIC: BEGIN **********/
 public:
 
+    cPrinting();
+
+    void mPrintWelcome();
+
+    void mPrintMenu();
+
+    void mPrintMenuEnd();
+
     /********** PUBLIC: END **********/
     
     /********** PRIVATE: BEGIN **********/
