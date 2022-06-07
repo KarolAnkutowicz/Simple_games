@@ -142,6 +142,7 @@
     <ClCompile Include="cboard.cpp" />
     <ClCompile Include="cfield.cpp" />
     <ClCompile Include="cposition.cpp" />
+    <ClCompile Include="cprinting.cpp" />
     <ClCompile Include="crock.cpp" />
     <ClCompile Include="csokoban.cpp" />
     <ClCompile Include="cstartgame.cpp" />
@@ -152,6 +153,7 @@
     <ClInclude Include="cfield.hpp" />
     <ClInclude Include="constantsandtypes.hpp" />
     <ClInclude Include="cposition.hpp" />
+    <ClInclude Include="cprinting.hpp" />
     <ClInclude Include="crock.hpp" />
     <ClInclude Include="csokoban.hpp" />
     <ClInclude Include="cstartgame.hpp" />
