@@ -6,17 +6,17 @@
 
 #pragma once
 
-/*
- * char tSymbolsFields[] - tablica symboli typow pol na tablicy
- * (polejno: puste pole, pusta baza, pelna baza, skala).
- */
-const char tSymbolsFields[] = ".-+X";
+const char constFieldFree = '.';
+const char constBaseFree = '-';
+const char constBaseFull = '+';
+const char constWall = 'X';
 
-/*
- * char tSymbolsElements[] - tablica symboli elemetow
- * ruchomych na tablicy podczas gry.
- */
-const char tSymbolsElements[] = "oS";
+const char tabBoardElements[] = { constFieldFree, constBaseFree, constBaseFull, constWall };
+
+const char moveSokoban = 'S';
+const char moveRock = 'o';
+
+const char tabMoveElements[] = { moveSokoban, moveRock };
 
 /* constantsandtypes.hpp */
 /********** END_OF_FILE **********/
