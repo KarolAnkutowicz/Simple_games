@@ -24,6 +24,7 @@ int main()
 	do
 	{ 
 		Print.mPrintMenu();
+		Print.mPrintGet();
 		std::cin >> vOption;
 		switch (vOption)
 		{
@@ -35,6 +36,7 @@ int main()
 			do
 			{
 				Print.mPrintMenuOptions(Symbols);
+				Print.mPrintGet();
 				std::cin >> vOption;
 				if (Symbols.ifExist(vOption))
 				{
@@ -76,6 +78,7 @@ int main()
 			break;
 		case '6':
 			Print.mPrintMenuExit();
+			Print.mPrintGet();
 			std::cin >> vOption;
 			if (vOption == 'y')
 				vEnd = true;

@@ -7,6 +7,7 @@
 #pragma once
 
 #include "csymbols.hpp"
+#include <iostream>
 
 class cPrinting
 {
@@ -27,6 +28,8 @@ public:
     void mPrintMenuBestResults();
 
     void mPrintMenuExit();
+
+    inline void mPrintGet() { std::cout << "Your choice: "; }
 
 /********** PUBLIC: END **********/
 };

@@ -5,20 +5,19 @@
  */
 
 #include "cprinting.hpp"
-#include <iostream>
 
 /********** PUBLIC: BEGIN **********/
 
 void cPrinting::mPrintWelcome()
 {
 	system("cls");
-	std::cout << "Welcome!\n\n";
+	std::cout << " Welcome!\n\n";
 }
 
 void cPrinting::mPrintMenu()
 {
 	system("cls");
-	std::cout << "Main menu:\n"
+	std::cout << "Main menu:\n\n"
 		" (1) - Start game\n"
 		" (2) - Options\n"
 		" (3) - Best results\n"
@@ -55,7 +54,7 @@ void cPrinting::mPrintMenuBestResults()
 void cPrinting::mPrintMenuExit()
 {
 	system("cls");
-	std::cout << "Are you sure?\n(y)es\n(n)o\n\n";
+	std::cout << "Are you sure?\n\n (y)es\n (n)o\n\n";
 }
 
  /********** PUBLIC: END **********/
