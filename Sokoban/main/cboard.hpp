@@ -6,12 +6,9 @@
 
 #pragma once
 
-//#include "cfield.hpp"
-//#include <iostream>
+#include "cfield.hpp"
+#include <vector>
 
-/*
- * cBoard - klasa modelujaca plansze gry.
- */
 class cBoard
 {
     /********** PUBLIC: BEGIN **********/
@@ -25,21 +22,9 @@ public:
 
 private:
 
-    /*
-     * std::unique_ptr<cField[]> tabGameBoard - wskaznik do tablicy pol.
-     */
-    //std::unique_ptr<cField[]> tabGameBoard;
-    //cField* tabGameBoard;
-
-    /*
-     * unsigned int vHigh - wysokosc planszy.
-     */
-    //unsigned int vHigh;
-
-    /*
-     * unsigned int vWide - szerokosc planszy
-     */
-    //unsigned int vWide;
+    std::vector <std::vector <cField> > tabElements;
+    unsigned int vHigh;
+    unsigned int vWide;
 
     /********** PRIVATE: END **********/
 };

@@ -6,13 +6,8 @@
 
 #pragma once
 
-//#include "constantsandtypes.hpp"
-//#include "cposition.hpp"
-//#include <iostream>
+#include "cposition.hpp"
 
-/*
- * cField - klasa modelujaca pojedyncze pole na tablicy gry.
- */
 class cField
 {
     /********** PUBLIC: BEGIN **********/
@@ -25,21 +20,9 @@ private:
 
     /********** PRIVATE: BEGIN **********/
 
-    /*
-     * cPosition vPositionField - skladowa pola - obiekt zawierajacy
-     * wspolrzedne i operujacy na nich.
-     */
-    //cPosition vPositionField;
-
-    /*
-     * unsigned int vIndex - pole okreslajacy wspolrzedna tablicy symboli.
-     */
-    //unsigned int vIndex;
-
-    /*
-     * bool vIsFull - pole okreslajace czy na polu jest umieszczony kamien.
-     */
-    //bool vIsFull;
+    cPosition vPositionField;
+    unsigned int vSymbolIndex;
+    bool vIsFull;
 
     /********** PRIVATE: END **********/
 };

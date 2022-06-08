@@ -6,17 +6,10 @@
 
 #pragma once
 
-//#include "cboard.hpp"
-//#include "cfield.hpp"
-//#include "constantsandtypes.hpp"
-//#include "crock.hpp"
-//#include "csokoban.hpp"
-//#include <memory>
-//#include <vector>
+#include "cboard.hpp"
+#include "crock.hpp"
+#include "csokoban.hpp"
 
-/*
- * cStartGame - klasa modelujaca obsluge gry.
- */
 class cStartGame
 {
     /********** PUBLIC: BEGIN **********/
@@ -33,23 +26,9 @@ public:
 
 private:
 
-    /*
-     * std::unique_ptr<cBoard> vBoard - wskaznik na plansze gry.
-     */
-    //std::unique_ptr<cBoard> vBoard;
-    //cBoard vBoard;
-   
-    /*
-     * std::unique_ptr<cSokoban> vSokoban - wskaznik na glowna postac.
-     */
-    //std::unique_ptr<cSokoban> vSokoban;
-    //cSokoban vSokoban;
-
-    /*
-     * std::vector<cRock> vRocks - wektor kamieni, ktore musimy
-     * przemiescic na wskazane pola.
-     */
-    //std::vector<cRock> vRocks;
+    cBoard vBoard;
+    cSokoban vSokoban;
+    std::vector<cRock> vRocks;
 
     /********** PRIVATE: END **********/
 };

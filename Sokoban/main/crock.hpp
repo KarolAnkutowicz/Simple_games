@@ -7,12 +7,7 @@
 #pragma once
 
 #include "cposition.hpp"
-#include <iostream>
 
-/*
- * cRock - klasa modelujaca kamien znajdujacy sie
- * na planszy gry.
- */
 class cRock
 {
     /********** PUBLIC: BEGIN **********/
@@ -26,17 +21,8 @@ public:
 
 private:
 
-    /*
-     * cPosition vPositionRock - pole bedace obiektem okreslajacym
-     * polozenie skaly na tablicy gry.
-     */
-    //cPosition vPositionRock;
-
-    /*
-     * bool vSave - pole okreslajace czy skala jest na bezpiecznym
-     * polu.
-     */
-    //bool vSave;
+    cPosition vPositionRock;
+    bool vSave;
 
     /********** PRIVATE: END **********/
 };

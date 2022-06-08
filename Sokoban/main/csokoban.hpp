@@ -6,9 +6,7 @@
 
 #pragma once
 
-//#include "constantsandtypes.hpp"
-//#include "cposition.hpp"
-//#include <iostream>
+#include "cposition.hpp"
 
 /*
  * cSokoban - klasa modelujaca glowna postac gry,
@@ -27,11 +25,7 @@ public:
 
 private:
 
-    /*
-     * cPosition vPositionSokoban - pole bedace obiektem
-     * opisujacym wspolrzedne postaci.
-     */
-    //cPosition vPositionSokoban;
+    cPosition vPositionSokoban;
 
 /********** PRIVATE: END **********/
 };

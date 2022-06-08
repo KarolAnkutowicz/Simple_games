@@ -6,10 +6,6 @@
 
 #pragma once
 
-/*
- * cPosition - klasa modelujaca pozycje pol
- * oraz elementow ruchomych gry.
- */
 class cPosition
 {
     /********** PUBLIC: BEGIN **********/
@@ -23,17 +19,8 @@ public:
 
 private:
 
-    /*
-     * int xPosition - pole przechowujace wartosc
-     * wspolrzednej horyzontalnej.
-     */
-    //int xPosition;
-
-    /*
-     * int yPosition - pole przechowujace wartosc
-     * wspolrzednje wertykalnej.
-     */
-    //int yPosition;
+    unsigned int xPosition;
+    unsigned int yPosition;
 
     /********** PRIVATE: END **********/
 };

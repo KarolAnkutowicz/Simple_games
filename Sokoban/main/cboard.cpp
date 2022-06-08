@@ -5,8 +5,6 @@
  */
 
 #include "cboard.hpp"
-//#include <fstream>
-//#include <iomanip>
 
 /********** PUBLIC: BEGIN **********/
 
