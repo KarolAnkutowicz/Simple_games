@@ -18,12 +18,7 @@ void cFileReader::mLevelReader(std::string mFileName)
 	std::cout << "In the future it will open " << mFileName << " file...\n\n";
 }
 
-void cFileReader::mListOfLevelsReader(std::string mFileName)
-{
-	std::cout << "In the future it will open " << mFileName << " file...\n\n";
-}
-
-void cFileReader::mEasyReader(std::string mFileName)
+void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)
 {
 	system("cls");
 	std::ifstream strIn;
@@ -40,7 +35,8 @@ void cFileReader::mEasyReader(std::string mFileName)
 			std::cout << i;
 	}
 	strIn.close();
-	system("pause");
+	if (aSituation % 2 == 0)
+		system("pause");
 }
 
 /********** PUBLIC: END **********/

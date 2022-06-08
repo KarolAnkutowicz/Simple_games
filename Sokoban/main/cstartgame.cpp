@@ -5,9 +5,14 @@
  */
 
 #include "cstartgame.hpp"
-//#include <iostream>
+#include <iostream>
 
 /********** PUBLIC: BEGIN **********/
+
+void cStartGame::cPlay(unsigned int aLevel)
+{
+	std::cout << "Start level nr " << aLevel << "!\n\n";
+}
 
 
 /********** PUBLIC: END **********/

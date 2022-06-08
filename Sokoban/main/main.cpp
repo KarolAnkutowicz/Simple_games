@@ -4,7 +4,7 @@
  * file: main.cpp
  */
 
-//#include "cstartgame.hpp"
+#include "cstartgame.hpp"
 #include "cfilereader.hpp"
 #include "cprinting.hpp"
 #include "csymbols.hpp"
@@ -16,8 +16,10 @@ int main()
 	cPrinting Print;
 	cFileReader Read;
 	cSymbols Symbols;
+	cStartGame Start;
 	Print.mPrintWelcome();
 	char vOption;
+	unsigned int vLevel;
 	bool vEnd = false;
 	do
 	{ 
@@ -27,7 +29,11 @@ int main()
 		switch (vOption)
 		{
 		case '1': 
-			Print.mPrintMenuStartGame();
+			Read.mEasyReader("listlevels.txt", 1);
+			Print.mPrintGet();
+			std::cin >> vLevel;
+			Start.cPlay(vLevel);
+			system("pause");
 			break;
 		case '2': 
 			do

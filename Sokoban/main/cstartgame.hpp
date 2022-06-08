@@ -23,6 +23,10 @@ class cStartGame
 
 public:
 
+    cStartGame() {};
+
+    void cPlay(unsigned int aLevel);
+
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/

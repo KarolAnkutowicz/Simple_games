@@ -17,9 +17,7 @@ public:
 
 	void mLevelReader(std::string mFileName);
 
-	void mListOfLevelsReader(std::string mFileName);
-
-	void mEasyReader(std::string mFileName);
+	void mEasyReader(std::string mFileName, unsigned int aSituation = 0);
 
 /********** PUBLIC: END **********/
 };
