@@ -43,7 +43,7 @@ int main()
 				std::cin >> vOption;
 				if (Symbols.ifExist(vOption))
 				{
-					unsigned int vIndex = Symbols.getIndex(vOption);
+					indexChars vIndex = Symbols.getIndex(vOption);
 					std::cout << "Get new symbol: ";
 					std::cin >> vOption;
 					if (Symbols.ifExist(vOption) || vOption == 'e')

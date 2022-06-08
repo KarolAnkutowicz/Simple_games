@@ -21,7 +21,7 @@ private:
     /********** PRIVATE: BEGIN **********/
 
     cPosition vPositionField;
-    unsigned int vSymbolIndex;
+    indexChars vSymbolIndex;
     bool vIsFull;
 
     /********** PRIVATE: END **********/

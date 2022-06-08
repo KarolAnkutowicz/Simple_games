@@ -14,7 +14,7 @@ class cBoard
     /********** PUBLIC: BEGIN **********/
 
 public:
-
+    cBoard() {};
 
     /********** PUBLIC: END **********/
 
@@ -23,8 +23,8 @@ public:
 private:
 
     std::vector <std::vector <cField> > tabElements;
-    unsigned int vHigh;
-    unsigned int vWide;
+    coordinate vHigh;
+    coordinate vWide;
 
     /********** PRIVATE: END **********/
 };

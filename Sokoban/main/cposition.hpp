@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include "csymbols.hpp"
+
 class cPosition
 {
     /********** PUBLIC: BEGIN **********/
@@ -19,8 +21,8 @@ public:
 
 private:
 
-    unsigned int xPosition;
-    unsigned int yPosition;
+    coordinate xPosition;
+    coordinate yPosition;
 
     /********** PRIVATE: END **********/
 };

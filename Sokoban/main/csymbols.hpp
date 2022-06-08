@@ -6,6 +6,10 @@
 
 #pragma once
 
+typedef unsigned int coordinate;
+typedef unsigned int indexChars;
+const unsigned int numberChars = 6;
+
 class cSymbols
 {
 /********** PUBLIC: BEGIN **********/
@@ -14,13 +18,13 @@ public:
 
 	cSymbols() : vChars{'.', '-', '+', 'X', 'S', 'o'} {}
 
-	inline char getCharacters(unsigned int aIndex) { return vChars[aIndex % 6]; }
-	inline void setCharacters(unsigned int aIndex, char aChar) { vChars[aIndex % 6] = aChar; }
-	inline unsigned int getSize() { return 6; };
+	inline char getCharacters(indexChars aIndex) { return vChars[aIndex % numberChars]; }
+	inline void setCharacters(indexChars aIndex, char aChar) { vChars[aIndex % numberChars] = aChar; }
+	inline unsigned int getSize() { return numberChars; };
 	
 	bool ifExist (char aChar)
 	{
-		for (unsigned int i = 0; i < 6; i++)
+		for (indexChars i = 0; i < numberChars; i++)
 			if (vChars[i] == aChar)
 				return true;
 		return false;
