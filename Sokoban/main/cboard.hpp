@@ -14,7 +14,8 @@ class cBoard
     /********** PUBLIC: BEGIN **********/
 
 public:
-    cBoard() {};
+    cBoard() { vHigh = vWide = 10; }
+    cBoard(coordinate vHg, coordinate vWd) { vHigh = vHg; vWide = vWd; }
 
     /********** PUBLIC: END **********/
 

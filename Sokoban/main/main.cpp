@@ -32,7 +32,7 @@ int main()
 			Read.mEasyReader("listlevels.txt", 1);
 			Print.mPrintGet();
 			std::cin >> vLevel;
-			Start.cPlay(vLevel);
+			Start.mPlay(vLevel);
 			system("pause");
 			break;
 		case '2': 

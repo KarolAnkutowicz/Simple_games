@@ -18,7 +18,7 @@ public:
 
     cStartGame() {};
 
-    void cPlay(unsigned int aLevel);
+    void mPlay(unsigned int aLevel);
 
     /********** PUBLIC: END **********/
 

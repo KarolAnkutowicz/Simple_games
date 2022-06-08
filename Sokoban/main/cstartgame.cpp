@@ -9,7 +9,7 @@
 
 /********** PUBLIC: BEGIN **********/
 
-void cStartGame::cPlay(unsigned int aLevel)
+void cStartGame::mPlay(unsigned int aLevel)
 {
 	std::cout << "Start level nr " << aLevel << "!\n\n";
 }
