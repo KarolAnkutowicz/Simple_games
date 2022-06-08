@@ -15,6 +15,8 @@ class cFileReader
 public:
 	cFileReader(){};
 
+	void mInterruptedGameReader();
+	
 	void mLevelReader(std::string mFileName);
 
 	void mEasyReader(std::string mFileName, unsigned int aSituation = 0);
