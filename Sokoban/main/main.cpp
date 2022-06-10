@@ -29,7 +29,7 @@ int main()
 		switch (vOption)
 		{
 		case '1': 
-			Read.mEasyReader("listlevels.txt", 1);
+			Read.mEasyReader("./data_files /listlevels.txt", 1);
 			Print.mPrintGet();
 			std::cin >> vLevel;
 			Start.mPlay(vLevel);
@@ -63,13 +63,13 @@ int main()
 			} while (vOption != 'e');
 			break;
 		case '3': 
-			Read.mEasyReader("bestresults.txt");
+			Read.mEasyReader("./data_files/bestresults.txt");
 			break;
 		case '4': 
-			Read.mEasyReader("tutorial.txt");
+			Read.mEasyReader("./data_files/tutorial.txt");
 			break;
 		case '5': 
-			Read.mEasyReader("credits.txt");
+			Read.mEasyReader("./data_files/credits.txt");
 			break;
 		case '6':
 			Print.mPrintMenuExit();
