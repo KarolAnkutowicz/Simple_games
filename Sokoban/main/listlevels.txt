@@ -1,3 +1,0 @@
-List of available levels:
-
-(0) level0.txt
