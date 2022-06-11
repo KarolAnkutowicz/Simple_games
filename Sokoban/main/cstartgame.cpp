@@ -6,13 +6,19 @@
 
 #include "cstartgame.hpp"
 #include <iostream>
+#include <string>
 
 /********** PUBLIC: BEGIN **********/
 
-void cStartGame::mPlay(unsigned int aLevel)
+void cStartGame::mPlay(cFileReader& Reader, unsigned int aLevel)
 {
 	system("cls");
-	std::cout << "Start level nr " << aLevel << "!\n\n";
+	std::string vFullPath = "./data_files/" + std::to_string(aLevel);
+	vFullPath += "_level.txt";
+	Reader.mLevelReader(vFullPath);
+	std::cout << vFullPath;
+	system("pause");
+	//std::cout << "Start level nr " << aLevel << "!\n\n";
 }
 
 

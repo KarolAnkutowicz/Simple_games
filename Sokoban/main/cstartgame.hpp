@@ -7,6 +7,7 @@
 #pragma once
 
 #include "cboard.hpp"
+#include "cfilereader.hpp"
 #include "crock.hpp"
 #include "csokoban.hpp"
 
@@ -18,7 +19,7 @@ public:
 
     cStartGame() {};
 
-    void mPlay(unsigned int aLevel);
+    void mPlay(cFileReader& Reader, unsigned int aLevel);
 
 
     /********** PUBLIC: END **********/

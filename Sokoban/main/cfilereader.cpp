@@ -22,7 +22,15 @@ void cFileReader::mInterruptedGameReader()
 void cFileReader::mLevelReader(std::string mFileName)
 {
 	system("cls");
-	std::cout << "In the future it will open " << mFileName << " file...\n\n";
+	std::ifstream strIn;
+	strIn.open(mFileName);
+	if (!strIn.is_open())
+		std::cerr << "Not found a file!\n";
+	else
+		std::cout << "I found file!\n";
+	strIn.close();
+	system("pause");
+	//std::cout << "In the future it will open " << mFileName << " file...\n\n";
 }
 
 void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)

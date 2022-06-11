@@ -37,7 +37,7 @@ void cPrinting::mPrintMenuStartGame()
 void cPrinting::mPrintOpenInterruptedGame()
 {
 	system("cls");
-	std::cout << "Do you want resume saved game?\n\n(y)es\n\n";
+	std::cout << "Do you want resume saved game?\n\n (y)es\n\n";
 }
 
 void cPrinting::mPrintMenuOptions(cSymbols& Symbol)
@@ -56,7 +56,7 @@ void cPrinting::mPrintMenuOptions(cSymbols& Symbol)
 void cPrinting::mPrintMenuExit()
 {
 	system("cls");
-	std::cout << "Are you sure?\n\n (y)es\n (n)o\n\n";
+	std::cout << "Are you sure?\n\n (y)es\n\n";
 }
 
  /********** PUBLIC: END **********/
