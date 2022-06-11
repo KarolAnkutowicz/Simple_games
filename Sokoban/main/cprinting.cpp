@@ -34,6 +34,12 @@ void cPrinting::mPrintMenuStartGame()
 	system("pause");
 }
 
+void cPrinting::mPrintOpenInterruptedGame()
+{
+	system("cls");
+	std::cout << "Do you want resume saved game?\n\n(y)es\n\n";
+}
+
 void cPrinting::mPrintMenuOptions(cSymbols& Symbol)
 {
 	system("cls");

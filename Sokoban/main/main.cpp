@@ -29,10 +29,17 @@ int main()
 		switch (vOption)
 		{
 		case '1': 
-			Read.mEasyReader("./data_files /listlevels.txt", 1);
-			Print.mPrintGet();
-			std::cin >> vLevel;
-			Start.mPlay(vLevel);
+			Print.mPrintOpenInterruptedGame();
+			std::cin >> vOption;
+			if (vOption == 'y')
+				Read.mInterruptedGameReader();
+			else
+			{
+				Read.mEasyReader("./data_files/listlevels.txt", 1);
+				Print.mPrintGet();
+				std::cin >> vLevel;
+				Start.mPlay(vLevel);
+			}
 			system("pause");
 			break;
 		case '2': 

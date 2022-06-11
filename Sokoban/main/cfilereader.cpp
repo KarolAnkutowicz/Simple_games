@@ -13,14 +13,16 @@
 
 /********** PUBLIC: BEGIN **********/
 
-void cFileReader::mLevelReader(std::string mFileName)
-{
-	std::cout << "In the future it will open " << mFileName << " file...\n\n";
-}
-
 void cFileReader::mInterruptedGameReader()
 {
+	system("cls");
 	std::cout << "In the future it will open interrupted game...\n\n";
+}
+
+void cFileReader::mLevelReader(std::string mFileName)
+{
+	system("cls");
+	std::cout << "In the future it will open " << mFileName << " file...\n\n";
 }
 
 void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)

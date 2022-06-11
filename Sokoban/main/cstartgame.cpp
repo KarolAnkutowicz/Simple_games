@@ -11,6 +11,7 @@
 
 void cStartGame::mPlay(unsigned int aLevel)
 {
+	system("cls");
 	std::cout << "Start level nr " << aLevel << "!\n\n";
 }
 

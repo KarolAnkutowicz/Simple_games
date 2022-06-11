@@ -23,6 +23,8 @@ public:
 
     void mPrintMenuStartGame();
 
+    void mPrintOpenInterruptedGame();
+
     void mPrintMenuOptions(cSymbols &Symbol);
 
     void mPrintMenuExit();
