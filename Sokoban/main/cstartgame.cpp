@@ -16,7 +16,6 @@ void cStartGame::mPlay(cFileReader& Reader, unsigned int aLevel)
 	std::string vFullPath = "./data_files/" + std::to_string(aLevel);
 	vFullPath += "_level.txt";
 	Reader.mLevelReader(vFullPath);
-	std::cout << vFullPath;
 	system("pause");
 	//std::cout << "Start level nr " << aLevel << "!\n\n";
 }

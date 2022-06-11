@@ -8,7 +8,7 @@
 
 typedef unsigned int coordinate;
 typedef unsigned int indexChars;
-const unsigned int numberChars = 6;
+const indexChars numberChars = 6;
 
 class cSymbols
 {

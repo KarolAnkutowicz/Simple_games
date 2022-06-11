@@ -7,12 +7,19 @@
 #pragma once
 
 #include "cposition.hpp"
+#include <iostream>
 
 class cField
 {
     /********** PUBLIC: BEGIN **********/
 
 public:
+
+    friend std::istream& operator >> (std::istream& strIn, cField& F);
+
+    void setPositionField(cPosition P);
+    inline void setSymbolIndex(indexChars aSymbolIndex) { vSymbolIndex = aSymbolIndex; }
+    inline void setIsFull(bool aIsFull) { vIsFull = aIsFull; }
 
     /********** PUBLIC: END **********/
 

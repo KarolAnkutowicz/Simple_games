@@ -7,6 +7,7 @@
 #pragma once
 
 #include "cposition.hpp"
+#include <iostream>
 
 class cRock
 {
@@ -14,6 +15,9 @@ class cRock
 
 public:
 
+    friend std::istream& operator >> (std::istream& strIn, cRock& R);
+
+    inline void setSave(bool aSave) { vSave = aSave; }
 
     /********** PUBLIC: END **********/
 

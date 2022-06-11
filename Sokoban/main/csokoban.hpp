@@ -7,6 +7,8 @@
 #pragma once
 
 #include "cposition.hpp"
+#include "csymbols.hpp"
+#include <iostream>
 
 /*
  * cSokoban - klasa modelujaca glowna postac gry,
@@ -18,6 +20,7 @@ class cSokoban
 
 public:
 
+    friend std::istream& operator >> (std::istream& StrIn, cSokoban& S);
 
 /********** PUBLIC: END **********/
 

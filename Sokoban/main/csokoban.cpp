@@ -8,6 +8,15 @@
 
 /********** PUBLIC: BEGIN **********/
 
+std::istream& operator >> (std::istream& strIn, cSokoban& S)
+{
+	coordinate vX, vY;
+	strIn >> vX >> vY;
+	S.vPositionSokoban.setXPosition(vX);
+	S.vPositionSokoban.setYPosition(vY);
+	return strIn;
+}
+
 
 /********** PUBLIC: END **********/
 
