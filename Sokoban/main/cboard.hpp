@@ -7,6 +7,7 @@
 #pragma once
 
 #include "cfield.hpp"
+#include <iostream>
 #include <vector>
 
 class cBoard
@@ -16,6 +17,14 @@ class cBoard
 public:
     cBoard() { vHigh = vWide = 10; }
     cBoard(coordinate vHg, coordinate vWd) { vHigh = vHg; vWide = vWd; }
+
+    friend std::istream& operator >> (std::istream& strIn, cBoard& B);
+
+    inline void setHigh(coordinate vH) { vHigh = vH; }
+    inline void setWide(coordinate vW) { vWide = vW; }
+
+    inline coordinate getHigh() { return vHigh; }
+    inline coordinate getWide() { return vWide; }
 
     /********** PUBLIC: END **********/
 
