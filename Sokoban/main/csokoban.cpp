@@ -17,7 +17,6 @@ std::istream& operator >> (std::istream& strIn, cSokoban& S)
 	return strIn;
 }
 
-
 /********** PUBLIC: END **********/
 
  /* csokoban.cpp */

@@ -6,7 +6,7 @@
 
 #include "cfield.hpp"
 
- /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 std::istream& operator >> (std::istream& strIn, cField& F)
 {

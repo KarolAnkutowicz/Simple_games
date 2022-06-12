@@ -143,7 +143,6 @@
     <ClCompile Include="cfield.cpp" />
     <ClCompile Include="cfilecreator.cpp" />
     <ClCompile Include="cfilereader.cpp" />
-    <ClCompile Include="cposition.cpp" />
     <ClCompile Include="cprinting.cpp" />
     <ClCompile Include="crock.cpp" />
     <ClCompile Include="csokoban.cpp" />

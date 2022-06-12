@@ -19,7 +19,6 @@ void cFileCreator::mCreateBestResults()
 	std::cout << "In the future it will create best results...\n\n";
 }
 
-
 /********** PUBLIC: END **********/
 
 /* cfilecreator.cpp */

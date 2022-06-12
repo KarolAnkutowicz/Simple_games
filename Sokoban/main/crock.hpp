@@ -19,6 +19,8 @@ public:
 
     inline void setSave(bool aSave) { vSave = aSave; }
 
+    inline bool getSave() { return vSave; }
+
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/

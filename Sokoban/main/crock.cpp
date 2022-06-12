@@ -18,7 +18,6 @@ std::istream& operator >> (std::istream& strIn, cRock& R)
 	return strIn;
 }
 
-
 /********** PUBLIC: END **********/
 
 

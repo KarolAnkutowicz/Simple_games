@@ -20,7 +20,6 @@ void cStartGame::mPlay(cFileReader& Reader, unsigned int aLevel)
 	//std::cout << "Start level nr " << aLevel << "!\n\n";
 }
 
-
 /********** PUBLIC: END **********/
 
 /* cstartgame.cpp */
