@@ -12,8 +12,8 @@ std::istream& operator >> (std::istream& strIn, cSokoban& S)
 {
 	coordinate vX, vY;
 	strIn >> vX >> vY;
-	S.vPositionSokoban.setXPosition(vX);
-	S.vPositionSokoban.setYPosition(vY);
+	S.setXPosition(vX);
+	S.setYPosition(vY);
 	return strIn;
 }
 
