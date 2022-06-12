@@ -38,7 +38,8 @@ int main()
 				Read.mEasyReader("./data_files/listlevels.txt", 1);
 				Print.mPrintGet();
 				std::cin >> vLevel;
-				Start.mPlay(Read, vLevel);
+				Read.mLevelReader(vLevel/*, Start*/);
+				//Start.mPlay(Read, vLevel);
 			}
 			system("pause");
 			break;

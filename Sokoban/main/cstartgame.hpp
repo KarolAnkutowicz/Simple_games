@@ -19,7 +19,7 @@ public:
 
     cStartGame() {};
 
-    void mPlay(cFileReader& Reader, unsigned int aLevel);
+    //void mPlay(cFileReader& Reader, unsigned int aLevel);
 
 
     /********** PUBLIC: END **********/

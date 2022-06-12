@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "cstartgame.hpp"
 #include <string>
 
 class cFileReader
@@ -17,7 +18,8 @@ public:
 
 	void mInterruptedGameReader();
 	
-	void mLevelReader(std::string mFileName);
+	//void mLevelReader(std::string mFileName);
+	void mLevelReader(unsigned int aLevel/*, cStartGame& St*/);
 
 	void mEasyReader(std::string mFileName, unsigned int aSituation = 0);
 

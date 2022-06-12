@@ -19,7 +19,7 @@ void cFileReader::mInterruptedGameReader()
 	std::cout << "In the future it will open interrupted game...\n\n";
 }
 
-void cFileReader::mLevelReader(std::string mFileName)
+/*void cFileReader::mLevelReader(std::string mFileName)
 {
 	system("cls");
 	std::ifstream strIn;
@@ -31,6 +31,11 @@ void cFileReader::mLevelReader(std::string mFileName)
 	strIn.close();
 	system("pause");
 	//std::cout << "In the future it will open " << mFileName << " file...\n\n";
+}*/
+
+void cFileReader::mLevelReader(unsigned int aLevel/*, cStartGame& St*/)
+{
+	std::cout << "In the future it will open " << aLevel << " level...\n\n";
 }
 
 void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)
