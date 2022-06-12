@@ -26,9 +26,8 @@ std::istream& operator >> (std::istream& strIn, cBoard& B)
 		{
 			strIn >> c;
 			Fld.setSymbolIndex(Smb.getIndex(c));
-			Pst.setXPosition(i);
-			Pst.setYPosition(j);
-			Fld.setPositionField(Pst);
+			Fld.setXPosition(i);
+			Fld.setYPosition(j);
 			Fld.setIsFull(false);
 			vRow.push_back(Fld);
 		}

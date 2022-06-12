@@ -17,18 +17,11 @@ std::istream& operator >> (std::istream& strIn, cField& F)
 		F.setSymbolIndex(S.getIndex(c));
 	else
 		F.setSymbolIndex(0);
-	cPosition vPosition;
-	F.setPositionField(vPosition);
+	F.setXPosition(0);
+	F.setYPosition(0);
 	F.setIsFull(false);
 	return strIn;
 }
-
-void cField::setPositionField(cPosition P)
-{
-	vPositionField.setXPosition(P.getXposition());
-	vPositionField.setYPosition(P.getYposition());
-}
-
 
 /********** PUBLIC: END **********/
 

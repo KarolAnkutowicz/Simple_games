@@ -25,7 +25,6 @@ public:
 
 private:
 
-    //cPosition vPositionRock;
     bool vSave;
 
     /********** PRIVATE: END **********/

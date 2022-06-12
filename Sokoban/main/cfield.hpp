@@ -9,7 +9,7 @@
 #include "cposition.hpp"
 #include <iostream>
 
-class cField
+class cField : public cPosition
 {
     /********** PUBLIC: BEGIN **********/
 
@@ -17,15 +17,9 @@ public:
 
     friend std::istream& operator >> (std::istream& strIn, cField& F);
 
-    void setPositionField(cPosition P);
-    inline void setPositionX(coordinate aHigh) { vPositionField.setXPosition(aHigh); }
-    inline void setPositionY(coordinate aWide) { vPositionField.setYPosition(aWide); }
     inline void setSymbolIndex(indexChars aSymbolIndex) { vSymbolIndex = aSymbolIndex; }
     inline void setIsFull(bool aIsFull) { vIsFull = aIsFull; }
 
-    inline cPosition getPositionField() { return vPositionField; }
-    inline coordinate getPositionX() { return vPositionField.getXposition(); }
-    inline coordinate getPositionY() { return vPositionField.getYposition(); }
     inline indexChars getIndexChars() { return vSymbolIndex; }
     inline bool getIsFull() { return vIsFull; }
 
@@ -35,7 +29,6 @@ private:
 
     /********** PRIVATE: BEGIN **********/
 
-    cPosition vPositionField;
     indexChars vSymbolIndex;
     bool vIsFull;
 
