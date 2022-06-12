@@ -33,9 +33,23 @@ void cFileReader::mInterruptedGameReader()
 	//std::cout << "In the future it will open " << mFileName << " file...\n\n";
 }*/
 
-void cFileReader::mLevelReader(unsigned int aLevel/*, cStartGame& St*/)
+void cFileReader::mLevelReader(unsigned int aLevel/*, cStartGame& Start*/)
 {
-	std::cout << "In the future it will open " << aLevel << " level...\n\n";
+	system("cls");
+	std::string vFullPath = "./data_files/" + std::to_string(aLevel);
+	vFullPath += "_level.txt";
+	std::ifstream strIn;
+	strIn.open(vFullPath);
+	if (!strIn.is_open())
+		std::cerr << "Not found a file!\n";
+	else
+		std::cout << "I found file!\n";
+	strIn.close();
+	system("pause");
+
+	//system("cls");
+	//std::cout << "In the future it will open " << aLevel << " level...\n\n";
+	//system("pause");
 }
 
 void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)

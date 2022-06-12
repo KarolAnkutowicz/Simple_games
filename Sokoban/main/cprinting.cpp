@@ -61,6 +61,14 @@ void cPrinting::mPrintMenuStartGame()
 	system("pause");
 }
 
+void cPrinting::mPrintCurrentGame(cStartGame& Start)
+{
+	system("cls");
+	std::cout << "Actually you can't play :(\n\n";
+	system("pause");
+}
+
+
 void cPrinting::mPrintOpenInterruptedGame()
 {
 	system("cls");
