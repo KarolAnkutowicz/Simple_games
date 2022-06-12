@@ -29,7 +29,7 @@ public:
 
     /********** PRIVATE: BEGIN **********/
 
-private:
+protected:
 
     coordinate xPosition;
     coordinate yPosition;

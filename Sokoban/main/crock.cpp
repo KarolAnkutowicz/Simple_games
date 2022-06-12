@@ -12,8 +12,8 @@ std::istream& operator >> (std::istream& strIn, cRock& R)
 {
 	coordinate vX, vY;
 	strIn >> vX >> vY;
-	R.vPositionRock.setXPosition(vX);
-	R.vPositionRock.setYPosition(vY);
+	R.setXPosition(vX);
+	R.setYPosition(vY);
 	R.setSave(false);
 	return strIn;
 }

@@ -9,7 +9,7 @@
 #include "cposition.hpp"
 #include <iostream>
 
-class cRock
+class cRock : public cPosition
 {
     /********** PUBLIC: BEGIN **********/
 
@@ -25,7 +25,7 @@ public:
 
 private:
 
-    cPosition vPositionRock;
+    //cPosition vPositionRock;
     bool vSave;
 
     /********** PRIVATE: END **********/
