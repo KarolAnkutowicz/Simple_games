@@ -11,10 +11,10 @@
 std::istream& operator >> (std::istream& strIn, cBoard& B)
 {
 	coordinate vH, vW;
-	char c;
+	//char c;
 	cField Fld;
-	cSymbols Smb;
-	cPosition Pst;
+	//cSymbols Smb;
+	//cPosition Pst;
 	std::vector<cField> vRow;
 	strIn >> vH >> vW;
 	B.setHigh(vH);
@@ -24,16 +24,29 @@ std::istream& operator >> (std::istream& strIn, cBoard& B)
 		vRow.clear();
 		for (coordinate j = 0; j < B.getWide(); j++)
 		{
-			strIn >> c;
-			Fld.setSymbolIndex(Smb.getIndex(c));
-			Fld.setXPosition(i);
-			Fld.setYPosition(j);
-			Fld.setIsFull(false);
+			//strIn >> c;
+			//Fld.setSymbolIndex(Smb.getIndex(c));
+			//Fld.setXPosition(i);
+			//Fld.setYPosition(j);
+			//Fld.setIsFull(false);
+			//vRow.push_back(Fld);
+			strIn >> Fld;
 			vRow.push_back(Fld);
 		}
 		B.tabElements.push_back(vRow);
 	}
 	return strIn;
+}
+
+std::ostream& operator << (std::ostream& strOut, cBoard& B)
+{
+	for (coordinate i = 0; i < B.getHigh(); i++)
+	{
+		for (coordinate j = 0; j < B.getWide(); j++)
+			strOut << B.tabElements[i][j];
+		strOut << '\n';
+	}
+	return strOut;
 }
 
 

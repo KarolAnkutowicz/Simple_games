@@ -16,11 +16,12 @@ class cField : public cPosition
 public:
 
     friend std::istream& operator >> (std::istream& strIn, cField& F);
+    friend std::ostream& operator << (std::ostream& strOut, cField& F);
 
-    inline void setSymbolIndex(indexChars aSymbolIndex) { vSymbolIndex = aSymbolIndex; }
+    inline void setSymbolIndex(indexElement aSymbolIndex) { vSymbolIndex = aSymbolIndex; }
     inline void setIsFull(bool aIsFull) { vIsFull = aIsFull; }
 
-    inline indexChars getIndexChars() { return vSymbolIndex; }
+    inline indexElement getIndexChars() { return vSymbolIndex; }
     inline bool getIsFull() { return vIsFull; }
 
     /********** PUBLIC: END **********/
@@ -29,7 +30,7 @@ private:
 
     /********** PRIVATE: BEGIN **********/
 
-    indexChars vSymbolIndex;
+    indexElement vSymbolIndex;
     bool vIsFull;
 
     /********** PRIVATE: END **********/

@@ -38,8 +38,7 @@ int main()
 				Read.mEasyReader("./data_files/listlevels.txt", 1);
 				Print.mPrintGet();
 				std::cin >> vLevel;
-				Read.mLevelReader(vLevel/*, Start*/);
-				//Start.mPlay(Read, vLevel);
+				Read.mLevelReader(vLevel, Start);
 			}
 			system("pause");
 			break;
@@ -51,7 +50,7 @@ int main()
 				std::cin >> vOption;
 				if (Symbols.ifExist(vOption))
 				{
-					indexChars vIndex = Symbols.getIndex(vOption);
+					indexElement vIndex = Symbols.getIndex(vOption);
 					std::cout << "Get new symbol: ";
 					std::cin >> vOption;
 					if (Symbols.ifExist(vOption) || vOption == 'e')

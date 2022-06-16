@@ -7,8 +7,8 @@
 #pragma once
 
 typedef unsigned int coordinate;
-typedef unsigned int indexChars;
-const indexChars numberChars = 6;
+typedef unsigned int indexElement;
+const indexElement numberChars = 6;
 
 class cSymbols
 {
@@ -18,22 +18,22 @@ public:
 
 	cSymbols() : vChars{'.', '-', '+', 'X', 'S', 'o'} {}
 
-	inline char getCharacters(indexChars aIndex) { return vChars[aIndex % numberChars]; }
-	inline void setCharacters(indexChars aIndex, char aChar) { vChars[aIndex % numberChars] = aChar; }
-	inline unsigned int getSize() { return numberChars; };
+	inline char getCharacters(indexElement aIndex) { return vChars[aIndex % numberChars]; }
+	inline void setCharacters(indexElement aIndex, char aChar) { vChars[aIndex % numberChars] = aChar; }
+	inline indexElement getSize() { return numberChars; };
 	
 	bool ifExist (char aChar)
 	{
-		for (indexChars i = 0; i < numberChars; i++)
+		for (indexElement i = 0; i < numberChars; i++)
 			if (vChars[i] == aChar)
 				return true;
 		return false;
 	}
 
-	unsigned int getIndex(char aChar)
+	indexElement getIndex(char aChar)
 	{
-		unsigned int vIndex = 6;
-		for (unsigned int i = 0; i < 6; i++)
+		indexElement vIndex = 6;
+		for (indexElement i = 0; i < 6; i++)
 			if (vChars[i] == aChar)
 				vIndex = i;
 		return vIndex;

@@ -23,6 +23,13 @@ std::istream& operator >> (std::istream& strIn, cField& F)
 	return strIn;
 }
 
+std::ostream& operator << (std::ostream& strOut, cField& F)
+{
+	cSymbols S;
+	strOut << S.getCharacters(F.getIndexChars());
+	return strOut;
+}
+
 /********** PUBLIC: END **********/
 
 /* cfield.cpp */
