@@ -19,7 +19,7 @@ int main()
 	cStartGame Start;
 	Print.mPrintWelcome();
 	char vOption;
-	unsigned int vLevel;
+	numberLevel vLevel;
 	bool vEnd = false;
 	do
 	{ 

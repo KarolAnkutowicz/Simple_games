@@ -8,6 +8,7 @@
 
 typedef unsigned int coordinate;
 typedef unsigned int indexElement;
+typedef unsigned int numberLevel;
 const indexElement numberChars = 6;
 
 class cSymbols

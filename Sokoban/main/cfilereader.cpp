@@ -19,7 +19,7 @@ void cFileReader::mInterruptedGameReader()
 	std::cout << "In the future it will open interrupted game...\n\n";
 }
 
-void cFileReader::mLevelReader(unsigned int aLevel, cStartGame& Start)
+void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 {
 	system("cls");
 	std::string vFullPath = "./data_files/" + std::to_string(aLevel);
@@ -32,13 +32,13 @@ void cFileReader::mLevelReader(unsigned int aLevel, cStartGame& Start)
 	{ 
 		//std::cout << "I found file!\n\nLet'sPlay!\n\n";
 		cSokoban Skb;
-		unsigned int vRocksSize;
+		indexElement vRocksSize;
 		cRock Rck;
 		std::vector<cRock> Rocks;
 		cBoard Brd;
 		strIn >> Skb >> vRocksSize;
 		Rocks.clear();
-		for (unsigned int i = 0; i < vRocksSize; i++)
+		for (indexElement i = 0; i < vRocksSize; i++)
 		{
 			strIn >> Rck;
 			Rocks.push_back(Rck);
@@ -46,7 +46,7 @@ void cFileReader::mLevelReader(unsigned int aLevel, cStartGame& Start)
 		strIn >> Brd;
 
 		std::cout << "Sokoban coordinates: (" << Skb.getXposition() << "," << Skb.getYposition() << ")\n\n";
-		for (unsigned int i = 0; i < Rocks.size(); i++)
+		for (indexElement i = 0; i < Rocks.size(); i++)
 			std::cout << "Rock no " << i << "(" << Rocks[i].getXposition() << "," << Rocks[i].getYposition() << ")\n";
 		std::cout << "\nBoard high: " << Brd.getHigh() << ", board wide: " << Brd.getWide() << "\n";
 		std::cout << Brd;
