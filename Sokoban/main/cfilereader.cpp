@@ -30,26 +30,17 @@ void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 		std::cerr << "Not found a file!\n";
 	else
 	{ 
-		//std::cout << "I found file!\n\nLet'sPlay!\n\n";
-		cSokoban Skb;
 		indexElement vRocksSize;
 		cRock Rck;
-		std::vector<cRock> Rocks;
-		cBoard Brd;
-		strIn >> Skb >> vRocksSize;
-		Rocks.clear();
+		cSymbols Sym;
+		strIn >> Start.vSokoban >> vRocksSize;
+		Start.vRocks.clear();
 		for (indexElement i = 0; i < vRocksSize; i++)
 		{
 			strIn >> Rck;
-			Rocks.push_back(Rck);
+			Start.vRocks.push_back(Rck);
 		}
-		strIn >> Brd;
-
-		std::cout << "Sokoban coordinates: (" << Skb.getXposition() << "," << Skb.getYposition() << ")\n\n";
-		for (indexElement i = 0; i < Rocks.size(); i++)
-			std::cout << "Rock no " << i << "(" << Rocks[i].getXposition() << "," << Rocks[i].getYposition() << ")\n";
-		std::cout << "\nBoard high: " << Brd.getHigh() << ", board wide: " << Brd.getWide() << "\n";
-		std::cout << Brd;
+		strIn >> Start.vBoard;
 	}
 	strIn.close();
 	system("pause");

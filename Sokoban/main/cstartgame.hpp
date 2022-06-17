@@ -19,17 +19,11 @@ public:
 
     cStartGame() {};
 
-    /********** PUBLIC: END **********/
-
-    /********** PRIVATE: BEGIN **********/
-
-private:
-
     cBoard vBoard;
     cSokoban vSokoban;
     std::vector<cRock> vRocks;
 
-    /********** PRIVATE: END **********/
+    /********** PUBLIC: END **********/
 };
 
 /* cstartgame.hpp */

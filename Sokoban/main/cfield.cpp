@@ -12,11 +12,8 @@ std::istream& operator >> (std::istream& strIn, cField& F)
 {
 	char c;
 	strIn >> c;
-	cSymbols S;
-	if (S.ifExist(c) == true)
-		F.setSymbolIndex(S.getIndex(c));
-	else
-		F.setSymbolIndex(0);
+	indexElement vIndex = (indexElement)c;
+	F.setSymbolIndex(vIndex - 48);
 	F.setXPosition(0);
 	F.setYPosition(0);
 	F.setIsFull(false);
