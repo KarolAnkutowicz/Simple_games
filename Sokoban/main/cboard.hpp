@@ -29,6 +29,8 @@ public:
     inline coordinate getWide() { return vWide; }
     inline cField getField(coordinate aX, coordinate aY) { return tabElements[aX][aY]; }
 
+    inline void mPrintElement(coordinate vHg, coordinate vWd) { std::cout << tabElements[vHg][vWd]; }
+
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/

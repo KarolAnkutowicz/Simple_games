@@ -17,6 +17,13 @@ std::istream& operator >> (std::istream& strIn, cSokoban& S)
 	return strIn;
 }
 
+std::ostream& operator << (std::ostream& strOut, cSokoban& S)
+{
+	cSymbols Smb;
+	strOut << Smb.getCharacters(4);
+	return strOut;
+}
+
 /********** PUBLIC: END **********/
 
  /* csokoban.cpp */

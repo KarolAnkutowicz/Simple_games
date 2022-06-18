@@ -64,8 +64,38 @@ void cPrinting::mPrintMenuStartGame()
 void cPrinting::mPrintCurrentGame(cStartGame& Start)
 {
 	system("cls");
-	std::cout << "Actually you can't play :(\n\n";
-	system("pause");
+	//std::cout << "Actually you can't play :(\n\n";
+	//system("pause");
+	bool vIfRock;
+	indexElement vIndex;
+	for (coordinate i = 0; i < Start.vBoard.getHigh(); i++)
+	{
+		for (coordinate j = 0; j < Start.vBoard.getWide(); j++)
+		{
+			vIfRock = false;
+			vIndex = 6;
+			if (Start.vSokoban.getXposition() == i && Start.vSokoban.getYposition() == j)
+				std::cout << Start.vSokoban;
+			else
+			{
+				for (coordinate k = 0; k < Start.vRocks.size(); k++)
+				{
+					if (Start.vRocks[k].getXposition() == i && Start.vRocks[k].getYposition() == j)
+					{
+						vIfRock = true;
+						vIndex = k;
+						break;
+					}
+				}
+				if (vIfRock == true)
+					std::cout << Start.vRocks[vIndex];
+				else
+					Start.vBoard.mPrintElement(i, j);
+			}
+			std::cout << ' ';
+		}
+		std::cout << '\n';
+	}
 }
 
 

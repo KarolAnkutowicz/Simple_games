@@ -18,6 +18,16 @@ std::istream& operator >> (std::istream& strIn, cRock& R)
 	return strIn;
 }
 
+std::ostream& operator << (std::ostream& strOut, cRock& R)
+{
+	cSymbols Smb;
+	if (R.getSave() == true)
+		strOut << Smb.getCharacters(2);
+	else
+		strOut << Smb.getCharacters(5);
+	return strOut;
+}
+
 /********** PUBLIC: END **********/
 
 

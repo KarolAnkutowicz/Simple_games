@@ -42,7 +42,6 @@ std::ostream& operator << (std::ostream& strOut, cBoard& B)
 	return strOut;
 }
 
-
 /********** PUBLIC: END **********/
 
 

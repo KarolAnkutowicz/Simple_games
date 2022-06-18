@@ -20,6 +20,7 @@ class cSokoban : public cPosition
 public:
 
     friend std::istream& operator >> (std::istream& StrIn, cSokoban& S);
+    friend std::ostream& operator << (std::ostream& strOut, cSokoban& S);
 
 /********** PUBLIC: END **********/
 };

@@ -16,6 +16,7 @@ class cRock : public cPosition
 public:
 
     friend std::istream& operator >> (std::istream& strIn, cRock& R);
+    friend std::ostream& operator << (std:: ostream& strOut, cRock& R);
 
     inline void setSave(bool aSave) { vSave = aSave; }
 
