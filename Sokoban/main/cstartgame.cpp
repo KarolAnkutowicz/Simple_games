@@ -10,15 +10,14 @@
 
 /********** PUBLIC: BEGIN **********/
 
-/*void cStartGame::mPlay(cFileReader& Reader, unsigned int aLevel)
+void cStartGame::mCheckYouWin()
 {
-	system("cls");
-	std::string vFullPath = "./data_files/" + std::to_string(aLevel);
-	vFullPath += "_level.txt";
-	Reader.mLevelReader(vFullPath);
-	system("pause");
-	//std::cout << "Start level nr " << aLevel << "!\n\n";
-}*/
+	vYouWin = true;
+	for (indexElement i = 0; i < vRocks.size(); i++)
+		if (vRocks[i].getSave() == false)
+			vYouWin = false;
+}
+
 
 /********** PUBLIC: END **********/
 

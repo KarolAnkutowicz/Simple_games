@@ -43,7 +43,6 @@ void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 		strIn >> Start.vBoard;
 	}
 	strIn.close();
-	system("pause");
 }
 
 void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)

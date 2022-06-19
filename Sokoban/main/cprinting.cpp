@@ -64,8 +64,6 @@ void cPrinting::mPrintMenuStartGame()
 void cPrinting::mPrintCurrentGame(cStartGame& Start)
 {
 	system("cls");
-	//std::cout << "Actually you can't play :(\n\n";
-	//system("pause");
 	bool vIfRock;
 	indexElement vIndex;
 	for (coordinate i = 0; i < Start.vBoard.getHigh(); i++)

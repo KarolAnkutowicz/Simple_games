@@ -19,9 +19,14 @@ public:
 
     cStartGame() {};
 
+    inline bool getYouWin() { return vYouWin; }
+
+    void mCheckYouWin();
+
     cBoard vBoard;
     cSokoban vSokoban;
     std::vector<cRock> vRocks;
+    bool vYouWin;
 
     /********** PUBLIC: END **********/
 };
