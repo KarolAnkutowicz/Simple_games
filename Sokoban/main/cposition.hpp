@@ -18,12 +18,12 @@ public:
 
     inline coordinate getXposition() { return xPosition; }
     inline coordinate getYposition() { return yPosition; }
-    inline void setXPosition(coordinate xPos) { xPosition = xPos; }
-    inline void setYPosition(coordinate yPos) { yPosition = yPos; }
+    inline void setXposition(coordinate xPos) { xPosition = xPos; }
+    inline void setYposition(coordinate yPos) { yPosition = yPos; }
     inline void incrementXposition() { xPosition++; }
-    inline void decrementXPosition() { xPosition--; };
+    inline void decrementXposition() { xPosition--; };
     inline void incrementYposition() { yPosition++; }
-    inline void decrementYPosition() { yPosition--; };
+    inline void decrementYposition() { yPosition--; };
 
     /********** PUBLIC: END **********/
 

@@ -14,8 +14,8 @@ std::istream& operator >> (std::istream& strIn, cField& F)
 	strIn >> c;
 	indexElement vIndex = (indexElement)c;
 	F.setSymbolIndex(vIndex - 48);
-	F.setXPosition(0);
-	F.setYPosition(0);
+	F.setXposition(0);
+	F.setYposition(0);
 	F.setIsFull(false);
 	return strIn;
 }

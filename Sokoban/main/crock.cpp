@@ -12,8 +12,8 @@ std::istream& operator >> (std::istream& strIn, cRock& R)
 {
 	coordinate vX, vY;
 	strIn >> vX >> vY;
-	R.setXPosition(vX);
-	R.setYPosition(vY);
+	R.setXposition(vX);
+	R.setYposition(vY);
 	R.setSave(false);
 	return strIn;
 }
@@ -27,6 +27,16 @@ std::ostream& operator << (std::ostream& strOut, cRock& R)
 		strOut << Smb.getCharacters(5);
 	return strOut;
 }
+
+void cRock::mSwitchSave()
+{
+	if (vSave == true)
+		vSave = false;
+	else
+		vSave = true;
+
+}
+
 
 /********** PUBLIC: END **********/
 

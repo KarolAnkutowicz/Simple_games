@@ -22,6 +22,8 @@ public:
 
     inline bool getSave() { return vSave; }
 
+    void mSwitchSave();
+
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/

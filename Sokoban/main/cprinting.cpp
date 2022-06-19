@@ -63,7 +63,7 @@ void cPrinting::mPrintMenuStartGame()
 
 void cPrinting::mPrintCurrentGame(cStartGame& Start)
 {
-	system("cls");
+	//system("cls");
 	bool vIfRock;
 	indexElement vIndex;
 	for (coordinate i = 0; i < Start.vBoard.getHigh(); i++)
@@ -94,6 +94,9 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start)
 		}
 		std::cout << '\n';
 	}
+	std::cout << "\nPosition Sokoban: (" << Start.vSokoban.getXposition() << ", " << Start.vSokoban.getYposition() << ")\n\nRocks positions:\n";
+	for (indexElement i = 0; i < Start.vRocks.size(); i++)
+		std::cout << "Rock nr " << i << ": (" << Start.vRocks[i].getXposition() << ", " << Start.vRocks[i].getYposition() << ")\n";
 }
 
 

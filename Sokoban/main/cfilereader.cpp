@@ -21,6 +21,16 @@ void cFileReader::mInterruptedGameReader()
 
 void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 {
+	/*
+	* otwarcie pliku
+	*	wczytanie wspolrzednych sokobana
+	*	wczytanie liczby kamieni
+	*	wczytywanie kamieni
+	*	wczytywanie planszy
+	*	sprawdzenie czy kamienie sa bezpieczne
+	*	sprawdzenie czy pola sa pelne
+	*/
+
 	system("cls");
 	std::string vFullPath = "./data_files/" + std::to_string(aLevel);
 	vFullPath += "_level.txt";
@@ -41,6 +51,8 @@ void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 			Start.vRocks.push_back(Rck);
 		}
 		strIn >> Start.vBoard;
+		for (indexElement i = 0; i < Start.vRocks.size(); i++)
+			Start.vBoard.getField(Start.vRocks[i].getXposition(), Start.vRocks[i].getYposition()).setIsFull(true);
 	}
 	strIn.close();
 }

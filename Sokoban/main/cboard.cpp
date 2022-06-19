@@ -22,8 +22,8 @@ std::istream& operator >> (std::istream& strIn, cBoard& B)
 		for (coordinate j = 0; j < B.getWide(); j++)
 		{
 			strIn >> Fld;
-			Fld.setXPosition(i);
-			Fld.setYPosition(j);
+			Fld.setXposition(i);
+			Fld.setYposition(j);
 			vRow.push_back(Fld);
 		}
 		B.tabElements.push_back(vRow);
