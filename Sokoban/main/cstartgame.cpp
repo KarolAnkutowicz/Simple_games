@@ -50,31 +50,6 @@ bool cStartGame::mPossibleMove(char c)
 			}
 		}
 		break;
-	case 'a':
-		if (vSokoban.getYposition() > 0)
-		{
-			if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 0
-				|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 1)
-				vIsPossible = true;
-			else
-			{
-				if (vSokoban.getXposition() > 1)
-				{
-					if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 2
-						|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 5)
-						if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 0
-							|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 1)
-							vIsPossible = true;
-					for (indexElement i = 0; i < vRocks.size(); i++)
-						if ((vRocks[i].getXposition() == vSokoban.getXposition())
-							&& (vRocks[i].getYposition() - 1 == vSokoban.getYposition()))
-							if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 0
-								|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 1)
-								vIsPossible = true;
-				}
-			}
-		}
-		break;
 	case 's':
 		if (vSokoban.getXposition() < vBoard.getHigh() - 1)
 		{
@@ -95,6 +70,31 @@ bool cStartGame::mPossibleMove(char c)
 							&& (vRocks[i].getYposition() == vSokoban.getYposition()))
 							if (vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIndexChars() == 0
 								|| vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIndexChars() == 1)
+								vIsPossible = true;
+				}
+			}
+		}
+		break;
+	case 'a':
+		if (vSokoban.getYposition() > 0)
+		{
+			if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 0
+				|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 1)
+				vIsPossible = true;
+			else
+			{
+				if (vSokoban.getXposition() > 1)
+				{
+					if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 2
+						|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 5)
+						if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 0
+							|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 1)
+							vIsPossible = true;
+					for (indexElement i = 0; i < vRocks.size(); i++)
+						if ((vRocks[i].getXposition() == vSokoban.getXposition())
+							&& (vRocks[i].getYposition() - 1 == vSokoban.getYposition()))
+							if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 0
+								|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 1)
 								vIsPossible = true;
 				}
 			}
@@ -134,171 +134,98 @@ void cStartGame::mMakeMove(char c)
 	if (mPossibleMove(c) == true)
 	{
 		indexElement vIndex = 0;
+		int vFactor;
+		if (c == 'w' || c == 'a')
+			vFactor = 1;
+		else
+			vFactor = -1;
 		switch (c)
 		{
 		case 'w':
-			if (vSokoban.getXposition() > 0)
+		case 's':
+			if ((vSokoban.getXposition() > 0 && c == 'w') || (vSokoban.getXposition() < vBoard.getHigh() - 1 && c == 's'))
 			{
-				if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 0
-					|| vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 1)
-					vSokoban.decrementXposition();
-				else
+				if (vBoard.getField(vSokoban.getXposition() - 1 * vFactor, vSokoban.getYposition()).getIndexChars() == 0
+					|| vBoard.getField(vSokoban.getXposition() - 1 * vFactor, vSokoban.getYposition()).getIndexChars() == 1)
 				{
-					if (vSokoban.getXposition() > 1)
+					if (c == 'w')
+						vSokoban.decrementXposition();
+					else
+						vSokoban.incrementXposition();
+				}
+				else if ((vSokoban.getXposition() > 1 && c == 'w') || (vSokoban.getXposition() < vBoard.getHigh() - 2 && c == 's'))
+				{
+					if (vBoard.getField(vSokoban.getXposition() - 1 * vFactor, vSokoban.getYposition()).getIndexChars() == 2
+						|| vBoard.getField(vSokoban.getXposition() - 1 * vFactor, vSokoban.getYposition()).getIndexChars() == 5)
 					{
-						if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 2
-							|| vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 5)
+						if (vBoard.getField(vSokoban.getXposition() - 2 * vFactor, vSokoban.getYposition()).getIndexChars() == 0
+							|| vBoard.getField(vSokoban.getXposition() - 2 * vFactor, vSokoban.getYposition()).getIndexChars() == 1)
 						{
-							if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 0
-								|| vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 1)
-							{
+							if (c == 'w')
 								vSokoban.decrementXposition();
-								for (indexElement i = 0; i < vRocks.size(); i++)
+							else
+								vSokoban.incrementXposition();
+							for (indexElement i = 0; i < vRocks.size(); i++)
+							{
+								if (vRocks[i].getXposition() == vSokoban.getXposition() - 2 * vFactor && vRocks[i].getYposition() == vSokoban.getYposition())
 								{
-									if (vRocks[i].getXposition() == vSokoban.getXposition() - 2
-										&& vRocks[i].getYposition() == vSokoban.getYposition())
-									{
+									if (c == 'w')
 										vRocks[i].decrementXposition();
-										vIndex = i;
-									}
-								}
-								if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 2)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).setSymbolIndex(1);
-								}
-								if (vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIndexChars() == 1)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).setSymbolIndex(2);
+									else
+										vRocks[i].incrementXposition();
+									vIndex = i;
 								}
 							}
+							if (vBoard.getField(vSokoban.getXposition() - 1 * vFactor, vSokoban.getYposition()).getIndexChars() == 2)
+								vBoard.getField(vSokoban.getXposition() - 1 * vFactor, vSokoban.getYposition()).setSymbolIndex(1);
+							if (vBoard.getField(vSokoban.getXposition() - 2 * vFactor, vSokoban.getYposition()).getIndexChars() == 1)
+								vBoard.getField(vSokoban.getXposition() - 2 * vFactor, vSokoban.getYposition()).setSymbolIndex(2);
+							vRocks[vIndex].mSwitchSave();
 						}
 					}
 				}
 			}
 			break;
 		case 'a':
-			if (vSokoban.getYposition() > 0)
-			{
-				if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 0
-					|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 1)
-					vSokoban.decrementYposition();
-				else
-				{
-					if (vSokoban.getYposition() > 1)
-					{
-						if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 2
-							|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 5)
-						{
-							if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 0
-								|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 1)
-							{
-								vSokoban.decrementYposition();
-								for (indexElement i = 0; i < vRocks.size(); i++)
-								{
-									if (vRocks[i].getXposition() == vSokoban.getXposition()
-										&& vRocks[i].getYposition() == vSokoban.getYposition() - 2)
-									{
-										vRocks[i].decrementYposition();
-										vIndex = i;
-									}
-								}
-								if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 2)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).setSymbolIndex(1);
-								}
-								if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 1)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).setSymbolIndex(2);
-								}
-							}
-						}
-					}
-				}
-			}
-			break;
-		case 's':
-			if (vSokoban.getXposition() < vBoard.getHigh() - 1)
-			{
-				if (vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 0
-					|| vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 1)
-					vSokoban.incrementXposition();
-				else
-				{
-					if (vSokoban.getXposition() < vBoard.getHigh() - 2)
-					{
-						if (vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 2
-							|| vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 5)
-						{
-							if (vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 0
-								|| vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 1)
-							{
-								vSokoban.incrementXposition();
-								for (indexElement i = 0; i < vRocks.size(); i++)
-								{
-									if (vRocks[i].getXposition() == vSokoban.getXposition() + 2
-										&& vRocks[i].getYposition() == vSokoban.getYposition())
-									{
-										vRocks[i].incrementXposition();
-										vIndex = i;
-									}
-								}
-								if (vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 2)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).setSymbolIndex(1);
-								}
-								if (vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIndexChars() == 1)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).setSymbolIndex(2);
-								}
-							}
-						}
-					}
-				}
-			}
-			break;
 		case 'd':
-			if (vSokoban.getYposition() < vBoard.getWide() - 1)
+			if ((vSokoban.getYposition() > 0 && c == 'a') || (vSokoban.getYposition() < vBoard.getWide() - 1 && c == 'd'))
 			{
-				if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 0
-					|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 1)
-					vSokoban.incrementYposition();
-				else
+				if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * vFactor).getIndexChars() == 0
+					|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * vFactor).getIndexChars() == 1)
 				{
-					if (vSokoban.getYposition() < vBoard.getWide() - 2)
+					if (c == 'a')
+						vSokoban.decrementYposition();
+					else
+						vSokoban.incrementYposition();
+				}
+				else if ((vSokoban.getYposition() > 1 && c == 'a') || (vSokoban.getYposition() < vBoard.getWide() - 2 && c == 'd'))
+				{
+					if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * vFactor).getIndexChars() == 2
+						|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * vFactor).getIndexChars() == 5)
 					{
-						if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 2
-							|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 5)
+						if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2 * vFactor).getIndexChars() == 0
+							|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2 * vFactor).getIndexChars() == 1)
 						{
-							if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 0
-								|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 1)
-							{
+							if (c == '1')
+								vSokoban.decrementYposition();
+							else
 								vSokoban.incrementYposition();
-								for (indexElement i = 0; i < vRocks.size(); i++)
+							for (indexElement i = 0; i < vRocks.size(); i++)
+							{
+								if (vRocks[i].getXposition() == vSokoban.getXposition() && vRocks[i].getYposition() == vSokoban.getYposition() - 2 * vFactor)
 								{
-									if (vRocks[i].getXposition() == vSokoban.getXposition()
-										&& vRocks[i].getYposition() == vSokoban.getYposition() + 2)
-									{
+									if (c == 'a')
+										vRocks[i].decrementYposition();
+									else
 										vRocks[i].incrementYposition();
-										vIndex = i;
-									}
-								}
-								if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 2)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).setSymbolIndex(1);
-								}
-								if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIndexChars() == 1)
-								{
-									vRocks[vIndex].mSwitchSave();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).setSymbolIndex(2);
+									vIndex = i;
 								}
 							}
+							if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * vFactor).getIndexChars() == 2)
+								vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * vFactor).setSymbolIndex(1);
+							if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2 * vFactor).getIndexChars() == 1)
+								vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2 * vFactor).setSymbolIndex(2);
+							vRocks[vIndex].mSwitchSave();
 						}
 					}
 				}

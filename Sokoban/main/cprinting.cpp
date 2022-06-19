@@ -63,7 +63,7 @@ void cPrinting::mPrintMenuStartGame()
 
 void cPrinting::mPrintCurrentGame(cStartGame& Start)
 {
-	//system("cls");
+	system("cls");
 	bool vIfRock;
 	indexElement vIndex;
 	for (coordinate i = 0; i < Start.vBoard.getHigh(); i++)
