@@ -43,9 +43,13 @@ int main()
 				while (Start.getYouWin() == false)
 				{
 					std::cin >> vOption;
-					if (vOption == 'e')
+					if (vOption == 'w' || vOption == 'a' || vOption == 's' || vOption == 'd')
+					{
+						Start.mMakeMove(vOption);
+						Print.mPrintCurrentGame(Start);
+					}
+					else if (vOption == 'e')
 						break;
-					Print.mPrintCurrentGame(Start);
 				}
 			}
 			system("pause");

@@ -27,6 +27,14 @@ std::ostream& operator << (std::ostream& strOut, cField& F)
 	return strOut;
 }
 
+void cField::mSwitchFull()
+{
+	if (vIsFull == true)
+		vIsFull = false;
+	else
+		vIsFull = true;
+}
+
 /********** PUBLIC: END **********/
 
 /* cfield.cpp */

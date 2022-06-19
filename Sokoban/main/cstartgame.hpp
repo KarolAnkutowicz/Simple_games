@@ -21,14 +21,24 @@ public:
 
     inline bool getYouWin() { return vYouWin; }
 
+    bool mPossibleMove(char c);
+    void mMakeMove(char c);
+
     void mCheckYouWin();
 
     cBoard vBoard;
     cSokoban vSokoban;
     std::vector<cRock> vRocks;
-    bool vYouWin;
 
     /********** PUBLIC: END **********/
+
+    /********** PRIVATE: BEGIN **********/
+
+private:
+
+    bool vYouWin;
+
+    /********** PRIVATE: END **********/
 };
 
 /* cstartgame.hpp */
