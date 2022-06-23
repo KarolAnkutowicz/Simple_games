@@ -32,6 +32,17 @@ std::istream& operator >> (std::istream& strIn, cBoard& B)
 	return strIn;
 }
 
+std::ostream& operator << (std::ostream& strOut, cBoard& B)
+{
+	for (coordinate i = 0; i < B.getHigh(); i++)
+	{
+		for (coordinate j = 0; j < B.getWide(); j++)
+			strOut << B.tabElements[i][j];
+		strOut << '\n';
+	}
+	return strOut;
+}
+
 /********** PUBLIC: END **********/
 
 

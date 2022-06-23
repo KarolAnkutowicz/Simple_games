@@ -20,6 +20,7 @@ public:
     cBoard(coordinate vHg, coordinate vWd) { vHigh = vHg; vWide = vWd; }
 
     friend std::istream& operator >> (std::istream& strIn, cBoard& B);
+    friend std::ostream& operator << (std::ostream& strOut, cBoard& B);
 
     inline void setHigh(coordinate vH) { vHigh = vH; }
     inline void setWide(coordinate vW) { vWide = vW; }
@@ -28,6 +29,7 @@ public:
 
     inline coordinate getHigh() { return vHigh; }
     inline coordinate getWide() { return vWide; }
+    inline void setField(coordinate aX, coordinate aY, cField aField) { tabElements[aX][aY] = aField; }
     inline cField getField(coordinate aX, coordinate aY) { return tabElements[aX][aY]; }
     inline indexElement getFieldSymbolIndex(coordinate aX, coordinate aY) { return tabElements[aX][aY].getIndexChars(); }
 
