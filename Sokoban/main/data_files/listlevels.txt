@@ -1,3 +1,4 @@
 List of available levels:
 
-(0) level0.txt
+(0) 0_level.txt
+(1) 1_level.txt
