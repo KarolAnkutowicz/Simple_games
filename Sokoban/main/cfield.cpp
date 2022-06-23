@@ -18,23 +18,12 @@ std::istream& operator >> (std::istream& strIn, cField& F)
 	if (vIndex)
 	switch (vIndex)
 	{
-
 	case 2:
 		F.setIsFull(true);
 		break;
 	default:
 		F.setIsFull(false);
 		break;
-//	case '0':
-//	case '1':
-//		F.setIsFull(false);
-//		break;
-//	//case '+':
-//	case '2':
-//	case '3':
-//	//case 'o':
-//		F.setIsFull(true);
-//		break;
 	}
 	return strIn;
 }

@@ -18,14 +18,6 @@ bool cStartGame::mCheckYouWin()
 	return true;
 }
 
-/*void cStartGame::mCheckYouWin()
-{
-	vYouWin = true;
-	for (indexElement i = 0; i < vRocks.size(); i++)
-		if (vRocks[i].getSave() == false)
-			vYouWin = false;
-}*/
-
 void cStartGame::mMakeMove(char c)
 {
 	switch (c)
@@ -69,7 +61,7 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getXposition() + 1 == vSokoban.getXposition())
+								if (vRocks[i].getXposition() + 1 == vSokoban.getXposition() && vRocks[i].getYposition() == vSokoban.getYposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition() - 1, vSokoban.getYposition(), false);
 									vBoard.setFieldFull(vSokoban.getXposition() - 2, vSokoban.getYposition(), true);
@@ -90,7 +82,7 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getXposition() + 1 == vSokoban.getXposition())
+								if (vRocks[i].getXposition() + 1 == vSokoban.getXposition() && vRocks[i].getYposition() == vSokoban.getYposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition() - 1, vSokoban.getYposition(), false);
 									vBoard.setFieldFull(vSokoban.getXposition() - 2, vSokoban.getYposition(), true);
@@ -142,7 +134,7 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getXposition() - 1 == vSokoban.getXposition())
+								if (vRocks[i].getXposition() - 1 == vSokoban.getXposition() && vRocks[i].getYposition() == vSokoban.getYposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition() + 1, vSokoban.getYposition(), false);
 									vBoard.setFieldFull(vSokoban.getXposition() + 2, vSokoban.getYposition(), true);
@@ -163,7 +155,7 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getXposition() - 1 == vSokoban.getXposition())
+								if (vRocks[i].getXposition() - 1 == vSokoban.getXposition() && vRocks[i].getYposition() == vSokoban.getYposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition() + 1, vSokoban.getYposition(), false);
 									vBoard.setFieldFull(vSokoban.getXposition() + 2, vSokoban.getYposition(), true);
@@ -216,7 +208,7 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getYposition() + 1 == vSokoban.getYposition())
+								if (vRocks[i].getYposition() + 1 == vSokoban.getYposition() && vRocks[i].getXposition() == vSokoban.getXposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 1, false);
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 2, true);
@@ -237,7 +229,7 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getYposition() + 1 == vSokoban.getYposition())
+								if (vRocks[i].getYposition() + 1 == vSokoban.getYposition() && vRocks[i].getXposition() == vSokoban.getXposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 1, false);
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 2, true);
@@ -288,7 +280,7 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getYposition() - 1 == vSokoban.getYposition())
+								if (vRocks[i].getYposition() - 1 == vSokoban.getYposition() && vRocks[i].getXposition() == vSokoban.getXposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 1, false);
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 2, true);
@@ -309,7 +301,7 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
-								if (vRocks[i].getYposition() - 1 == vSokoban.getYposition())
+								if (vRocks[i].getYposition() - 1 == vSokoban.getYposition() && vRocks[i].getXposition() == vSokoban.getXposition())
 								{
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 1, false);
 									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 2, true);

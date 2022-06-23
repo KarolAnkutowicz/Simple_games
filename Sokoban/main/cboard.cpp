@@ -16,6 +16,7 @@ std::istream& operator >> (std::istream& strIn, cBoard& B)
 	strIn >> vH >> vW;
 	B.setHigh(vH);
 	B.setWide(vW);
+	B.tabElements.clear();
 	for (coordinate i = 0; i < B.getHigh(); i++)
 	{
 		vRow.clear();

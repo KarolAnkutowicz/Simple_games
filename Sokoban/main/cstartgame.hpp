@@ -28,21 +28,12 @@ public:
     bool mIfRock(coordinate aX, coordinate aY);
 
     bool mCheckYouWin();
-    //void mCheckYouWin();
 
     cBoard vBoard;
     cSokoban vSokoban;
     std::vector<cRock> vRocks;
 
     /********** PUBLIC: END **********/
-
-    /********** PRIVATE: BEGIN **********/
-
-private:
-
-    //bool vYouWin;
-
-    /********** PRIVATE: END **********/
 };
 
 /* cstartgame.hpp */
