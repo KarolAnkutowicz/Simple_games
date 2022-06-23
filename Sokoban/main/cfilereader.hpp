@@ -18,7 +18,6 @@ public:
 
 	void mInterruptedGameReader();
 	
-	//void mLevelReader(std::string mFileName);
 	void mLevelReader(numberLevel aLevel, cStartGame& Start);
 
 	void mEasyReader(std::string mFileName, unsigned int aSituation = 0);

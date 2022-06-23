@@ -7,7 +7,6 @@
 #pragma once
 
 #include "cboard.hpp"
-//#include "cfilereader.hpp"
 #include "crock.hpp"
 #include "csokoban.hpp"
 
@@ -21,8 +20,12 @@ public:
 
     inline bool getYouWin() { return vYouWin; }
 
-    bool mPossibleMove(char c);
+    //bool mPossibleMove(char c);
     void mMakeMove(char c);
+    void mMoveUpDown(char c, int aFactor);
+    void mMoveLeftRight(char c, int aFactor);
+
+    bool mIfRock(coordinate aX, coordinate aY);
 
     void mCheckYouWin();
 

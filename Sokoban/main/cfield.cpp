@@ -16,7 +16,27 @@ std::istream& operator >> (std::istream& strIn, cField& F)
 	F.setSymbolIndex(vIndex - 48);
 	F.setXposition(0);
 	F.setYposition(0);
-	F.setIsFull(false);
+	if (vIndex)
+	switch (vIndex)
+	{
+
+	case '2':
+		F.setIsFull(true);
+		break;
+	default:
+		F.setIsFull(false);
+		break;
+//	case '0':
+//	case '1':
+//		F.setIsFull(false);
+//		break;
+//	//case '+':
+//	case '2':
+//	case '3':
+//	//case 'o':
+//		F.setIsFull(true);
+//		break;
+	}
 	return strIn;
 }
 
@@ -30,9 +50,15 @@ std::ostream& operator << (std::ostream& strOut, cField& F)
 void cField::mSwitchFull()
 {
 	if (vIsFull == true)
+	{
 		vIsFull = false;
+		setSymbolIndex(1);
+	}
 	else
+	{
 		vIsFull = true;
+		setSymbolIndex(2);
+	}
 }
 
 /********** PUBLIC: END **********/

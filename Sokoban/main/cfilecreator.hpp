@@ -17,13 +17,6 @@ public:
 	void mCreateBestResults();
 
 	/********** PUBLIC: END **********/
-	
-	/********** PRIVATE: BEGIN **********/
-
-private:
-	
-	/********** PRIVATE: END **********/
-
 };
 
 /* cfilecreator.hpp */
