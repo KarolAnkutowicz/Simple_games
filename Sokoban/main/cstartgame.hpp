@@ -18,7 +18,7 @@ public:
 
     cStartGame() {};
 
-    inline bool getYouWin() { return vYouWin; }
+    //inline bool getYouWin() { return vYouWin; }
 
     //bool mPossibleMove(char c);
     void mMakeMove(char c);
@@ -27,7 +27,8 @@ public:
 
     bool mIfRock(coordinate aX, coordinate aY);
 
-    void mCheckYouWin();
+    bool mCheckYouWin();
+    //void mCheckYouWin();
 
     cBoard vBoard;
     cSokoban vSokoban;
@@ -39,7 +40,7 @@ public:
 
 private:
 
-    bool vYouWin;
+    //bool vYouWin;
 
     /********** PRIVATE: END **********/
 };

@@ -10,13 +10,21 @@
 
 /********** PUBLIC: BEGIN **********/
 
-void cStartGame::mCheckYouWin()
+bool cStartGame::mCheckYouWin()
+{
+	for (indexElement i = 0; i < vRocks.size(); i++)
+		if (vRocks[i].getSave() == false)
+			return false;
+	return true;
+}
+
+/*void cStartGame::mCheckYouWin()
 {
 	vYouWin = true;
 	for (indexElement i = 0; i < vRocks.size(); i++)
 		if (vRocks[i].getSave() == false)
 			vYouWin = false;
-}
+}*/
 
 void cStartGame::mMakeMove(char c)
 {

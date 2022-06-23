@@ -26,6 +26,8 @@ public:
 
     void mPrintCurrentGame(cStartGame &Start);
 
+    void mPrintYouWin();
+
     void mPrintOpenInterruptedGame();
 
     void mPrintMenuOptions(cSymbols &Symbol);

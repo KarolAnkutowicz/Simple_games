@@ -40,7 +40,7 @@ int main()
 				std::cin >> vLevel;
 				Read.mLevelReader(vLevel, Start);
 				Print.mPrintCurrentGame(Start);
-				while (Start.getYouWin() == false)
+				while (Start.mCheckYouWin() == false)
 				{
 					std::cin >> vOption;
 					if (vOption == 'w' || vOption == 'a' || vOption == 's' || vOption == 'd')
@@ -51,6 +51,8 @@ int main()
 					else if (vOption == 'e')
 						break;
 				}
+				if (Start.mCheckYouWin() == true)
+					Print.mPrintYouWin();
 			}
 			system("pause");
 			break;
