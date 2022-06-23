@@ -94,6 +94,15 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start)
 		}
 		std::cout << '\n';
 	}
+
+	/*for (coordinate i = 0; i < Start.vBoard.getHigh(); i++)
+	{
+		for (coordinate j = 0; j < Start.vBoard.getWide(); j++)
+		{
+			std:: cout << Start.vBoard.getField(i, j).getIsFull() << ' ';
+		}
+		std::cout << '\n';
+	}*/
 }
 
 

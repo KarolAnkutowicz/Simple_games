@@ -63,8 +63,8 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 							{
 								if (vRocks[i].getXposition() + 1 == vSokoban.getXposition())
 								{
-									vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition() - 1, vSokoban.getYposition(), false);
+									vBoard.setFieldFull(vSokoban.getXposition() - 2, vSokoban.getYposition(), true);
 									vSokoban.decrementXposition();
 									vRocks[i].decrementXposition();
 									break;
@@ -80,8 +80,8 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 							{
 								if (vRocks[i].getXposition() + 1 == vSokoban.getXposition())
 								{
-									vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition() - 1, vSokoban.getYposition(), false);
+									vBoard.setFieldFull(vSokoban.getXposition() - 2, vSokoban.getYposition(), true);
 									vSokoban.decrementXposition();
 									vRocks[i].decrementXposition();
 									break;
@@ -126,8 +126,8 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 							{
 								if (vRocks[i].getXposition() - 1 == vSokoban.getXposition())
 								{
-									vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition() + 1, vSokoban.getYposition(), false);
+									vBoard.setFieldFull(vSokoban.getXposition() + 2, vSokoban.getYposition(), true);
 									vSokoban.incrementXposition();
 									vRocks[i].incrementXposition();
 									break;
@@ -143,8 +143,8 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 							{
 								if (vRocks[i].getXposition() - 1 == vSokoban.getXposition())
 								{
-									vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition() + 1, vSokoban.getYposition(), false);
+									vBoard.setFieldFull(vSokoban.getXposition() + 2, vSokoban.getYposition(), true);
 									vSokoban.incrementXposition();
 									vRocks[i].incrementXposition();
 									break;
@@ -190,8 +190,8 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 							{
 								if (vRocks[i].getYposition() + 1 == vSokoban.getYposition())
 								{
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 1, false);
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 2, true);
 									vSokoban.decrementYposition();
 									vRocks[i].decrementYposition();
 									break;
@@ -207,8 +207,8 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 							{
 								if (vRocks[i].getYposition() + 1 == vSokoban.getYposition())
 								{
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 1, false);
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() - 2, true);
 									vSokoban.decrementYposition();
 									vRocks[i].decrementYposition();
 									break;
@@ -252,8 +252,8 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 							{
 								if (vRocks[i].getYposition() - 1 == vSokoban.getYposition())
 								{
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 1, false);
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 2, true);
 									vSokoban.incrementYposition();
 									vRocks[i].incrementYposition();
 									break;
@@ -269,8 +269,8 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 							{
 								if (vRocks[i].getYposition() - 1 == vSokoban.getYposition())
 								{
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).mSwitchFull();
-									vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).mSwitchFull();
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 1, false);
+									vBoard.setFieldFull(vSokoban.getXposition(), vSokoban.getYposition() + 2, true);
 									vSokoban.incrementYposition();
 									vRocks[i].incrementYposition();
 									break;

@@ -24,6 +24,7 @@ public:
     inline void setHigh(coordinate vH) { vHigh = vH; }
     inline void setWide(coordinate vW) { vWide = vW; }
     inline void setField(coordinate aX, coordinate aY, cField aField) { tabElements[aX][aY] = aField; }
+    inline void setFieldFull(coordinate aX, coordinate aY, bool aFull) { tabElements[aX][aY].setIsFull(aFull); }
 
     inline coordinate getHigh() { return vHigh; }
     inline coordinate getWide() { return vWide; }
