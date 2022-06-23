@@ -35,20 +35,6 @@ std::ostream& operator << (std::ostream& strOut, cField& F)
 	return strOut;
 }
 
-void cField::mSwitchFull()
-{
-	if (vIsFull == true)
-	{
-		vIsFull = false;
-		setSymbolIndex(1);
-	}
-	else
-	{
-		vIsFull = true;
-		setSymbolIndex(2);
-	}
-}
-
 /********** PUBLIC: END **********/
 
 /* cfield.cpp */

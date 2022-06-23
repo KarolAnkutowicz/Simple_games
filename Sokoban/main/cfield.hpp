@@ -24,8 +24,6 @@ public:
     inline indexElement getIndexChars() { return vSymbolIndex; }
     inline bool getIsFull() { return vIsFull; }
 
-    void mSwitchFull();
-
     /********** PUBLIC: END **********/
 
 private:
