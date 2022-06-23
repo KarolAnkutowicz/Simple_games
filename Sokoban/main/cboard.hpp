@@ -20,11 +20,9 @@ public:
     cBoard(coordinate vHg, coordinate vWd) { vHigh = vHg; vWide = vWd; }
 
     friend std::istream& operator >> (std::istream& strIn, cBoard& B);
-    friend std::ostream& operator << (std::ostream& strOut, cBoard& B);
 
     inline void setHigh(coordinate vH) { vHigh = vH; }
     inline void setWide(coordinate vW) { vWide = vW; }
-    inline void setField(coordinate aX, coordinate aY, cField aField) { tabElements[aX][aY] = aField; }
     inline void setFieldFull(coordinate aX, coordinate aY, bool aFull) { tabElements[aX][aY].setIsFull(aFull); }
     inline void setFieldSymbolIndex(coordinate aX, coordinate aY, indexElement aIndex) { tabElements[aX][aY].setSymbolIndex(aIndex); }
 
