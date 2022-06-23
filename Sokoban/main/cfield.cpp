@@ -10,17 +10,16 @@
 
 std::istream& operator >> (std::istream& strIn, cField& F)
 {
-	char c;
-	strIn >> c;
-	indexElement vIndex = (indexElement)c;
-	F.setSymbolIndex(vIndex - 48);
+	indexElement vIndex;
+	strIn >> vIndex;
+	F.setSymbolIndex(vIndex);
 	F.setXposition(0);
 	F.setYposition(0);
 	if (vIndex)
 	switch (vIndex)
 	{
 
-	case '2':
+	case 2:
 		F.setIsFull(true);
 		break;
 	default:
