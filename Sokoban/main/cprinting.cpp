@@ -86,7 +86,12 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start)
 					}
 				}
 				if (vIfRock == true)
-					std::cout << Start.vRocks[vIndex];
+				{
+					if (Start.vBoard.getField(i, j).getIndexChars() == 2)
+						Start.vBoard.mPrintElement(i, j);
+					else
+						std::cout << Start.vRocks[vIndex];
+				}
 				else
 					Start.vBoard.mPrintElement(i, j);
 			}
