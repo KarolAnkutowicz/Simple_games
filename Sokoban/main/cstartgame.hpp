@@ -18,9 +18,6 @@ public:
 
     cStartGame() {};
 
-    //inline bool getYouWin() { return vYouWin; }
-
-    //bool mPossibleMove(char c);
     void mMakeMove(char c);
     void mMoveUpDown(char c, int aFactor);
     void mMoveLeftRight(char c, int aFactor);

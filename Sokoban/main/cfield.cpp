@@ -35,6 +35,11 @@ std::ostream& operator << (std::ostream& strOut, cField& F)
 	return strOut;
 }
 
+void cField::mPrintField(cSymbols& S)
+{
+	std::cout << S.getCharacters(getIndexChars());
+}
+
 void cField::mSwitchFull()
 {
 	if (vIsFull == true)

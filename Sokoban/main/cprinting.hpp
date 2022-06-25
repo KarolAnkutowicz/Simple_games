@@ -7,7 +7,6 @@
 #pragma once
 
 #include "cstartgame.hpp"
-#include "csymbols.hpp"
 #include <iostream>
 
 class cPrinting
@@ -22,9 +21,7 @@ public:
 
     void mPrintMenu();
 
-    void mPrintMenuStartGame();
-
-    void mPrintCurrentGame(cStartGame &Start);
+    void mPrintCurrentGame(cStartGame &Start, cSymbols &Symbol);
 
     void mPrintYouWin();
 

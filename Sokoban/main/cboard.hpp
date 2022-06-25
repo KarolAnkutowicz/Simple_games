@@ -7,7 +7,6 @@
 #pragma once
 
 #include "cfield.hpp"
-#include "csymbols.hpp"
 #include <iostream>
 #include <vector>
 
@@ -33,7 +32,7 @@ public:
     inline cField getField(coordinate aX, coordinate aY) { return tabElements[aX][aY]; }
     inline indexElement getFieldSymbolIndex(coordinate aX, coordinate aY) { return tabElements[aX][aY].getIndexChars(); }
 
-    inline void mPrintElement(coordinate vHg, coordinate vWd) { std::cout << tabElements[vHg][vWd]; }
+    inline void mPrintElement(coordinate vHg, coordinate vWd, cSymbols &Symbol) { tabElements[vHg][vWd].mPrintField(Symbol); }
 
     /********** PUBLIC: END **********/
 

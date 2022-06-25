@@ -17,6 +17,7 @@ public:
 
     friend std::istream& operator >> (std::istream& strIn, cField& F);
     friend std::ostream& operator << (std::ostream& strOut, cField& F);
+    void mPrintField(cSymbols& S);
 
     inline void setSymbolIndex(indexElement aSymbolIndex) { vSymbolIndex = aSymbolIndex; }
     inline void setIsFull(bool aIsFull) { vIsFull = aIsFull; }

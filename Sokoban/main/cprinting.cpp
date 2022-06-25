@@ -54,14 +54,7 @@ void cPrinting::mPrintMenu()
 		" (6) - Exit\n\n";
 }
 
-void cPrinting::mPrintMenuStartGame()
-{
-	system("cls");
-	std::cout << "Let's play!\n\n";
-	system("pause");
-}
-
-void cPrinting::mPrintCurrentGame(cStartGame& Start)
+void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 {
 	system("cls");
 	bool vIfRock;
@@ -88,12 +81,13 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start)
 				if (vIfRock == true)
 				{
 					if (Start.vBoard.getField(i, j).getIndexChars() == 2)
-						Start.vBoard.mPrintElement(i, j);
+						//Start.vBoard.mPrintElement(i, j);
+						Start.vBoard.mPrintElement(i, j, Symbol);
 					else
 						std::cout << Start.vRocks[vIndex];
 				}
 				else
-					Start.vBoard.mPrintElement(i, j);
+					Start.vBoard.mPrintElement(i, j, Symbol);
 			}
 			std::cout << ' ';
 		}

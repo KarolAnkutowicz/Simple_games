@@ -39,14 +39,14 @@ int main()
 				Print.mPrintGet();
 				std::cin >> vLevel;
 				Read.mLevelReader(vLevel, Start);
-				Print.mPrintCurrentGame(Start);
+				Print.mPrintCurrentGame(Start, Symbols);
 				while (Start.mCheckYouWin() == false)
 				{
 					std::cin >> vOption;
 					if (vOption == 'w' || vOption == 'a' || vOption == 's' || vOption == 'd')
 					{
 						Start.mMakeMove(vOption);
-						Print.mPrintCurrentGame(Start);
+						Print.mPrintCurrentGame(Start, Symbols);
 					}
 					else if (vOption == 'e')
 						break;

@@ -45,6 +45,5 @@ std::ostream& operator << (std::ostream& strOut, cBoard& B)
 
 /********** PUBLIC: END **********/
 
-
  /* cboard.cpp */
  /********** END_OF_FILE **********/

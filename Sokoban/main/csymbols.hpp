@@ -6,6 +6,8 @@
 
 #pragma once
 
+#include <iostream>
+
 typedef unsigned int coordinate;
 typedef unsigned int indexElement;
 typedef unsigned int numberLevel;
@@ -17,7 +19,7 @@ class cSymbols
 
 public:
 
-	cSymbols() : vChars{'.', '-', '+', 'X', 'S', 'o'} {}
+	cSymbols() : vChars{ '.', '-', '+', 'X', 'S', 'o' } {}
 
 	inline char getCharacters(indexElement aIndex) { return vChars[aIndex % numberChars]; }
 	inline void setCharacters(indexElement aIndex, char aChar) { vChars[aIndex % numberChars] = aChar; }

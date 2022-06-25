@@ -44,20 +44,20 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 		if (vSokoban.getXposition() > 0)
 		{
 			if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 0
-				&& vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIsFull() == false) // S.
+				&& vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIsFull() == false)
 				vSokoban.decrementXposition();
 			else if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 1
-				&& vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIsFull() == false) // S-
+				&& vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIsFull() == false)
 				vSokoban.decrementXposition();
-			else // S?
+			else
 			{
 				if (vSokoban.getXposition() > 1)
 				{
 					if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() != 3
-						&& vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIsFull() == true) // So? S+?
+						&& vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIsFull() == true)
 					{
 						if (vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIndexChars() == 0
-							&& vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIsFull() == false) // So. S+.
+							&& vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
@@ -78,7 +78,7 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 							}
 						}
 						else if (vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIndexChars() == 1
-							&& vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIsFull() == false) // So- S+-
+							&& vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
@@ -111,26 +111,20 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 		if (vSokoban.getXposition() < vBoard.getHigh() - 1)
 		{
 			if (vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 0
-				&& vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIsFull() == false
-				&& mIfRock(vSokoban.getXposition() + 1, vSokoban.getYposition()) == false) // S.
-			{
+				&& vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIsFull() == false)
 				vSokoban.incrementXposition();
-			}
 			else if (vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() == 1
-				&& vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIsFull() == false
-				&& mIfRock(vSokoban.getXposition() + 1, vSokoban.getYposition()) == false) // S-
-			{
+				&& vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIsFull() == false)
 				vSokoban.incrementXposition();
-			}
-			else // S?
+			else
 			{
 				if (vSokoban.getXposition() < vBoard.getHigh() - 2)
 				{
 					if (vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIndexChars() != 3
-						&& vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIsFull() == true) // So? S+?
+						&& vBoard.getField(vSokoban.getXposition() + 1, vSokoban.getYposition()).getIsFull() == true)
 					{
 						if (vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIndexChars() == 0
-							&& vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIsFull() == false) // So. S+.
+							&& vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
@@ -151,7 +145,7 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 							}
 						}
 						else if (vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIndexChars() == 1
-							&& vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIsFull() == false) // So- S+-
+							&& vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
@@ -187,24 +181,24 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 		if (vSokoban.getYposition() > 0)
 		{
 			if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 0
-				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIsFull() == false) // S.
+				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIsFull() == false)
 			{
 				vSokoban.decrementYposition();
 			}
 			else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 1
-				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIsFull() == false) // S-
+				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIsFull() == false)
 			{
 				vSokoban.decrementYposition();
 			}
-			else // S?
+			else
 			{
 				if (vSokoban.getYposition() > 1)
 				{
 					if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() != 3
-						&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIsFull() == true) // So? S+?
+						&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIsFull() == true)
 					{
 						if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 0
-							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIsFull() == false) // So. S+.
+							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
@@ -225,7 +219,7 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 							}
 						}
 						else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 1
-							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIsFull() == false) // So- S+-
+							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
@@ -258,25 +252,24 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 		if (vSokoban.getYposition() < vBoard.getWide() - 1)
 		{
 			if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 0
-				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIsFull() == false) // S.
+				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIsFull() == false)
 			{
 				vSokoban.incrementYposition();
 			}
 			else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() == 1
-				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIsFull() == false) // S-
+				&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIsFull() == false)
 			{
 				vSokoban.incrementYposition();
 			}
-			else // S?
+			else
 			{
 				if (vSokoban.getYposition() < vBoard.getWide() - 2)
 				{
 					if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIndexChars() != 3
-						&& (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIsFull() == true
-						|| mIfRock(vSokoban.getXposition(), vSokoban.getYposition() + 1) == true)) // So? S+?
+						&& (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 1).getIsFull() == true))
 					{
 						if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIndexChars() == 0
-							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIsFull() == false) // So. S+.
+							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
@@ -297,7 +290,7 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 							}
 						}
 						else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIndexChars() == 1
-							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIsFull() == false) // So- S+-
+							&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIsFull() == false)
 						{
 							for (indexElement i = 0; i < vRocks.size(); i++)
 							{
