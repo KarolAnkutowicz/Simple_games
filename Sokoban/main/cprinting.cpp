@@ -81,7 +81,6 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 				if (vIfRock == true)
 				{
 					if (Start.vBoard.getField(i, j).getIndexChars() == 2)
-						//Start.vBoard.mPrintElement(i, j);
 						Start.vBoard.mPrintElement(i, j, Symbol);
 					else
 						std::cout << Start.vRocks[vIndex];

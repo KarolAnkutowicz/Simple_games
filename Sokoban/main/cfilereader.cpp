@@ -43,8 +43,6 @@ void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 		for (indexElement i = 0; i < Start.vRocks.size(); i++)
 		{
 			Start.vBoard.setFieldFull(Start.vRocks[i].getXposition(), Start.vRocks[i].getYposition(), true);
-			//std::cout << "[" << Start.vRocks[i].getXposition() << "][" << Start.vRocks[i].getYposition() << "] = "
-			//	<< Start.vBoard.getField(Start.vRocks[i].getXposition(), Start.vRocks[i].getYposition()).getIsFull() << '\n';
 		}
 	}
 	strIn.close();

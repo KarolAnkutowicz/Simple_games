@@ -28,15 +28,6 @@ std::ostream& operator << (std::ostream& strOut, cRock& R)
 	return strOut;
 }
 
-void cRock::mSwitchSave()
-{
-	if (vSave == true)
-		vSave = false;
-	else
-		vSave = true;
-
-}
-
 /********** PUBLIC: END **********/
 
 
