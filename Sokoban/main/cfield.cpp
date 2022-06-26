@@ -28,30 +28,9 @@ std::istream& operator >> (std::istream& strIn, cField& F)
 	return strIn;
 }
 
-std::ostream& operator << (std::ostream& strOut, cField& F)
-{
-	cSymbols S;
-	strOut << S.getCharacters(F.getIndexChars());
-	return strOut;
-}
-
 void cField::mPrintField(cSymbols& S)
 {
 	std::cout << S.getCharacters(getIndexChars());
-}
-
-void cField::mSwitchFull()
-{
-	if (vIsFull == true)
-	{
-		vIsFull = false;
-		setSymbolIndex(1);
-	}
-	else
-	{
-		vIsFull = true;
-		setSymbolIndex(2);
-	}
 }
 
 /********** PUBLIC: END **********/

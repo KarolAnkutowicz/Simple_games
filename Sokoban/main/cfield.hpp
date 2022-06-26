@@ -16,7 +16,7 @@ class cField : public cPosition
 public:
 
     friend std::istream& operator >> (std::istream& strIn, cField& F);
-    friend std::ostream& operator << (std::ostream& strOut, cField& F);
+
     void mPrintField(cSymbols& S);
 
     inline void setSymbolIndex(indexElement aSymbolIndex) { vSymbolIndex = aSymbolIndex; }
@@ -24,8 +24,6 @@ public:
 
     inline indexElement getIndexChars() { return vSymbolIndex; }
     inline bool getIsFull() { return vIsFull; }
-
-    void mSwitchFull();
 
     /********** PUBLIC: END **********/
 
