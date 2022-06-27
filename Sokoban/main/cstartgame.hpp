@@ -20,7 +20,9 @@ public:
 
     void mMakeMove(char c);
     void mMoveUpDown(char c, int aFactor);
-    void mMoveLeftRight(char c, int aFactor);
+    void mMoveLeftRigth(char c, int aFactor);
+    void mPushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
+    void mPushStoneLeftRigth(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
 
     bool mIfRock(coordinate aX, coordinate aY);
 
