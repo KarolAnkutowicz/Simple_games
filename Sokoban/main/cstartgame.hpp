@@ -27,8 +27,12 @@ public:
 
     bool mIfRock(coordinate aX, coordinate aY);
 
-    void mAddMove(char c);
+    inline void mAddMove(char c) { vMoves.push(c); }
     void mUndoMove();
+    void mReverseMoveUpDown(char c, int aFactor);
+    void mReverseMoveLeftRigth(char c, int aFactor);
+    void mReversePushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
+    void mReversePushStoneLeftRigth(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
 
     bool mCheckYouWin();
 

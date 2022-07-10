@@ -10,29 +10,28 @@
 
 /********** PUBLIC: BEGIN **********/
 
-bool cStartGame::mCheckYouWin()
-{
-	for (indexElement i = 0; i < vRocks.size(); i++)
-		if (vRocks[i].getSave() == false)
-			return false;
-	return true;
-}
-
 void cStartGame::mMakeMove(char c)
 {
 	switch (c)
 	{
 	case 'w':
+		mAddMove('w');
 		mMoveUpDown('w', 1);
 		break;
 	case 'a':
+		mAddMove('a');
 		mMoveLeftRigth('a', 1);
 		break;
 	case 's':
+		mAddMove('s');
 		mMoveUpDown('s', -1);
 		break;
 	case 'd':
+		mAddMove('d');
 		mMoveLeftRigth('d', -1);
+		break;
+	case 'r':
+		mUndoMove();
 		break;
 	}
 }
@@ -304,6 +303,60 @@ bool cStartGame::mIfRock(coordinate aX, coordinate aY)
 			return true;
 	return false;
 }
+
+void cStartGame::mUndoMove()
+{
+	if (vMoves.size() != 0)
+	{
+		char c;
+		c = vMoves.top();
+		switch (c)
+		{
+		case 'w':
+			mReverseMoveUpDown('w', 1);
+			break;
+		case 'a':
+			mReverseMoveLeftRigth('a', 1);
+			break;
+		case 's':
+			mReverseMoveUpDown('s', -1);
+			break;
+		case 'd':
+			mReverseMoveLeftRigth('d', -1);
+			break;
+		}
+		vMoves.pop();
+	}
+}
+
+void cStartGame::mReverseMoveUpDown(char c, int aFactor)
+{
+
+}
+
+void cStartGame::mReverseMoveLeftRigth(char c, int aFactor)
+{
+
+}
+
+void cStartGame::mReversePushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban)
+{
+
+}
+
+void cStartGame::mReversePushStoneLeftRigth(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban)
+{
+
+}
+
+bool cStartGame::mCheckYouWin()
+{
+	for (indexElement i = 0; i < vRocks.size(); i++)
+		if (vRocks[i].getSave() == false)
+			return false;
+	return true;
+}
+
 
 /********** PUBLIC: END **********/
 
