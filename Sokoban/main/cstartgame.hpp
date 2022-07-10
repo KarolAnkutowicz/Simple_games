@@ -9,6 +9,7 @@
 #include "cboard.hpp"
 #include "crock.hpp"
 #include "csokoban.hpp"
+#include <stack>
 
 class cStartGame
 {
@@ -26,6 +27,9 @@ public:
 
     bool mIfRock(coordinate aX, coordinate aY);
 
+    void mAddMove(char c);
+    void mUndoMove();
+
     bool mCheckYouWin();
 
     cBoard vBoard;
@@ -33,6 +37,14 @@ public:
     std::vector<cRock> vRocks;
 
     /********** PUBLIC: END **********/
+
+    /********** PRIVATE: BEGIN **********/
+
+private:
+
+    std::stack<char> vMoves;
+
+    /********** PRIVATE: END **********/
 };
 
 /* cstartgame.hpp */
