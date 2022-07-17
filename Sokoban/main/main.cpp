@@ -48,6 +48,11 @@ int main()
 						Start.mMakeMove(vOption);
 						Print.mPrintCurrentGame(Start, Symbols);
 					}
+					else if (vOption == 'r')
+					{
+						Start.mUndoMove();
+						Print.mPrintCurrentGame(Start, Symbols);
+					}
 					else if (vOption == 'e')
 						break;
 				}
