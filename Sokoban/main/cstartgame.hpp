@@ -36,9 +36,10 @@ public:
 
     bool mCheckYouWin();
 
-    cBoard vBoard;
-    cSokoban vSokoban;
-    std::vector<cRock> vRocks;
+    inline void mClearRocks() { vRocks.clear(); }
+    inline size_t getRocksSize() { return vRocks.size(); }
+    inline void mAddRock(cRock Rock) { vRocks.push_back(Rock); }
+    inline cRock getRock(indexElement aIndex) { return vRocks[aIndex]; }
 
     /********** PUBLIC: END **********/
 
@@ -46,7 +47,11 @@ public:
 
 private:
 
+    cBoard vBoard;
+    cSokoban vSokoban;
+    std::vector<cRock> vRocks;
     std::stack<char> vMoves;
+    std::stack<bool> vPushes;
 
     /********** PRIVATE: END **********/
 };

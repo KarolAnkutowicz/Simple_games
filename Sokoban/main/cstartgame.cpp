@@ -597,7 +597,6 @@ bool cStartGame::mCheckYouWin()
 	return true;
 }
 
-
 /********** PUBLIC: END **********/
 
 /* cstartgame.cpp */
