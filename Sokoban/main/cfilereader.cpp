@@ -32,17 +32,17 @@ void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 	{ 
 		indexElement vRocksSize;
 		cRock Rck;
-		strIn >> Start.vSokoban >> vRocksSize;
+		strIn >> Start.getSokoban() >> vRocksSize;
 		Start.mClearRocks();
 		for (indexElement i = 0; i < vRocksSize; i++)
 		{
 			strIn >> Rck;
 			Start.mAddRock(Rck);
 		}
-		strIn >> Start.vBoard;
+		strIn >> Start.getBoard();
 		for (indexElement i = 0; i < Start.getRocksSize(); i++)
 		{
-			Start.vBoard.setFieldFull(Start.getRock(i).getXposition(), Start.getRock(i).getYposition(), true);
+			Start.getBoard().setFieldFull(Start.getRock(i).getXposition(), Start.getRock(i).getYposition(), true);
 		}
 	}
 	strIn.close();

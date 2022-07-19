@@ -59,14 +59,14 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 	system("cls");
 	bool vIfRock;
 	indexElement vIndex;
-	for (coordinate i = 0; i < Start.vBoard.getHigh(); i++)
+	for (coordinate i = 0; i < Start.getBoard().getHigh(); i++)
 	{
-		for (coordinate j = 0; j < Start.vBoard.getWide(); j++)
+		for (coordinate j = 0; j < Start.getBoard().getWide(); j++)
 		{
 			vIfRock = false;
 			vIndex = 6;
-			if (Start.vSokoban.getXposition() == i && Start.vSokoban.getYposition() == j)
-				std::cout << Start.vSokoban;
+			if (Start.getSokoban().getXposition() == i && Start.getSokoban().getYposition() == j)
+				std::cout << Start.getSokoban();
 			else
 			{
 				for (coordinate k = 0; k < Start.getRocksSize(); k++)
@@ -80,14 +80,13 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 				}
 				if (vIfRock == true)
 				{
-					if (Start.vBoard.getField(i, j).getIndexChars() == 2)
-						Start.vBoard.mPrintElement(i, j, Symbol);
+					if (Start.getBoard().getField(i, j).getIndexChars() == 2)
+						Start.getBoard().mPrintElement(i, j, Symbol);
 					else
-						std::cout << Start.vRocks[vIndex];
-					std::cout << Start.getRock(vIndex).;
+						std::cout << Start.getRock(vIndex);
 				}
 				else
-					Start.vBoard.mPrintElement(i, j, Symbol);
+					Start.getBoard().mPrintElement(i, j, Symbol);
 			}
 			std::cout << ' ';
 		}
