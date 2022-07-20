@@ -21,6 +21,7 @@ public:
     inline void setSave(bool aSave) { vSave = aSave; }
 
     inline bool getSave() { return vSave; }
+    inline char getChar(cSymbols& aSymbol) { return aSymbol.getCharacters(5); }
 
     /********** PUBLIC: END **********/
 

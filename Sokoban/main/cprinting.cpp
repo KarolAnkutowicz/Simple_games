@@ -66,7 +66,7 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 			vIfRock = false;
 			vIndex = 6;
 			if (Start.getSokoban().getXposition() == i && Start.getSokoban().getYposition() == j)
-				std::cout << Start.getSokoban();
+				std::cout << Start.getSokoban().getSymbol(Symbol);
 			else
 			{
 				for (coordinate k = 0; k < Start.getRocksSize(); k++)
@@ -83,7 +83,7 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 					if (Start.getBoard().getField(i, j).getIndexChars() == 2)
 						Start.getBoard().mPrintElement(i, j, Symbol);
 					else
-						std::cout << Start.getRock(vIndex);
+						std::cout << Start.getRock(vIndex).getChar(Symbol);
 				}
 				else
 					Start.getBoard().mPrintElement(i, j, Symbol);

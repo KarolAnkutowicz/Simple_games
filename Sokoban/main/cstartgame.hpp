@@ -36,14 +36,14 @@ public:
 
     bool mCheckYouWin();
 
-    inline cBoard getBoard() { return vBoard; }
+    inline cBoard& getBoard() { return vBoard; }
 
-    inline cSokoban getSokoban() { return vSokoban; }
+    inline cSokoban& getSokoban() { return vSokoban; }
     inline void setSokoban() {}
 
     inline void mClearRocks() { vRocks.clear(); }
     inline size_t getRocksSize() { return vRocks.size(); }
-    inline void mAddRock(cRock Rock) { vRocks.push_back(Rock); }
+    inline void mAddRock(cRock& Rock) { vRocks.push_back(Rock); }
     inline cRock getRock(indexElement aIndex) { return vRocks[aIndex]; }
 
     /********** PUBLIC: END **********/
