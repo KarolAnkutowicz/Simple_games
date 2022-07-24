@@ -34,6 +34,10 @@ public:
     void mReversePushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
     void mReversePushStoneLeftRigth(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
 
+    inline void mAddPush(bool aIfPush) { vPushes.push(aIfPush); }
+    inline void mUndoPush() { if (vPushes.size() != 0) vPushes.pop(); }
+    inline bool mGetLastPush() { return vPushes.top(); }
+
     bool mCheckYouWin();
 
     inline cBoard& getBoard() { return vBoard; }
