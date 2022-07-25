@@ -38,7 +38,38 @@ void cStartGame::mMakeMove(char c)
 
 void cStartGame::mMoveUpDown(char c, int aFactor)
 {
-	if (c == 'w' && vSokoban.getXposition() > 0)
+	if (vBoard.getField(vSokoban.getXposition() - 1 * aFactor, vSokoban.getYposition()).getIsFull() == false
+		&& (vBoard.getField(vSokoban.getXposition() - 1 * aFactor, vSokoban.getYposition()).getIndexChars() == 0
+			|| vBoard.getField(vSokoban.getXposition() - 1 * aFactor, vSokoban.getYposition()).getIndexChars() == 1))
+	{
+		if (c == 'w' && vSokoban.getXposition() > 0)
+			vSokoban.decrementXposition();
+		else if (c == 's' && vSokoban.getXposition() < vBoard.getHigh() - 1)
+			vSokoban.incrementXposition();
+		mAddPush(false);
+	}
+	else if (vBoard.getField(vSokoban.getXposition() - 1 * aFactor, vSokoban.getYposition()).getIndexChars() != 3
+		&& vBoard.getField(vSokoban.getXposition() - 1 * aFactor, vSokoban.getYposition()).getIsFull() == true
+		&& vBoard.getField(vSokoban.getXposition() - 2 * aFactor, vSokoban.getYposition()).getIsFull() == false)
+	{
+		if (c == 'w' && vSokoban.getXposition() > 1)
+		{
+			if (vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIndexChars() == 0)
+				mPushStoneUpDown('w', 1, vSokoban.getXposition(), vSokoban.getYposition());
+			else if (vBoard.getField(vSokoban.getXposition() - 2, vSokoban.getYposition()).getIndexChars() == 1)
+				mPushStoneUpDown('w', -1, vSokoban.getXposition(), vSokoban.getYposition());
+		}
+		else if (c == 's' && vSokoban.getXposition() < vBoard.getHigh() - 2)
+		{
+			if (vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIndexChars() == 0)
+				mPushStoneUpDown('s', 1, vSokoban.getXposition(), vSokoban.getYposition());
+			else if (vBoard.getField(vSokoban.getXposition() + 2, vSokoban.getYposition()).getIndexChars() == 1)
+				mPushStoneUpDown('s', -1, vSokoban.getXposition(), vSokoban.getYposition());
+		}
+		mAddPush(true);
+	}
+	
+	/*if (c == 'w' && vSokoban.getXposition() > 0)
 	{
 		if (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIsFull() == false
 			&& (vBoard.getField(vSokoban.getXposition() - 1, vSokoban.getYposition()).getIndexChars() == 0
@@ -79,12 +110,43 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 				mPushStoneUpDown('s', -1, vSokoban.getXposition(), vSokoban.getYposition());
 			mAddPush(true);
 		}
-	}
+	}*/
 }
 
 void cStartGame::mMoveLeftRigth(char c, int aFactor)
 {
-	if (c == 'a' && vSokoban.getYposition() > 0)
+	if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * aFactor).getIsFull() == false
+		&& (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * aFactor).getIndexChars() == 0
+			|| vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * aFactor).getIndexChars() == 1))
+	{
+		if (c == 'a' && vSokoban.getYposition() > 0)
+			vSokoban.decrementYposition();
+		else if (c == 'd' && vSokoban.getYposition() < vBoard.getWide() - 1)
+			vSokoban.incrementYposition();
+		mAddPush(false);
+	}
+	else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * aFactor).getIndexChars() != 3
+		&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * aFactor).getIsFull() == true
+		&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2 * aFactor).getIsFull() == false)
+	{
+		if (c == 'a' && vSokoban.getYposition() > 1)
+		{
+			if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 0)
+				mPushStoneLeftRigth('a', 1, vSokoban.getXposition(), vSokoban.getYposition());
+			else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 2).getIndexChars() == 1)
+				mPushStoneLeftRigth('a', -1, vSokoban.getXposition(), vSokoban.getYposition());
+		}
+		else if (c == 'd' && vSokoban.getYposition() < vBoard.getWide() - 2)
+		{
+			if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIndexChars() == 0)
+				mPushStoneLeftRigth('d', 1, vSokoban.getXposition(), vSokoban.getYposition());
+			else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() + 2).getIndexChars() == 1)
+				mPushStoneLeftRigth('d', -1, vSokoban.getXposition(), vSokoban.getYposition());
+		}
+		mAddPush(true);
+	}
+
+	/*if (c == 'a' && vSokoban.getYposition() > 0)
 	{
 		if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIsFull() == false
 			&& (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1).getIndexChars() == 0
@@ -125,7 +187,7 @@ void cStartGame::mMoveLeftRigth(char c, int aFactor)
 				mPushStoneLeftRigth('d', -1, vSokoban.getXposition(), vSokoban.getYposition());
 			mAddPush(true);
 		}
-	}
+	}*/
 }
 
 void cStartGame::mPushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban)
