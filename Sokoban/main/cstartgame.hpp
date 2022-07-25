@@ -36,7 +36,7 @@ public:
 
     inline void mAddPush(bool aIfPush) { vPushes.push(aIfPush); }
     inline void mUndoPush() { if (vPushes.size() != 0) vPushes.pop(); }
-    inline bool mGetLastPush() { return vPushes.top(); }
+    inline bool getLastPush() { return vPushes.top(); }
 
     bool mCheckYouWin();
 
