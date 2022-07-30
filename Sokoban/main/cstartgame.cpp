@@ -249,49 +249,41 @@ void cStartGame::mUndoMove()
 		switch (c)
 		{
 		case 'w':
-			mReverseMoveUpDown('w', 1);
+		case 's':
+			mReverseMoveUpDown(c);
 			break;
 		case 'a':
-			mReverseMoveLeftRight('a', 1);
-			break;
-		case 's':
-			mReverseMoveUpDown('s', -1);
-			break;
 		case 'd':
-			mReverseMoveLeftRight('d', -1);
+			mReverseMoveLeftRight(c);
 			break;
 		}
 		vMoves.pop();
 	}
 }
 
-void cStartGame::mReverseMoveUpDown(char c, int aFactor)
+void cStartGame::mReverseMoveUpDown(char c)
 {
 	if (vPushes.top() == false)
 		vSokoban.incrementXposition();
 	else
 	{
-		if (c == 'w')
-			mReversePushStoneUpDown(c, 1, vSokoban.getXposition(), vSokoban.getYposition());
-		else if (c == 's')
-			mReversePushStoneUpDown(c, -1, vSokoban.getXposition(), vSokoban.getYposition());
+		if (c == 'w' || c == 's')
+			mReversePushStoneUpDown(c, vSokoban.getXposition(), vSokoban.getYposition());
 	}
 }
 
-void cStartGame::mReverseMoveLeftRight(char c, int aFactor)
+void cStartGame::mReverseMoveLeftRight(char c)
 {
 	if (vPushes.top() == false)
 		vSokoban.incrementYposition();
 	else
 	{
-		if (c == 'w')
-			mReversePushStoneLeftRight(c, 1, vSokoban.getXposition(), vSokoban.getYposition());
-		else if (c == 's')
-			mReversePushStoneLeftRight(c, -1, vSokoban.getXposition(), vSokoban.getYposition());
+		if (c == 'a' || c == 'd')
+			mReversePushStoneLeftRight(c, vSokoban.getXposition(), vSokoban.getYposition());
 	}
 }
 
-void cStartGame::mReversePushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban)
+void cStartGame::mReversePushStoneUpDown(char c, coordinate aXSokoban, coordinate aYSokoban)
 {
 	/*if (c == 'w')
 	{
@@ -383,7 +375,7 @@ void cStartGame::mReversePushStoneUpDown(char c, int aFactor, coordinate aXSokob
 	}*/
 }
 
-void cStartGame::mReversePushStoneLeftRight(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban)
+void cStartGame::mReversePushStoneLeftRight(char c, coordinate aXSokoban, coordinate aYSokoban)
 {
 	/*if (c == 'a')
 	{

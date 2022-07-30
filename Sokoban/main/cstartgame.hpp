@@ -29,10 +29,10 @@ public:
 
     inline void mAddMove(char c) { vMoves.push(c); }
     void mUndoMove();
-    void mReverseMoveUpDown(char c, int aFactor);
-    void mReverseMoveLeftRight(char c, int aFactor);
-    void mReversePushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
-    void mReversePushStoneLeftRight(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
+    void mReverseMoveUpDown(char c);
+    void mReverseMoveLeftRight(char c);
+    void mReversePushStoneUpDown(char c, coordinate aXSokoban, coordinate aYSokoban);
+    void mReversePushStoneLeftRight(char c, coordinate aXSokoban, coordinate aYSokoban);
 
     inline void mAddPush(bool aIfPush) { vPushes.push(aIfPush); }
     inline void mUndoPush() { if (vPushes.size() != 0) vPushes.pop(); }
