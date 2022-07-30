@@ -21,18 +21,18 @@ public:
 
     void mMakeMove(char c);
     void mMoveUpDown(char c, int aFactor);
-    void mMoveLeftRigth(char c, int aFactor);
+    void mMoveLeftRight(char c, int aFactor);
     void mPushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
-    void mPushStoneLeftRigth(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
+    void mPushStoneLeftRight(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
 
     bool mIfRock(coordinate aX, coordinate aY);
 
     inline void mAddMove(char c) { vMoves.push(c); }
     void mUndoMove();
     void mReverseMoveUpDown(char c, int aFactor);
-    void mReverseMoveLeftRigth(char c, int aFactor);
+    void mReverseMoveLeftRight(char c, int aFactor);
     void mReversePushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
-    void mReversePushStoneLeftRigth(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
+    void mReversePushStoneLeftRight(char c, int aFactor, coordinate aXSokoban, coordinate aYSokoban);
 
     inline void mAddPush(bool aIfPush) { vPushes.push(aIfPush); }
     inline void mUndoPush() { if (vPushes.size() != 0) vPushes.pop(); }
