@@ -36,6 +36,7 @@ public:
 
     inline void mAddPush(bool aIfPush) { vPushes.push(aIfPush); }
     inline void mUndoPush() { if (vPushes.size() != 0) vPushes.pop(); }
+    void mClearMovesAndPushes();
 
     bool mCheckYouWin();
 
@@ -49,6 +50,10 @@ public:
     inline void mAddRock(cRock& Rock) { vRocks.push_back(Rock); }
     inline cRock getRock(indexElement aIndex) { return vRocks[aIndex]; }
 
+    inline void mResetCounter() { vMoveCounter = 0; }
+    inline void mIncrementMoveCounter() { vMoveCounter++; };
+    inline unsigned int getMoveCounter() { return vMoveCounter; }
+
     /********** PUBLIC: END **********/
 
     /********** PRIVATE: BEGIN **********/
@@ -60,6 +65,7 @@ private:
     std::vector<cRock> vRocks;
     std::stack<char> vMoves;
     std::stack<bool> vPushes;
+    unsigned int vMoveCounter;
 
     /********** PRIVATE: END **********/
 };

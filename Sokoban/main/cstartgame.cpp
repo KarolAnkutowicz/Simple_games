@@ -44,6 +44,7 @@ void cStartGame::mMoveUpDown(char c, int aFactor)
 			vSokoban.incrementXposition();
 		mAddMove(c);
 		mAddPush(false);
+		mIncrementMoveCounter();
 	}
 	else if (vBoard.getField(vSokoban.getXposition() - 1 * aFactor, vSokoban.getYposition()).getIndexChars() != 3
 		&& vBoard.getField(vSokoban.getXposition() - 1 * aFactor, vSokoban.getYposition()).getIsFull() == true
@@ -78,6 +79,7 @@ void cStartGame::mMoveLeftRight(char c, int aFactor)
 			vSokoban.incrementYposition();
 		mAddMove(c);
 		mAddPush(false);
+		mIncrementMoveCounter();
 	}
 	else if (vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * aFactor).getIndexChars() != 3
 		&& vBoard.getField(vSokoban.getXposition(), vSokoban.getYposition() - 1 * aFactor).getIsFull() == true
@@ -130,6 +132,7 @@ void cStartGame::mPushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coo
 					vRocks[i].decrementXposition();
 					mAddMove(c);
 					mAddPush(true);
+					mIncrementMoveCounter();
 					break;
 				}
 				else
@@ -159,6 +162,7 @@ void cStartGame::mPushStoneUpDown(char c, int aFactor, coordinate aXSokoban, coo
 					vRocks[i].incrementXposition();
 					mAddMove(c);
 					mAddPush(true);
+					mIncrementMoveCounter();
 					break;
 				}
 				else
@@ -198,6 +202,7 @@ void cStartGame::mPushStoneLeftRight(char c, int aFactor, coordinate aXSokoban, 
 					vRocks[i].decrementYposition();
 					mAddMove(c);
 					mAddPush(true);
+					mIncrementMoveCounter();
 					break;
 				}
 				else
@@ -227,6 +232,7 @@ void cStartGame::mPushStoneLeftRight(char c, int aFactor, coordinate aXSokoban, 
 					vRocks[i].incrementYposition();
 					mAddMove(c);
 					mAddPush(true);
+					mIncrementMoveCounter();
 					break;
 				}
 				else
@@ -274,6 +280,7 @@ void cStartGame::mReverseMoveUpDown(char c)
 		else if (c == 's')
 			vSokoban.decrementXposition();
 		mUndoPush();
+		mIncrementMoveCounter();
 	}
 	else
 	{
@@ -291,6 +298,7 @@ void cStartGame::mReverseMoveLeftRight(char c)
 		else if (c == 'd')
 			vSokoban.decrementYposition();
 		mUndoPush();
+		mIncrementMoveCounter();
 	}
 	else
 	{
@@ -322,6 +330,7 @@ void cStartGame::mReversePushStoneUpDown(char c, coordinate aXSokoban, coordinat
 				vSokoban.incrementXposition();
 				vRocks[i].incrementXposition();
 				mUndoPush();
+				mIncrementMoveCounter();
 				break;
 			}
 			else
@@ -346,6 +355,7 @@ void cStartGame::mReversePushStoneUpDown(char c, coordinate aXSokoban, coordinat
 				vSokoban.decrementXposition();
 				vRocks[i].decrementXposition();
 				mUndoPush();
+				mIncrementMoveCounter();
 				break;
 			}
 			else
@@ -377,6 +387,7 @@ void cStartGame::mReversePushStoneLeftRight(char c, coordinate aXSokoban, coordi
 				vSokoban.incrementYposition();
 				vRocks[i].incrementYposition();
 				mUndoPush();
+				mIncrementMoveCounter();
 				break;
 			}
 			else
@@ -401,12 +412,21 @@ void cStartGame::mReversePushStoneLeftRight(char c, coordinate aXSokoban, coordi
 				vSokoban.decrementYposition();
 				vRocks[i].decrementYposition();
 				mUndoPush();
+				mIncrementMoveCounter();
 				break;
 			}
 			else
 				continue;
 		}
 	}
+}
+
+void cStartGame::mClearMovesAndPushes()
+{
+	while (vMoves.size() != 0)
+		vMoves.pop();
+	while (vPushes.size() != 0)
+		vPushes.pop();
 }
 
 bool cStartGame::mCheckYouWin()

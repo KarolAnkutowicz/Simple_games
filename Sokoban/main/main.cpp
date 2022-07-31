@@ -39,7 +39,9 @@ int main()
 				Print.mPrintGet();
 				std::cin >> vLevel;
 				Read.mLevelReader(vLevel, Start);
+				Start.mResetCounter();
 				Print.mPrintCurrentGame(Start, Symbols);
+				Start.mClearMovesAndPushes();
 				while (Start.mCheckYouWin() == false)
 				{
 					std::cin >> vOption;

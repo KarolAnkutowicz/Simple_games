@@ -92,6 +92,7 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 		}
 		std::cout << '\n';
 	}
+	std::cout << "\nMoves: " << Start.getMoveCounter() << "\n\n";
 }
 
 void cPrinting::mPrintYouWin()
