@@ -1,4 +1,24 @@
-This
-is
-tutorial
-:)
+2. Keys:
+
+W - up
+S - down
+A - left
+D - right
+R - undo move
+E - abandon game
+
+3. Purpose
+
+Move all stones to safe fields.
+
+4. Possible moves
+
+Sokoban can only push one stone at a time. It cannot drag stones behind it. It cannot penetrate stones or other obstacles.
+
+5. Undo moves
+
+The game allows you to undo a move, but it counts like a legal move.
+
+6. End of the game
+
+The game ends when all the stones are placed on safe fields.
