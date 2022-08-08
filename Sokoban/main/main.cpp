@@ -66,7 +66,7 @@ int main()
 		case '2': 
 			do
 			{
-				Print.mPrintMenuOptions(Symbols);
+				Print.mPrintMenuOptions(Symbols, 0);
 				Print.mPrintGet();
 				std::cin >> vOption;
 				if (Symbols.ifExist(vOption))
@@ -94,7 +94,8 @@ int main()
 			Read.mEasyReader("./data_files/bestresults.txt");
 			break;
 		case '4': 
-			Read.mEasyReader("./data_files/tutorial.txt");
+			Print.mPrintMenuOptions(Symbols, 1);
+			Read.mEasyReader("./data_files/tutorial.txt", 2);
 			break;
 		case '5': 
 			Read.mEasyReader("./data_files/credits.txt");

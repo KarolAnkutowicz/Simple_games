@@ -27,7 +27,7 @@ public:
 
     void mPrintOpenInterruptedGame();
 
-    void mPrintMenuOptions(cSymbols &Symbol);
+    void mPrintMenuOptions(cSymbols &Symbol, unsigned int aOption);
 
     void mPrintMenuExit();
 

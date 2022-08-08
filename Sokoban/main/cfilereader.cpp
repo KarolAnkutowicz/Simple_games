@@ -50,7 +50,8 @@ void cFileReader::mLevelReader(numberLevel aLevel, cStartGame& Start)
 
 void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)
 {
-	system("cls");
+	if (aSituation == 0)
+		system("cls");
 	std::ifstream strIn;
 	strIn.open(mFileName);
 	if (!strIn.is_open())
@@ -63,6 +64,7 @@ void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)
 			vCharacters.push_back(c);
 		for (const auto& i : vCharacters)
 			std::cout << i;
+		std::cout << "\n";
 	}
 	strIn.close();
 	if (aSituation % 2 == 0)
