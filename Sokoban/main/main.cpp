@@ -72,20 +72,20 @@ int main()
 				if (Symbols.ifExist(vOption))
 				{
 					indexElement vIndex = Symbols.getIndex(vOption);
-					std::cout << "Get new symbol: ";
+					Print.mPrintMenuOptionsGetSymbol();
 					std::cin >> vOption;
 					if (Symbols.ifExist(vOption) || vOption == 'e')
-						std::cout << "Change impossible - duplication symbol!\n\n";
+						Print.mPrintMenuOptionsChangeImpossible();
 					else
 					{
 						Symbols.setCharacters(vIndex, vOption);
-						std::cout << "Change made.\n\n";
+						Print.mPrintMenuOptionsChangeMade();
 					}
 					system("pause");
 				}
 				else if (vOption != 'e')
 				{
-					std::cout << "Character is not exist!\n\n";
+					Print.mPrintMenuOptionsCharacterNotExist();
 					system("pause");
 				}
 			} while (vOption != 'e');
