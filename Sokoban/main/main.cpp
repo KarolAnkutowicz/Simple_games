@@ -35,6 +35,7 @@ int main()
 				Read.mInterruptedGameReader();
 			else
 			{
+				system("cls");
 				Read.mEasyReader("./data_files/listlevels.txt", 1);
 				Print.mPrintGet();
 				std::cin >> vLevel;

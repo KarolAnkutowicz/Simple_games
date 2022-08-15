@@ -17,7 +17,7 @@ class cStartGame
 
 public:
 
-    cStartGame() {};
+    cStartGame() : vMoveCounter{ 0 } {};
 
     void mMakeMove(char c);
     void mMoveUpDown(char c, int aFactor);
