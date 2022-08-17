@@ -7,11 +7,8 @@
 #pragma once
 
 #include <vector>
+#include "cresult.hpp"
 #include "csymbols.hpp"
-
-typedef unsigned int timeSeconds;
-typedef unsigned int moveNumber;
-const unsigned int maxResults = 20;
 
 class cBestResults
 {
