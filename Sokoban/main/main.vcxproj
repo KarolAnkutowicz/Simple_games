@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="cbestresults.cpp" />
     <ClCompile Include="cboard.cpp" />
     <ClCompile Include="cfield.cpp" />
     <ClCompile Include="cfilecreator.cpp" />
@@ -150,6 +151,7 @@
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="cbestresults.hpp" />
     <ClInclude Include="cboard.hpp" />
     <ClInclude Include="cfield.hpp" />
     <ClInclude Include="cfilecreator.hpp" />
