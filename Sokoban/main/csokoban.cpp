@@ -26,5 +26,5 @@ std::ostream& operator << (std::ostream& strOut, cSokoban& S)
 
 /********** PUBLIC: END **********/
 
- /* csokoban.cpp */
- /********** END_OF_FILE **********/
+/* csokoban.cpp */
+/********** END_OF_FILE **********/

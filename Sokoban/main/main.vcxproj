@@ -145,6 +145,7 @@
     <ClCompile Include="cfilecreator.cpp" />
     <ClCompile Include="cfilereader.cpp" />
     <ClCompile Include="cprinting.cpp" />
+    <ClCompile Include="cresult.cpp" />
     <ClCompile Include="crock.cpp" />
     <ClCompile Include="csokoban.cpp" />
     <ClCompile Include="cstartgame.cpp" />
@@ -158,6 +159,7 @@
     <ClInclude Include="cfilereader.hpp" />
     <ClInclude Include="cposition.hpp" />
     <ClInclude Include="cprinting.hpp" />
+    <ClInclude Include="cresult.hpp" />
     <ClInclude Include="crock.hpp" />
     <ClInclude Include="csokoban.hpp" />
     <ClInclude Include="cstartgame.hpp" />

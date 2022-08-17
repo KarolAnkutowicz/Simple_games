@@ -130,7 +130,7 @@ void cPrinting::mPrintMenuExit()
 	std::cout << "Are you sure?\n\n (y)es\n\n";
 }
 
- /********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
- /* cprinting.cpp */
- /********** END_OF_FILE **********/
+/* cprinting.cpp */
+/********** END_OF_FILE **********/

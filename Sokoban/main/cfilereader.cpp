@@ -73,5 +73,5 @@ void cFileReader::mEasyReader(std::string mFileName, unsigned int aSituation)
 
 /********** PUBLIC: END **********/
 
- /* cfilereader.cpp */
- /********** END_OF_FILE **********/
+/* cfilereader.cpp */
+/********** END_OF_FILE **********/

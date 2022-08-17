@@ -1,23 +1,26 @@
 /********** BEGIN_OF_FILE **********/
 /*
  * author: Karol Ankutowicz
- * file: cfilecreator.hpp
+ * file: cresult.hpp
  */
 
 #pragma once
 
-class cFileCreator
+class cResult
 {
 /********** PUBLIC: BEGIN **********/
 
 public:
 
-	void mCreateInterruptedGame();
-
-	void mCreateBestResults();
-
 /********** PUBLIC: END **********/
+
+/********** PRIVATE: BEGIN **********/
+
+private:
+
+/********** PRIVATE: END **********/
+
 };
 
-/* cfilecreator.hpp */
+/* cresult.hpp */
 /********** END_OF_FILE **********/

@@ -15,23 +15,23 @@ const unsigned int maxResults = 20;
 
 class cBestResults
 {
-	/********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 public:
 
 	void mAddRecordMove(numberLevel aLevel, timeSeconds aResult);
 	void mAddRecordTime(numberLevel aLevel, moveNumber aResult);
 
-	/********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
-	/********** PRIVATE: BEGIN **********/
+/********** PRIVATE: BEGIN **********/
 
 private:
 
 	std::vector<std::vector<moveNumber> > vBestMoveNumber;
 	std::vector<std::vector<timeSeconds> > vBestTimes;
 
-	/********** PRIVATE: END **********/
+/********** PRIVATE: END **********/
 
 };
 

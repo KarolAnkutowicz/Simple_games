@@ -13,7 +13,7 @@
 
 class cStartGame
 {
-    /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 public:
 
@@ -54,9 +54,9 @@ public:
     inline void mIncrementMoveCounter() { vMoveCounter++; };
     inline unsigned int getMoveCounter() { return vMoveCounter; }
 
-    /********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
-    /********** PRIVATE: BEGIN **********/
+/********** PRIVATE: BEGIN **********/
 
 private:
 
@@ -67,7 +67,7 @@ private:
     std::stack<bool> vPushes;
     unsigned int vMoveCounter;
 
-    /********** PRIVATE: END **********/
+/********** PRIVATE: END **********/
 };
 
 /* cstartgame.hpp */

@@ -10,7 +10,7 @@
 
 class cPosition
 {
-    /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 public:
     cPosition() { xPosition = yPosition = 0; }
@@ -25,16 +25,16 @@ public:
     inline void incrementYposition() { yPosition++; }
     inline void decrementYposition() { yPosition--; };
 
-    /********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
-    /********** PRIVATE: BEGIN **********/
+/********** PRIVATE: BEGIN **********/
 
 protected:
 
     coordinate xPosition;
     coordinate yPosition;
 
-    /********** PRIVATE: END **********/
+/********** PRIVATE: END **********/
 };
 
 /* cposition.hpp */

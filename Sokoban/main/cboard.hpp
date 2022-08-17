@@ -12,7 +12,7 @@
 
 class cBoard
 {
-    /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 public:
     cBoard() { vHigh = vWide = 10; }
@@ -33,9 +33,9 @@ public:
     inline indexElement getFieldSymbolIndex(coordinate aX, coordinate aY) { return tabElements[aX][aY].getIndexChars(); }
 
 
-    /********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
-    /********** PRIVATE: BEGIN **********/
+/********** PRIVATE: BEGIN **********/
 
 private:
 
@@ -43,7 +43,7 @@ private:
     coordinate vHigh;
     coordinate vWide;
 
-    /********** PRIVATE: END **********/
+/********** PRIVATE: END **********/
 };
 
 /* cboard.hpp */

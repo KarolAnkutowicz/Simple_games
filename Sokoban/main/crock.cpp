@@ -31,5 +31,5 @@ std::ostream& operator << (std::ostream& strOut, cRock& R)
 /********** PUBLIC: END **********/
 
 
- /* crock.hpp */
- /********** END_OF_FILE **********/
+/* crock.hpp */
+/********** END_OF_FILE **********/

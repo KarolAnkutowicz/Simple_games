@@ -34,5 +34,5 @@ std::istream& operator >> (std::istream& strIn, cBoard& B)
 
 /********** PUBLIC: END **********/
 
- /* cboard.cpp */
- /********** END_OF_FILE **********/
+/* cboard.cpp */
+/********** END_OF_FILE **********/

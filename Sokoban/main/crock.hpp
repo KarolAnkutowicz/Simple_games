@@ -11,7 +11,7 @@
 
 class cRock : public cPosition
 {
-    /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 public:
 
@@ -23,15 +23,15 @@ public:
     inline bool getSave() { return vSave; }
     inline char getChar(cSymbols& aSymbol) { return aSymbol.getCharacters(5); }
 
-    /********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
-    /********** PRIVATE: BEGIN **********/
+/********** PRIVATE: BEGIN **********/
 
 private:
 
     bool vSave;
 
-    /********** PRIVATE: END **********/
+/********** PRIVATE: END **********/
 };
 
 /* crock.hpp */

@@ -11,7 +11,7 @@
 
 class cField : public cPosition
 {
-    /********** PUBLIC: BEGIN **********/
+/********** PUBLIC: BEGIN **********/
 
 public:
 
@@ -25,16 +25,16 @@ public:
     inline indexElement getIndexChars() { return vSymbolIndex; }
     inline bool getIsFull() { return vIsFull; }
 
-    /********** PUBLIC: END **********/
+/********** PUBLIC: END **********/
 
 private:
 
-    /********** PRIVATE: BEGIN **********/
+/********** PRIVATE: BEGIN **********/
 
     indexElement vSymbolIndex;
     bool vIsFull;
 
-    /********** PRIVATE: END **********/
+/********** PRIVATE: END **********/
 };
 
 /* cfield.hpp */
