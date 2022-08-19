@@ -18,16 +18,9 @@ class cResult
 public:
 
 	virtual char* getNamePlayer() = 0;
+	virtual void setNamePlayer(char* aNamePlayer) = 0;
 
 /********** PUBLIC: END **********/
-
-/********** PRIVATE: BEGIN **********/
-
-private:
-
-	char tNamePlayer[namePlayer];
-
-/********** PRIVATE: END **********/
 };
 
 
@@ -37,12 +30,20 @@ class cResultMove : public cResult
 /********** PUBLIC: BEGIN **********/
 
 public:
+	cResultMove(moveNumber aMoveNumber) : vMoveNumber(aMoveNumber) {}
+
+	moveNumber getMoveNumber() { return vMoveNumber; }
+	char* getNamePlayer() { return tNamePlayer; }
+	void setNamePlayer(char* aNamePlayer);
 
 /********** PUBLIC: END **********/
 
 /********** PRIVATE: BEGIN **********/
 
 private:
+
+	moveNumber vMoveNumber;
+	char tNamePlayer[namePlayer];
 
 /********** PRIVATE: END **********/
 };
@@ -54,12 +55,24 @@ class cResultTime : public cResult
 /********** PUBLIC: BEGIN **********/
 
 public:
+	cResultTime(timeSeconds aTimeSeconds) : vTimeSeconds(aTimeSeconds) {}
+
+	void mCalculateMinutesSeconds();
+
+	timeSeconds getTimeSeconds() { return vTimeSeconds; }
+	char* getNamePlayer() { return tNamePlayer; }
+	void setNamePlayer(char* aNamePlayer);
 
 /********** PUBLIC: END **********/
 
 /********** PRIVATE: BEGIN **********/
 
 private:
+
+	timeSeconds vTimeSeconds;
+	char tNamePlayer[namePlayer];
+	timeSeconds vCalculatedMinutes;
+	timeSeconds vCalculatedSeconds;
 
 /********** PRIVATE: END **********/
 };
