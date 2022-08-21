@@ -6,5 +6,15 @@
 
 #include "cbestresults.hpp"
 
+void cBestResults::mAddRecordMove(numberLevel aLevel, cResultMove aResult)
+{
+
+}
+
+void cBestResults::mAddRecordTime(numberLevel aLevel, cResultTime aResult)
+{
+
+}
+
  /* cbestresults.cpp */
  /********** END_OF_FILE **********/
