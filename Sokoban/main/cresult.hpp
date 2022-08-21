@@ -30,7 +30,12 @@ class cResultMove : public cResult
 /********** PUBLIC: BEGIN **********/
 
 public:
-	cResultMove(moveNumber aMoveNumber) : vMoveNumber(aMoveNumber) {}
+	cResultMove(moveNumber aMoveNumber) : vMoveNumber(aMoveNumber)
+	{
+		for (unsigned int i = 0; i < (namePlayer - 1); i++)
+			tNamePlayer[i] = ' ';
+		tNamePlayer[namePlayer - 1] = '\0';
+	}
 
 	moveNumber getMoveNumber() { return vMoveNumber; }
 	char* getNamePlayer() { return tNamePlayer; }
@@ -55,7 +60,14 @@ class cResultTime : public cResult
 /********** PUBLIC: BEGIN **********/
 
 public:
-	cResultTime(timeSeconds aTimeSeconds) : vTimeSeconds(aTimeSeconds) {}
+	cResultTime(timeSeconds aTimeSeconds) : vTimeSeconds(aTimeSeconds)
+	{
+		for (unsigned int i = 0; i < (namePlayer - 1); i++)
+			tNamePlayer[i] = ' ';
+		tNamePlayer[namePlayer - 1] = '\0';
+		vCalculatedMinutes = 0;
+		vCalculatedSeconds = 0;
+	}
 
 	void mCalculateMinutesSeconds();
 
