@@ -18,8 +18,13 @@ class cBestResults
 
 public:
 
+	bool mCheckMove(numberLevel aLevel, cResultMove aResult);
 	void mAddRecordMove(numberLevel aLevel, cResultMove aResult);
+	void mSortRecordMove(numberLevel aLevel);
+
+	bool mCheckTime(numberLevel aLevel, cResultMove aResult);
 	void mAddRecordTime(numberLevel aLevel, cResultTime aResult);
+	void mSortRecordTime(numberLevel aLevel);
 
 /********** PUBLIC: END **********/
 
