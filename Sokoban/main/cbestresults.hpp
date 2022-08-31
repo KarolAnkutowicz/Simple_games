@@ -21,10 +21,12 @@ public:
 	bool mCheckMove(numberLevel aLevel, cResultMove aResult);
 	void mAddRecordMove(numberLevel aLevel, cResultMove aResult);
 	void mSortRecordMove(numberLevel aLevel);
+	bool mCompareMoves(numberLevel aLevel, cResultMove aIndex1, cResultMove aIndex2);
 
-	bool mCheckTime(numberLevel aLevel, cResultMove aResult);
+	bool mCheckTime(numberLevel aLevel, cResultTime aResult);
 	void mAddRecordTime(numberLevel aLevel, cResultTime aResult);
 	void mSortRecordTime(numberLevel aLevel);
+	bool mCompareTimes(numberLevel aLevel, cResultTime aIndex1, cResultTime aIndex2);
 
 /********** PUBLIC: END **********/
 
