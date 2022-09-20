@@ -1,11 +1,12 @@
 2. Keys:
 
-W - up
-S - down
-A - left
-D - right
-R - undo move
-E - abandon game
+[W] - up
+[S] - down
+[A] - left
+[D] - right
+[R] - undo move
+[E] - abandon game
+[Enter] - confirm move/abandon
 
 3. Purpose
 

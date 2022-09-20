@@ -1,1 +1,18 @@
-This is credits :)
+Inspired by:
+
+Other "Sokoban" implementations :)
+
+
+Project manager:
+
+Karol A.
+
+
+Data:
+
+Karol A.
+
+
+Programist:
+
+Karol A.
