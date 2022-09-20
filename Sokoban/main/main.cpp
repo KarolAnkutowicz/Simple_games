@@ -60,7 +60,10 @@ int main()
 						break;
 				}
 				if (Start.mCheckYouWin() == true)
+				{
 					Print.mPrintYouWin();
+					Print.mPrintYouWinGetName();
+				}
 			}
 			system("pause");
 			break;

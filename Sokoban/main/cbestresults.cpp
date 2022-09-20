@@ -5,6 +5,7 @@
  */
 
 #include "cbestresults.hpp"
+#include <algorithm>
 
 bool cBestResults::mCheckMove(numberLevel aLevel, cResultMove aResult)
 {
@@ -29,12 +30,13 @@ void cBestResults::mAddRecordMove(numberLevel aLevel, cResultMove aResult)
 
 void cBestResults::mSortRecordMove(numberLevel aLevel)
 {
-
+	//for (auto vBestMoveNumber[aLevel].begin() : vBestMoveNumber[aLevel].end())
+	//std::sort(vBestMoveNumber.begin(), vBestMoveNumber.end(), mCompareMoves());
 }
 
 bool cBestResults::mCompareMoves(numberLevel aLevel, cResultMove aIndex1, cResultMove aIndex2)
 {
-	return true;
+	return (aIndex1.getMoveNumber() < aIndex2.getMoveNumber());
 }
 
 

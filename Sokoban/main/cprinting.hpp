@@ -24,6 +24,7 @@ public:
     void mPrintCurrentGame(cStartGame &Start, cSymbols &Symbol);
 
     void mPrintYouWin();
+    inline void mPrintYouWinGetName() { std::cout << "Get your 3-chars nick: "; }
 
     void mPrintOpenInterruptedGame();
 
