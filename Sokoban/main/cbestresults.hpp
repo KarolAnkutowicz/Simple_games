@@ -23,10 +23,10 @@ public:
 	void mSortRecordMove(numberLevel aLevel);
 	bool mCompareMoves(numberLevel aLevel, cResultMove aIndex1, cResultMove aIndex2);
 
-	bool mCheckTime(numberLevel aLevel, cResultTime aResult);
-	void mAddRecordTime(numberLevel aLevel, cResultTime aResult);
-	void mSortRecordTime(numberLevel aLevel);
-	bool mCompareTimes(numberLevel aLevel, cResultTime aIndex1, cResultTime aIndex2);
+	//bool mCheckTime(numberLevel aLevel, cResultTime aResult);
+	//void mAddRecordTime(numberLevel aLevel, cResultTime aResult);
+	//void mSortRecordTime(numberLevel aLevel);
+	//bool mCompareTimes(numberLevel aLevel, cResultTime aIndex1, cResultTime aIndex2);
 
 /********** PUBLIC: END **********/
 
@@ -35,7 +35,7 @@ public:
 private:
 
 	std::vector<std::vector<cResultMove> > vBestMoveNumber;
-	std::vector<std::vector<cResultTime> > vBestTimes;
+	//std::vector<std::vector<cResultTime> > vBestTimes;
 
 /********** PRIVATE: END **********/
 

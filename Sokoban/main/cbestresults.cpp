@@ -30,6 +30,7 @@ void cBestResults::mAddRecordMove(numberLevel aLevel, cResultMove aResult)
 
 void cBestResults::mSortRecordMove(numberLevel aLevel)
 {
+
 	//for (auto vBestMoveNumber[aLevel].begin() : vBestMoveNumber[aLevel].end())
 	//std::sort(vBestMoveNumber.begin(), vBestMoveNumber.end(), mCompareMoves());
 }
@@ -41,25 +42,25 @@ bool cBestResults::mCompareMoves(numberLevel aLevel, cResultMove aIndex1, cResul
 
 
 
-bool cBestResults::mCheckTime(numberLevel aLevel, cResultTime aResult)
+/*bool cBestResults::mCheckTime(numberLevel aLevel, cResultTime aResult)
 {
 	return true;
-}
+}*/
 
-void cBestResults::mAddRecordTime(numberLevel aLevel, cResultTime aResult)
+/*void cBestResults::mAddRecordTime(numberLevel aLevel, cResultTime aResult)
 {
 
-}
+}*/
 
-void cBestResults::mSortRecordTime(numberLevel aLevel)
+/*void cBestResults::mSortRecordTime(numberLevel aLevel)
 {
 
-}
+}*/
 
-bool cBestResults::mCompareTimes(numberLevel aLevel, cResultTime aIndex1, cResultTime aIndex2)
+/*bool cBestResults::mCompareTimes(numberLevel aLevel, cResultTime aIndex1, cResultTime aIndex2)
 {
 	return true;
-}
+}*/
 
 /* cbestresults.cpp */
  /********** END_OF_FILE **********/

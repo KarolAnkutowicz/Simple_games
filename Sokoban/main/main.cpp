@@ -62,7 +62,6 @@ int main()
 				if (Start.mCheckYouWin() == true)
 				{
 					Print.mPrintYouWin();
-					Print.mPrintYouWinGetName();
 				}
 			}
 			system("pause");
