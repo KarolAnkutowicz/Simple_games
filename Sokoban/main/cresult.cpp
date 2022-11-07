@@ -15,18 +15,18 @@ void cResultMove::setNamePlayer(char* aNamePlayer)
 
 
 
-void cResultTime::mCalculateMinutesSeconds()
+/*void cResultTime::mCalculateMinutesSeconds()
 {
 	vCalculatedSeconds = vTimeSeconds % 60;
 	vCalculatedMinutes = (vTimeSeconds - vCalculatedSeconds) / 60;
-}
+}*/
 
-void cResultTime::setNamePlayer(char* aNamePlayer)
+/*void cResultTime::setNamePlayer(char* aNamePlayer)
 {
 	for (unsigned int i = 0; i < (namePlayer - 1); i++)
 		tNamePlayer[i] = aNamePlayer[i];
 	tNamePlayer[namePlayer - 1] = '\0';
-}
+}*/
 
 /* cresult.cpp */
 /********** END_OF_FILE **********/

@@ -24,6 +24,8 @@ public:
     void mPrintCurrentGame(cStartGame &Start, cSymbols &Symbol);
 
     void mPrintYouWin();
+    void mPrintYourResultToList();
+    void mPrintYourResultNotToList();
 
     void mPrintOpenInterruptedGame();
 

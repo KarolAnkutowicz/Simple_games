@@ -55,11 +55,11 @@ private:
 
 
 
-class cResultTime : public cResult
-{
+//class cResultTime : public cResult
+//{
 /********** PUBLIC: BEGIN **********/
 
-public:
+/*public:
 	cResultTime(timeSeconds aTimeSeconds) : vTimeSeconds(aTimeSeconds)
 	{
 		for (unsigned int i = 0; i < (namePlayer - 1); i++)
@@ -74,20 +74,20 @@ public:
 	timeSeconds getTimeSeconds() { return vTimeSeconds; }
 	char* getNamePlayer() { return tNamePlayer; }
 	void setNamePlayer(char* aNamePlayer);
-
+	*/
 /********** PUBLIC: END **********/
 
 /********** PRIVATE: BEGIN **********/
 
-private:
+/*private:
 
 	timeSeconds vTimeSeconds;
 	char tNamePlayer[namePlayer];
 	timeSeconds vCalculatedMinutes;
 	timeSeconds vCalculatedSeconds;
-
+	*/
 /********** PRIVATE: END **********/
-};
+//};
 
 /* cresult.hpp */
 /********** END_OF_FILE **********/

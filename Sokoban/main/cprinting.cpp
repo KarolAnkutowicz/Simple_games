@@ -54,6 +54,7 @@ void cPrinting::mPrintMenu()
 		" (6) - Exit\n\n";
 }
 
+
 void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 {
 	system("cls");
@@ -95,9 +96,20 @@ void cPrinting::mPrintCurrentGame(cStartGame& Start, cSymbols &Symbol)
 	std::cout << "\nMoves: " << Start.getMoveCounter() << "\n\n";
 }
 
+
 void cPrinting::mPrintYouWin()
 {
 	std::cout << "\nYOU WIN!\n\n";
+}
+
+void cPrinting::mPrintYourResultToList()
+{
+	std::cout << "\nCongratulations! Your result lands on the highscore list!\n";
+}
+
+void cPrinting::mPrintYourResultNotToList()
+{
+	std::cout << "\nUnfortunately, your result not lands on the highscore list.\n";
 }
 
 
@@ -106,6 +118,7 @@ void cPrinting::mPrintOpenInterruptedGame()
 	system("cls");
 	std::cout << "Do you want resume saved game?\n\n (y)es\n\n";
 }
+
 
 void cPrinting::mPrintMenuOptions(cSymbols& Symbol, unsigned int aOption)
 {
@@ -123,6 +136,7 @@ void cPrinting::mPrintMenuOptions(cSymbols& Symbol, unsigned int aOption)
 	if (aOption == 0)
 		std::cout << " (e) - exit options\n\n";
 }
+
 
 void cPrinting::mPrintMenuExit()
 {
