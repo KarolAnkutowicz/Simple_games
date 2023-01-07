@@ -1,4 +1,11 @@
-﻿#include <iostream>
+﻿/********** BEGIN_OF_FILE **********/
+/*
+ * author: Karol Ankutowicz
+ * file: main.cpp
+ */
+
+#include <iostream>
+#include <tuple>
 
 const unsigned int constFizz = 3;
 const unsigned int constBuzz = 5;
@@ -25,6 +32,19 @@ bool fGetDecision(char aDecision)
         default: vDecision = true; break;
     }
     return vDecision;
+}
+
+std::tuple <unsigned int, unsigned int, unsigned int> fSetArguments()
+{
+    unsigned int vFizz, vBuzz, vMax;
+    mPrintFizz();
+    std::cin >> vFizz;
+    mPrintBuzz();
+    std::cin >> vBuzz;
+    mPrintMax();
+    std::cin >> vMax;
+    std::cout << "\n";
+    return std::make_tuple(vFizz, vBuzz, vMax);
 }
 
 void fMakeFizzBuzz(unsigned int aFizz, unsigned int aBuzz, unsigned int aMax)
@@ -67,13 +87,8 @@ int main()
         vContinue = fGetDecision(vOption);
         if (vContinue == false)
         {
-            mPrintFizz();
-            std::cin >> vFizz;
-            mPrintBuzz();
-            std::cin >> vBuzz;
-            mPrintMax();
-            std::cin >> vMax;
-            fMakeFizzBuzz(vFizz, vBuzz, vMax);
+            auto vArguments = fSetArguments();
+            fMakeFizzBuzz(std::get<0>(vArguments), std::get<1>(vArguments), std::get<2>(vArguments));
         }
         else
             fMakeFizzBuzz(constFizz, constBuzz, constMax);
@@ -84,3 +99,6 @@ int main()
 
     return 0;
 }
+
+/* main.cpp */
+/********** END_OF_FILE **********/
