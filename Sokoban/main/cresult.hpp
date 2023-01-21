@@ -6,7 +6,7 @@
 
 #pragma once
 
-typedef unsigned int timeSeconds;
+//typedef unsigned int timeSeconds;
 typedef unsigned int moveNumber;
 const unsigned int maxResults = 20;
 const unsigned int namePlayer = 4;
