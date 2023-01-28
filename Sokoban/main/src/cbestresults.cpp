@@ -4,7 +4,7 @@
  * file: cbestresults.cpp
  */
 
-#include "api/cbestresults.hpp"
+#include "../api/cbestresults.hpp"
 #include <algorithm>
 
 bool cBestResults::mCheckMove(numberLevel aLevel, cResultMove aResult)

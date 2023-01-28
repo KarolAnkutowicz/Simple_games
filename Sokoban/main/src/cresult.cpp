@@ -4,7 +4,7 @@
  * file: cresult.cpp
  */
 
-#include "cresult.hpp"
+#include "../api/cresult.hpp"
 
 void cResultMove::setNamePlayer(char* aNamePlayer)
 {

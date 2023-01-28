@@ -4,7 +4,7 @@
  * file: cboard.cpp
  */
 
-#include "cboard.hpp"
+#include "../api/cboard.hpp"
 
 /********** PUBLIC: BEGIN **********/
 

@@ -4,10 +4,10 @@
  * file: main.cpp
  */
 
-#include "cstartgame.hpp"
-#include "cfilereader.hpp"
-#include "cprinting.hpp"
-#include "csymbols.hpp"
+#include "../api/cstartgame.hpp"
+#include "../api/cfilereader.hpp"
+#include "../api/cprinting.hpp"
+#include "../api/csymbols.hpp"
 #include <cstdlib>
 #include <iostream>
 

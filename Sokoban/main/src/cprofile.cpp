@@ -4,7 +4,7 @@
  * file: cprofile.cpp
  */
 
-#include "cprofile.hpp"
+#include "../api/cprofile.hpp"
 
 /********** PUBLIC: BEGIN **********/
 

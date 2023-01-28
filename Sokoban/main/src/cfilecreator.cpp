@@ -4,7 +4,7 @@
  * file: cfilecreator.cpp
  */
 
-#include "cfilecreator.hpp"
+#include "../api/cfilecreator.hpp"
 #include <iostream>
 
 /********** PUBLIC: BEGIN **********/

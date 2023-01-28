@@ -6,9 +6,9 @@
 
 #pragma once
 
-#include <vector>
 #include "cresult.hpp"
 #include "csymbols.hpp"
+#include <vector>
 
 const unsigned int maxResultInLevel = 10;
 

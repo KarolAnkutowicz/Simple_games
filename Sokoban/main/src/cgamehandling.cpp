@@ -4,7 +4,7 @@
  * file: cgamehandling.cpp
  */
 
-#include "cgamehandling.hpp"
+#include "../api/cgamehandling.hpp"
 
 /********** PUBLIC: BEGIN **********/
 

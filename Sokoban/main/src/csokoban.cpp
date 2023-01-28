@@ -4,7 +4,7 @@
  * file: csokoban.cpp
  */
 
-#include "csokoban.hpp"
+#include "../api/csokoban.hpp"
 
 /********** PUBLIC: BEGIN **********/
 

@@ -4,7 +4,7 @@
  * file: cfield.cpp
  */
 
-#include "cfield.hpp"
+#include "../api/cfield.hpp"
 
 /********** PUBLIC: BEGIN **********/
 
