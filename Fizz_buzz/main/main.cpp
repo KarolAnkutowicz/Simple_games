@@ -6,6 +6,7 @@
 
 #include <iostream>
 #include <tuple>
+#include <Windows.h>
 
 const unsigned int constFizz = 3;
 const unsigned int constBuzz = 5;
@@ -68,6 +69,7 @@ void fMakeFizzBuzz(unsigned int aFizz, unsigned int aBuzz, unsigned int aMax)
         if (vDivide == false)
             std::cout << vStart;
         std::cout << std::endl;
+        Sleep(1000);
     } while (vStart < aMax);
     std::cout << "\n";
 }
