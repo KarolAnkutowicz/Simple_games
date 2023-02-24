@@ -5,6 +5,12 @@
  */
 
 #pragma once
+#include "cstartgame.hpp"
+#include "cfilereader.hpp"
+#include "cprinting.hpp"
+#include "csymbols.hpp"
+#include <cstdlib>
+#include <iostream>
 
 class cGameHandling
 {

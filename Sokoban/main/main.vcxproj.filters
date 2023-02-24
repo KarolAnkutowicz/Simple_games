@@ -18,84 +18,90 @@
     <ClCompile Include="main.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cstartgame.cpp">
+    <ClCompile Include="src\cstartgame.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cboard.cpp">
+    <ClCompile Include="src\cboard.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="csokoban.cpp">
+    <ClCompile Include="src\csokoban.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cfield.cpp">
+    <ClCompile Include="src\cfield.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="crock.cpp">
+    <ClCompile Include="src\crock.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cprinting.cpp">
+    <ClCompile Include="src\cprinting.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cfilereader.cpp">
+    <ClCompile Include="src\cfilereader.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cfilecreator.cpp">
+    <ClCompile Include="src\cfilecreator.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cbestresults.cpp">
+    <ClCompile Include="src\cresult.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cresult.cpp">
+    <ClCompile Include="src\cprofile.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cprofile.cpp">
+    <ClCompile Include="src\cprofilelist.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
-    <ClCompile Include="cprofilelist.cpp">
+    <ClCompile Include="src\cgamehandling.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+    <ClCompile Include="src\cbestresults.cpp">
       <Filter>Pliki źródłowe</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cstartgame.hpp">
+    <ClInclude Include="api\cstartgame.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cboard.hpp">
+    <ClInclude Include="api\cboard.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="csokoban.hpp">
+    <ClInclude Include="api\csokoban.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cfield.hpp">
+    <ClInclude Include="api\cfield.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cposition.hpp">
+    <ClInclude Include="api\cposition.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="crock.hpp">
+    <ClInclude Include="api\crock.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cprinting.hpp">
+    <ClInclude Include="api\cprinting.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cfilereader.hpp">
+    <ClInclude Include="api\cfilereader.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="csymbols.hpp">
+    <ClInclude Include="api\csymbols.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cfilecreator.hpp">
+    <ClInclude Include="api\cfilecreator.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cbestresults.hpp">
+    <ClInclude Include="api\cresult.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cresult.hpp">
+    <ClInclude Include="api\cprofile.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cprofile.hpp">
+    <ClInclude Include="api\cprofilelist.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
-    <ClInclude Include="cprofilelist.hpp">
+    <ClInclude Include="api\cgamehandling.hpp">
+      <Filter>Pliki nagłówkowe</Filter>
+    </ClInclude>
+    <ClInclude Include="api\cbestresults.hpp">
       <Filter>Pliki nagłówkowe</Filter>
     </ClInclude>
   </ItemGroup>

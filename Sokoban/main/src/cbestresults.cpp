@@ -23,8 +23,8 @@ void cBestResults::mAddRecordMove(numberLevel aLevel, cResultMove aResult)
 		vBestMoveNumber[aLevel].pop_back();
 		vBestMoveNumber[aLevel].push_back(aResult);
 		mSortRecordMove(aLevel);
-			// 10,11,12,13,14,14,15,15,15
-			// 9->0, 10->1, 11->2, 12->3, 13->4, 14->6, 15->9
+		// 10,11,12,13,14,14,15,15,15
+		// 9->0, 10->1, 11->2, 12->3, 13->4, 14->6, 15->9
 	}
 }
 
@@ -49,12 +49,10 @@ bool cBestResults::mCompareMoves(numberLevel aLevel, cResultMove aIndex1, cResul
 
 /*void cBestResults::mAddRecordTime(numberLevel aLevel, cResultTime aResult)
 {
-
 }*/
 
 /*void cBestResults::mSortRecordTime(numberLevel aLevel)
 {
-
 }*/
 
 /*bool cBestResults::mCompareTimes(numberLevel aLevel, cResultTime aIndex1, cResultTime aIndex2)
@@ -63,4 +61,4 @@ bool cBestResults::mCompareMoves(numberLevel aLevel, cResultMove aIndex1, cResul
 }*/
 
 /* cbestresults.cpp */
- /********** END_OF_FILE **********/
+/********** END_OF_FILE **********/

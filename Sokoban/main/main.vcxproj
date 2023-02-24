@@ -139,35 +139,37 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="cbestresults.cpp" />
-    <ClCompile Include="cboard.cpp" />
-    <ClCompile Include="cfield.cpp" />
-    <ClCompile Include="cfilecreator.cpp" />
-    <ClCompile Include="cfilereader.cpp" />
-    <ClCompile Include="cprinting.cpp" />
-    <ClCompile Include="cprofile.cpp" />
-    <ClCompile Include="cprofilelist.cpp" />
-    <ClCompile Include="cresult.cpp" />
-    <ClCompile Include="crock.cpp" />
-    <ClCompile Include="csokoban.cpp" />
-    <ClCompile Include="cstartgame.cpp" />
+    <ClCompile Include="src\cbestresults.cpp" />
+    <ClCompile Include="src\cboard.cpp" />
+    <ClCompile Include="src\cfield.cpp" />
+    <ClCompile Include="src\cfilecreator.cpp" />
+    <ClCompile Include="src\cfilereader.cpp" />
+    <ClCompile Include="src\cgamehandling.cpp" />
+    <ClCompile Include="src\cprinting.cpp" />
+    <ClCompile Include="src\cprofile.cpp" />
+    <ClCompile Include="src\cprofilelist.cpp" />
+    <ClCompile Include="src\cresult.cpp" />
+    <ClCompile Include="src\crock.cpp" />
+    <ClCompile Include="src\csokoban.cpp" />
+    <ClCompile Include="src\cstartgame.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="cbestresults.hpp" />
-    <ClInclude Include="cboard.hpp" />
-    <ClInclude Include="cfield.hpp" />
-    <ClInclude Include="cfilecreator.hpp" />
-    <ClInclude Include="cfilereader.hpp" />
-    <ClInclude Include="cposition.hpp" />
-    <ClInclude Include="cprinting.hpp" />
-    <ClInclude Include="cprofile.hpp" />
-    <ClInclude Include="cprofilelist.hpp" />
-    <ClInclude Include="cresult.hpp" />
-    <ClInclude Include="crock.hpp" />
-    <ClInclude Include="csokoban.hpp" />
-    <ClInclude Include="cstartgame.hpp" />
-    <ClInclude Include="csymbols.hpp" />
+    <ClInclude Include="api\cboard.hpp" />
+    <ClInclude Include="api\cfield.hpp" />
+    <ClInclude Include="api\cfilecreator.hpp" />
+    <ClInclude Include="api\cfilereader.hpp" />
+    <ClInclude Include="api\cgamehandling.hpp" />
+    <ClInclude Include="api\cposition.hpp" />
+    <ClInclude Include="api\cprinting.hpp" />
+    <ClInclude Include="api\cprofile.hpp" />
+    <ClInclude Include="api\cprofilelist.hpp" />
+    <ClInclude Include="api\cresult.hpp" />
+    <ClInclude Include="api\crock.hpp" />
+    <ClInclude Include="api\csokoban.hpp" />
+    <ClInclude Include="api\cstartgame.hpp" />
+    <ClInclude Include="api\csymbols.hpp" />
+    <ClInclude Include="api\cbestresults.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
