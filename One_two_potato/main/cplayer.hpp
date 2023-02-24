@@ -9,7 +9,9 @@
 #include <string>
 #include <vector>
 
-const unsigned int constNumberOfHands = 2;
+typedef unsigned short numberPlayers;
+const numberPlayers constNumberOfHands = 2;
+const bool constClockwiseDirect = true;
 
 class cHand
 {

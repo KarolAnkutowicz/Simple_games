@@ -5,9 +5,11 @@
  */
 
 #include "cpotatogame.hpp"
+#include <iostream>
 
 int main()
 {
+	cPotatoGame Game;
 	return 0;
 }
 
